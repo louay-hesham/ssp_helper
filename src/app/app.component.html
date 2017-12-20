@@ -2,29 +2,10 @@
     
   <div class="jumbotron">
     <div class="container">
-      <h1>Welcome to SSP Helper web application!</h1>
-      <p>
-        This app helps you in knowing which courses you can register depending on what courses you have already passed.
-      </p>
-      <b>Who is this for?</b>
-      <ul>
-        <li>Students who failed one or more courses that are prerequisites to other courses.</li>
-        <li>Students who are limited to the number of credit hours they can register and have to sacrifice a course by not registering it at some point.</li>
-        <li>Students who dropped a whole term for some reason.</li>
-      </ul>
-      <p>Basically, if you're behind the proposed study plan of your department, this app is for you. Otherwise, this app isn't beneficial for you</p>
-
-      <h4 style="color:#FF0000" class="alert-warning">IMPORTANT DISCLAIMER! PLEASE READ!</h4>
-      <ol>
-        <li>This app is not affiliated with Alexandria University by any means.</li>
-        <li>There might be errors with the output of this app. Please revise your options with your advisor prior to actual registration.</li>
-        <li>This app is made to just give you a vague idea of what courses are possible to register.</li>
-        <li>The courses listed in this app might or might not actually open during registration. Completing the prerequisites of a certain course doesn't mean you can register it. It might not open for registration afterall</li>
-        <li>Some courses are more important than others. The output of this app is not a recommendation. It Just shows you the possibilities</li>
-      </ol>
-      <div class="row">
+      <app-disclaimer *ngIf="!appVisible"></app-disclaimer>
+      <div class="row" *ngIf="!appVisible">
         <div class="col-md-4"></div>
-        <button class="btn btn-outline-danger col-md-4" align="center">I understand, take me to the app</button>
+        <button class="btn btn-outline-danger col-md-4" (click)="showApp()">I understand, take me to the app</button>
         <div class="col-md-4"></div>
       </div>
     </div>
