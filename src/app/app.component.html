@@ -2,6 +2,7 @@
     
   <div class="jumbotron">
     <div class="container">
+      <app-main *ngIf="appVisible"></app-main>
       <app-disclaimer *ngIf="!appVisible"></app-disclaimer>
       <div class="row" *ngIf="!appVisible">
         <div class="col-md-4"></div>
