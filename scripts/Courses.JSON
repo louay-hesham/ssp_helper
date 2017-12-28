@@ -1,0 +1,1 @@
+{"MP101": {"prerequisites": ["MP000"], "satisfies": [], "credit_hours": 3, "name": "Maths 1", "code": "MP101"}, "MP000": {"prerequisites": [], "satisfies": ["MP101"], "credit_hours": 0, "name": "Indomie Sha3reya", "code": "MP000"}}
