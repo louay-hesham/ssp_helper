@@ -16,7 +16,7 @@
 			<span *ngFor="let course of coursesList()">
 				<button *ngIf="course.level == level"
 			          class="{{buttonClass(course)}}"
-			          (click)="buttonClicked(course)"
+			          (click)="course.pass()"
 			          disabled="{{buttonDisability(course)}}"
 			          style="margin: 5px">
 			    <b>{{course.name}}</b>

@@ -60,10 +60,6 @@ export class MainComponent implements OnInit {
   	}
   }
 
-  buttonClicked(course: Course) {
-  	course.isPassed = true;
-  }
-
   buttonDisability(course: Course): string {
   	if (course.isAvailable()) {
   		return "";

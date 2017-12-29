@@ -1,6 +1,7 @@
 export class Course {
 
   public static courses: {[code: string]: Course} = { };
+  public static CH: number = 0;
 
   public code: string;
   public name: string;
@@ -27,11 +28,20 @@ export class Course {
   }
 
   public isAvailable(): boolean {
-    let avail = true;
-    for (let i in this.prerequisites) {
-      let prerequisite = this.prerequisites[i];
-      avail = avail && Course.courses[prerequisite].isPassed;
+    if (this.code == "CC591") {
+      return Course.CH >= 129
+    } else {
+      let avail = true;
+      for (let i in this.prerequisites) {
+        let prerequisite = this.prerequisites[i];
+        avail = avail && Course.courses[prerequisite].isPassed;
+      }
+      return avail;
     }
-    return avail;
+  }
+
+  public pass() {
+    this.isPassed = true;
+    Course.CH += this.creditHours;
   }
 }
