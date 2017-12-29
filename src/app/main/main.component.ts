@@ -23,6 +23,8 @@ export class MainComponent implements OnInit {
   levelName(level: string): string {
   	if (level == 'h') {
   		return "Humanities courses";
+  	} else if (level == 'e') {
+  		return "Elective courses";
   	} else {
   		return "Term " + level;
   	}

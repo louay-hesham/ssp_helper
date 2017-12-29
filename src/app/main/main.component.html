@@ -1,34 +1,15 @@
-<div class="row">
-	<b>Color codes:</b>
-	<p style="color:#0000FF"> Passed </p>
-	-
-	<p style="color:#FFA500"> Requirements met </p>
-	-
-	<p style="color:#FF0000"> Requirements not met </p>
-</div>
+<b>Instructions</b>
+<ul>
+	<li>
+		<b>Color codes:</b><b style="color:#0000FF"> Passed </b>-<b style="color:#FFA500"> Requirements met </b>-<b style="color:#FF0000"> Requirements not met </b>
+	</li>
+	<li>Only select courses which you have already passed. As you select these courses, other courses will be available</li>
+	<li>If taking an elective course in a term, select the elective courses first before the core ones</li>
+	<li>Humanity courses are present in the bottom as they aren't prerequisites of any courses</li>
+	<li>Be careful as if you clicked a course by mistake you have to refresh and start all over</li>
+</ul>
 
 <div class="row">
-	<p>Only select courses which you have already passed. Humanity courses are present in the bottom as they aren't prerequisites of any courses.</p>
-</div>
-
-<div class="row">
-
-	<!-- <div class="col-md-4">
-		<div>
-			<h4>Elective Courses</h4>
-			<span *ngFor="let course of coursesList()">
-				<button *ngIf="course.level == 'e'"
-			          class="{{buttonClass(course)}}"
-			          (click)="buttonClicked(course)"
-			          disabled="{{buttonDisability(course)}}"
-			          style="margin: 5px">
-			    <b>{{course.name}}</b>
-			    <br>{{course.code}}
-			  </button>
-			</span>
-		</div>
-	</div> -->
-
 	<div>
 		<div *ngFor="let level of levels">
 			<h4>{{levelName(level)}}</h4>
@@ -44,5 +25,4 @@
 			</span>
 		</div>
 	</div>
-
 </div>
