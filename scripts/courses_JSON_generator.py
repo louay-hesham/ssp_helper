@@ -4,33 +4,11 @@
 import json
 import sys
 
-class Course(object):
-  def __init__(self, obj):
-    self.code = obj['code']
-    self.name = obj['name']
-    self.prerequisites = obj['prerequisites']
-    self.satisfies = obj['satisfies']
-    self.credit_hours = obj['credit_hours']
-
-  def __str__(self):
-    return str(self.to_JSON())
-
-  def to_JSON(self):
-    return {
-      'code': self.code,
-      'name': self.name,
-      'prerequisites': self.prerequisites,
-      'satisfies': self.satisfies,
-      'credit_hours': self.credit_hours,
-    }
-
-
 try:
   with open('Courses.JSON') as data_file:
-    dictionary = json.load(data_file)
-    courses = { key: Course(value) for key, value in dictionary.items() }
+    courses = json.load(data_file)
     print('loaded courses from JSON')
-except (OSError, IOError) as e:
+except (OSError, IOError, ValueError) as e:
   MP000 = {
     'code': 'MP000',
     'name': 'Indomie Sha3reya',
@@ -39,10 +17,12 @@ except (OSError, IOError) as e:
     'credit_hours': 0,
   }
   courses = {
-    'MP000': Course(MP000)
+    'MP000': MP000
   }
   with open('Courses.JSON', 'w') as outfile:
-    json.dump({ key: value.to_JSON() for key, value in courses.items() }, outfile)
+    json.dump(courses, outfile)
+
+print(courses)
 
 while(True):
   subject_str = input("""Enter subject info in the following format:
@@ -55,21 +35,21 @@ while(True):
     break
 
   subject_info = subject_str.split(',')
-  new_course = Course({
-    'code': subject_info[0],
-    'name': subject_info[1],
-    'prerequisites': subject_info[2].split('&'),
+  new_course = {
+    'code': subject_info[0].upper(),
+    'name': subject_info[1].title(),
+    'prerequisites': ['MP000'] if subject_info[2] == '' else subject_info[2].upper().split('&'),
     'satisfies': [],
     'credit_hours': int(subject_info[3])
-  })
-  courses[new_course.code] = new_course
+  }
+  courses[new_course['code']] = new_course
+  print(new_course)
+  print("\n")
 
-  for prerequisite in new_course.prerequisites:
-    courses[prerequisite].satisfies.append(new_course.code)
-
-  print(courses[subject_info[0]])
+  for prerequisite in new_course['prerequisites']:
+    courses[prerequisite]['satisfies'].append(new_course['code'])
 
 
 with open('Courses.JSON', 'w') as outfile:
-  json.dump({ key: value.to_JSON() for key, value in courses.items() }, outfile)
+  json.dump(courses, outfile)
 
