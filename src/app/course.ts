@@ -6,12 +6,16 @@ export class Course {
   public prerequisites: string[];
   public satisfies: string[];
   public creditHours: number;
+  public isPassed: boolean;
 
   public static loadCourses(data: any) {
     for (let key in data) {
       Course.courses[key] = new Course(data[key]);
     }
-    console.log(Course.courses);
+    for (let key in Course.courses) {
+      let course = Course.courses[key];
+      console.log(course.code + ': ' + course.isAvailable());
+    }
   }
 
   constructor(data: any) {
@@ -20,5 +24,15 @@ export class Course {
     this.prerequisites = data['prerequisites'];
     this.satisfies = data['satisfies'];
     this.creditHours = data['creditHours'];
+    this.isPassed = false;
+  }
+
+  public isAvailable(): boolean {
+    let avail = true;
+    for (let i in this.prerequisites) {
+      let prerequisite = this.prerequisites[i];
+      avail = avail && Course.courses[prerequisite].isPassed;
+    }
+    return avail;
   }
 }
