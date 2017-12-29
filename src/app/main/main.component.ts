@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { CoursesLoaderService } from '../courses-loader.service'
+import { Course } from '../course'
 
 
 @Component({
@@ -15,8 +16,7 @@ export class MainComponent implements OnInit {
 
   ngOnInit() {
   	this.coursesLoader.getCourses().subscribe(data => {
-      console.log(data);
-      this.courses = data;
+      Course.loadCourses(data);
   	});
   }
 }
