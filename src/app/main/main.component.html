@@ -1,1 +1,10 @@
-<p>of a7</p>
+<div class="row">
+	<button *ngFor="let course of coursesList()"
+          class="{{buttonClass(course)}}"
+          (click)="buttonClicked(course)"
+          disabled="{{buttonDisability(course)}}"
+          style="margin: 5px">
+    <b>{{course.name}}</b>
+    <br>{{course.code}}
+  </button>
+</div>

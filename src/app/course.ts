@@ -1,4 +1,5 @@
 export class Course {
+
   public static courses: {[code: string]: Course} = { };
 
   public code: string;
@@ -10,11 +11,7 @@ export class Course {
 
   public static loadCourses(data: any) {
     for (let key in data) {
-      Course.courses[key] = new Course(data[key]);
-    }
-    for (let key in Course.courses) {
-      let course = Course.courses[key];
-      console.log(course.code + ': ' + course.isAvailable());
+      this.courses[key] = new Course(data[key]);
     }
   }
 
