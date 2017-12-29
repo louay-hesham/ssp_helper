@@ -1,233 +1,195 @@
 {
-  "MP107": {
-    "prerequisites": [
-      "MP000"
-    ],
-    "name": "Physics 1",
-    "satisfies": [
-      "MP108",
-      "MP204"
-    ],
+  "MP201": {
+    "name": "Maths 3",
     "credit_hours": 3,
-    "code": "MP107"
-  },
-  "MP301": {
+    "code": "MP201",
     "prerequisites": [
       "MP102"
     ],
-    "name": "Probability",
-    "satisfies": [],
-    "credit_hours": 3,
-    "code": "MP301"
+    "satisfies": []
   },
   "MP104": {
+    "name": "Mechanics 2",
+    "credit_hours": 3,
+    "code": "MP104",
     "prerequisites": [
       "MP101",
       "MP103"
     ],
-    "name": "Mechanics 2",
-    "satisfies": [],
-    "credit_hours": 3,
-    "code": "MP104"
+    "satisfies": []
   },
-  "HS102": {
+  "MP103": {
+    "name": "Mechanics 1",
+    "credit_hours": 3,
+    "code": "MP103",
+    "prerequisites": [],
+    "satisfies": [
+      "MP104"
+    ]
+  },
+  "MP108": {
+    "name": "Physics 2",
+    "credit_hours": 3,
+    "code": "MP108",
     "prerequisites": [
-      "MP000"
+      "MP101",
+      "MP107"
     ],
-    "name": "Human Rights",
-    "satisfies": [],
+    "satisfies": [
+      "EME207"
+    ]
+  },
+  "MP105": {
+    "name": "Graph 1",
+    "credit_hours": 3,
+    "code": "MP105",
+    "prerequisites": [],
+    "satisfies": [
+      "MP106",
+      "PE102"
+    ]
+  },
+  "HS103": {
+    "name": "History Of Engineering",
     "credit_hours": 1,
-    "code": "HS102"
+    "code": "HS103",
+    "prerequisites": [],
+    "satisfies": []
+  },
+  "GPE101": {
+    "name": "Engineering Chemistry",
+    "credit_hours": 3,
+    "code": "GPE101",
+    "prerequisites": [],
+    "satisfies": []
   },
   "PE102": {
+    "name": "Production",
+    "credit_hours": 3,
+    "code": "PE102",
     "prerequisites": [
       "MP105"
     ],
-    "name": "Production",
-    "satisfies": [],
-    "credit_hours": 3,
-    "code": "PE102"
+    "satisfies": []
   },
-  "GPE101": {
-    "prerequisites": [
-      "MP000"
-    ],
-    "name": "Engineering Chemistry",
-    "satisfies": [],
+  "EME207": {
+    "name": "Circuits 1",
     "credit_hours": 3,
-    "code": "GPE101"
+    "code": "EME207",
+    "prerequisites": [
+      "MP108"
+    ],
+    "satisfies": []
+  },
+  "MP106": {
+    "name": "Graph 2",
+    "credit_hours": 3,
+    "code": "MP106",
+    "prerequisites": [
+      "MP105"
+    ],
+    "satisfies": []
+  },
+  "MP102": {
+    "name": "Maths2",
+    "credit_hours": 3,
+    "code": "MP102",
+    "prerequisites": [
+      "MP101"
+    ],
+    "satisfies": [
+      "MP201",
+      "MP301",
+      "CC181"
+    ]
+  },
+  "MP107": {
+    "name": "Physics 1",
+    "credit_hours": 3,
+    "code": "MP107",
+    "prerequisites": [],
+    "satisfies": [
+      "MP108",
+      "MP204"
+    ]
+  },
+  "MP204": {
+    "name": "Modern Physics",
+    "credit_hours": 3,
+    "code": "MP204",
+    "prerequisites": [
+      "MP101",
+      "MP107"
+    ],
+    "satisfies": []
+  },
+  "CSE102": {
+    "name": "Computer Programming",
+    "credit_hours": 3,
+    "code": "CSE102",
+    "prerequisites": [],
+    "satisfies": [
+      "CC271"
+    ]
+  },
+  "CC271": {
+    "name": " Programming 1",
+    "credit_hours": 3,
+    "code": "CC271",
+    "prerequisites": [
+      "CSE102"
+    ],
+    "satisfies": []
   },
   "HS301": {
-    "prerequisites": [
-      "MP000"
-    ],
     "name": "Project Management",
-    "satisfies": [],
     "credit_hours": 2,
-    "code": "HS301"
-  },
-  "HS103": {
-    "prerequisites": [
-      "MP000"
-    ],
-    "name": "History Of Engineering",
-    "satisfies": [],
-    "credit_hours": 1,
-    "code": "HS103"
-  },
-  "MP201": {
-    "prerequisites": [
-      "MP102"
-    ],
-    "name": "Maths 3",
-    "satisfies": [],
-    "credit_hours": 3,
-    "code": "MP201"
-  },
-  "MP103": {
-    "prerequisites": [
-      "MP000"
-    ],
-    "name": "Mechanics 1",
-    "satisfies": [
-      "MP104"
-    ],
-    "credit_hours": 3,
-    "code": "MP103"
+    "code": "HS301",
+    "prerequisites": [],
+    "satisfies": []
   },
   "CC181": {
+    "name": "Discrete Structures",
+    "credit_hours": 3,
+    "code": "CC181",
     "prerequisites": [
       "MP102"
     ],
-    "name": "Discrete Structures",
-    "satisfies": [],
+    "satisfies": []
+  },
+  "HS102": {
+    "name": "Human Rights",
+    "credit_hours": 1,
+    "code": "HS102",
+    "prerequisites": [],
+    "satisfies": []
+  },
+  "HS101": {
+    "name": "English Language",
+    "credit_hours": 2,
+    "code": "HS101",
+    "prerequisites": [],
+    "satisfies": []
+  },
+  "MP301": {
+    "name": "Probability",
     "credit_hours": 3,
-    "code": "CC181"
+    "code": "MP301",
+    "prerequisites": [
+      "MP102"
+    ],
+    "satisfies": []
   },
   "MP101": {
-    "prerequisites": [
-      "MP000"
-    ],
     "name": "Maths 1",
+    "credit_hours": 3,
+    "code": "MP101",
+    "prerequisites": [],
     "satisfies": [
       "MP102",
       "MP104",
       "MP108",
       "MP204"
-    ],
-    "credit_hours": 3,
-    "code": "MP101"
-  },
-  "MP102": {
-    "prerequisites": [
-      "MP101"
-    ],
-    "name": "Maths2",
-    "satisfies": [
-      "MP201",
-      "MP301",
-      "CC181"
-    ],
-    "credit_hours": 3,
-    "code": "MP102"
-  },
-  "EME207": {
-    "prerequisites": [
-      "MP108"
-    ],
-    "name": "Circuits 1",
-    "satisfies": [],
-    "credit_hours": 3,
-    "code": "EME207"
-  },
-  "CSE102": {
-    "prerequisites": [
-      "MP000"
-    ],
-    "name": "Computer Programming",
-    "satisfies": [
-      "CC271"
-    ],
-    "credit_hours": 3,
-    "code": "CSE102"
-  },
-  "MP204": {
-    "prerequisites": [
-      "MP101",
-      "MP107"
-    ],
-    "name": "Modern Physics",
-    "satisfies": [],
-    "credit_hours": 3,
-    "code": "MP204"
-  },
-  "MP105": {
-    "prerequisites": [
-      "MP000"
-    ],
-    "name": "Graph 1",
-    "satisfies": [
-      "MP106",
-      "PE102"
-    ],
-    "credit_hours": 3,
-    "code": "MP105"
-  },
-  "MP000": {
-    "prerequisites": [],
-    "name": "Indomie Sha3reya",
-    "satisfies": [
-      "MP101",
-      "MP103",
-      "MP105",
-      "HS102",
-      "GPE101",
-      "MP107",
-      "HS101",
-      "CSE102",
-      "HS103",
-      "HS301"
-    ],
-    "credit_hours": 0,
-    "code": "MP000"
-  },
-  "HS101": {
-    "prerequisites": [
-      "MP000"
-    ],
-    "name": "English Language",
-    "satisfies": [],
-    "credit_hours": 2,
-    "code": "HS101"
-  },
-  "MP108": {
-    "prerequisites": [
-      "MP101",
-      "MP107"
-    ],
-    "name": "Physics 2",
-    "satisfies": [
-      "EME207"
-    ],
-    "credit_hours": 3,
-    "code": "MP108"
-  },
-  "CC271": {
-    "prerequisites": [
-      "CSE102"
-    ],
-    "name": " Programming 1",
-    "satisfies": [],
-    "credit_hours": 3,
-    "code": "CC271"
-  },
-  "MP106": {
-    "prerequisites": [
-      "MP105"
-    ],
-    "name": "Graph 2",
-    "satisfies": [],
-    "credit_hours": 3,
-    "code": "MP106"
+    ]
   }
 }

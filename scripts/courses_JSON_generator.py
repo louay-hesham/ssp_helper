@@ -7,20 +7,9 @@ import sys
 try:
   with open('Courses.JSON') as data_file:
     courses = json.load(data_file)
-    print('loaded courses from JSON')
+    print('Loaded courses from JSON.')
 except (OSError, IOError, ValueError) as e:
-  MP000 = {
-    'code': 'MP000',
-    'name': 'Indomie Sha3reya',
-    'prerequisites': [],
-    'satisfies': [],
-    'credit_hours': 0,
-  }
-  courses = {
-    'MP000': MP000
-  }
-  with open('Courses.JSON', 'w') as outfile:
-    json.dump(courses, outfile)
+  print("File not found, re enter everything again.")
 
 print(courses)
 
@@ -38,7 +27,7 @@ while(True):
   new_course = {
     'code': subject_info[0].upper(),
     'name': subject_info[1].title(),
-    'prerequisites': ['MP000'] if subject_info[2] == '' else subject_info[2].upper().split('&'),
+    'prerequisites': [] if subject_info[2] == '' else subject_info[2].upper().split('&'),
     'satisfies': [],
     'credit_hours': int(subject_info[3])
   }
