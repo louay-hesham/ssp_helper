@@ -8,10 +8,11 @@ export class Course {
   public satisfies: string[];
   public creditHours: number;
   public isPassed: boolean;
+  public level: string;
 
   public static loadCourses(data: any) {
     for (let key in data) {
-      this.courses[key] = new Course(data[key]);
+      Course.courses[key] = new Course(data[key]);
     }
   }
 
@@ -20,7 +21,8 @@ export class Course {
     this.name = data['name'];
     this.prerequisites = data['prerequisites'];
     this.satisfies = data['satisfies'];
-    this.creditHours = data['creditHours'];
+    this.creditHours = data['credit_hours'];
+    this.level = data['level'];
     this.isPassed = false;
   }
 
