@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { CoursesLoaderService } from '../courses-loader.service'
+
 
 @Component({
   selector: 'app-main',
@@ -7,7 +9,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MainComponent implements OnInit {
 
-  constructor() { }
+	private courses: any;
 
-  ngOnInit() { }
+  constructor(private coursesLoader: CoursesLoaderService) { }
+
+  ngOnInit() {
+  	this.coursesLoader.getCourses().subscribe(data => {
+      console.log(data);
+      this.courses = data;
+  	});
+  }
 }
