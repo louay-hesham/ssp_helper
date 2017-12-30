@@ -9,8 +9,11 @@
 	<li>Be careful as if you clicked a course by mistake you have to refresh and start all over</li>
 </ul>
 
-<div sticky>
-	of a7
+<div style="position: fixed; top: 65px; right: 1px;">
+	<span style="background-color: cyan">
+    <b>CHs complete: </b>
+    {{getCH()}}
+  </span>
 </div>
 
 <div *ngFor="let level of levels">

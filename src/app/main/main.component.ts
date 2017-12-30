@@ -20,6 +20,10 @@ export class MainComponent implements OnInit {
   	});
   }
 
+  getCH(): number {
+    return Course.CH;
+  }
+
   completeLevelButtonVisibility(level: string): boolean {
   	if (level == 'h' || level == 'e') {
   		return false;
