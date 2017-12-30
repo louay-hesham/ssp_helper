@@ -35,7 +35,7 @@ export class MainComponent implements OnInit {
   completeLevel(level: string) {
   	for (let key in Course.courses) {
   		let course = Course.courses[key];
-  		if (course.level == level && course.isAvailable()) {
+  		if (course.level == level && course.isAvailable() && !course.isPassed) {
   			course.pass();
   		}
   	}
