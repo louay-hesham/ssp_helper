@@ -20,6 +20,23 @@ export class MainComponent implements OnInit {
   	});
   }
 
+  completeLevelButtonVisibility(level: string): boolean {
+  	if (level == 'h' || level == 'e') {
+  		return false;
+  	} else {
+  		return true;
+  	}
+  }
+
+  completeLevel(level: string) {
+  	for (let key in Course.courses) {
+  		let course = Course.courses[key];
+  		if (course.level == level && course.isAvailable()) {
+  			course.pass();
+  		}
+  	}
+  }
+
   levelName(level: string): string {
   	if (level == 'h') {
   		return "Humanities courses";
@@ -65,6 +82,14 @@ export class MainComponent implements OnInit {
   		return "";
   	} else {
   		return "disabled";
+  	}
+  }
+
+  buttonStyle(avail: boolean): string {
+  	if (avail) {
+  		return "pointer";
+  	} else {
+  		return ""
   	}
   }
 }

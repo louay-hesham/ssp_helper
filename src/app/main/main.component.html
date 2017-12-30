@@ -9,20 +9,27 @@
 	<li>Be careful as if you clicked a course by mistake you have to refresh and start all over</li>
 </ul>
 
-<div class="row">
-	<div>
-		<div *ngFor="let level of levels">
-			<h4>{{levelName(level)}}</h4>
-			<span *ngFor="let course of coursesList()">
-				<button *ngIf="course.level == level"
-			          class="{{buttonClass(course)}}"
-			          (click)="course.pass()"
-			          disabled="{{buttonDisability(course)}}"
-			          style="margin: 5px">
-			    <b>{{course.name}}</b>
-			    <br>{{course.code}}
-			  </button>
-			</span>
-		</div>
+<div *ngFor="let level of levels">
+
+	<h4>{{levelName(level)}}</h4>
+	<a  (click)="completeLevel(level)"
+      *ngIf="completeLevelButtonVisibility(level)"
+      style="cursor: pointer; color: #5588FF">
+		(select the whole term)
+	</a>
+
+	<div class="row">
+		<span *ngFor="let course of coursesList()">
+			<button *ngIf="course.level == level"
+		          class="{{buttonClass(course)}}"
+		          (click)="course.pass()"
+		          disabled="{{buttonDisability(course)}}"
+		          style.cursor="{{buttonStyle(course.isAvailable())}}"
+              style.margin="{{'5px'}}">
+		    <b>{{course.name}}</b>
+		    <br>{{course.code}}
+		  </button>
+		</span>
 	</div>
+
 </div>
