@@ -27,6 +27,16 @@ export class Course {
     this.isPassed = false;
   }
 
+  private fail() {
+    if (this.isPassed) {
+      this.isPassed = false;
+      Course.CH -= this.creditHours;
+      for (let code in this.satisfies) {
+        Course.courses[this.satisfies[code]].fail();
+      }
+    }
+  }
+
   public isAvailable(): boolean {
     if (this.code == "CC591") {
       return Course.CH >= 129
@@ -40,8 +50,19 @@ export class Course {
     }
   }
 
+  public togglePass() {
+    if (this.isPassed) {
+      this.fail();
+      if (Course.CH < 129) {
+        Course.courses["CC591"].fail();
+      }
+    } else {
+      this.pass();  
+    }  
+  }
+
   public pass() {
     this.isPassed = true;
-    Course.CH += this.creditHours;
+    Course.CH += this.creditHours;  
   }
 }

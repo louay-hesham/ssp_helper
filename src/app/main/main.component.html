@@ -9,6 +9,10 @@
 	<li>Be careful as if you clicked a course by mistake you have to refresh and start all over</li>
 </ul>
 
+<div sticky>
+	of a7
+</div>
+
 <div *ngFor="let level of levels">
 
 	<h4>{{levelName(level)}}</h4>
@@ -22,7 +26,7 @@
 		<span *ngFor="let course of coursesList()">
 			<button *ngIf="course.level == level"
 		          class="{{buttonClass(course)}}"
-		          (click)="course.pass()"
+		          (click)="course.togglePass()"
 		          disabled="{{buttonDisability(course)}}"
 		          style.cursor="{{buttonStyle(course.isAvailable())}}"
               style.margin="{{'5px'}}">
