@@ -12,6 +12,7 @@ import { CoursesLoaderService } from './courses-loader.service'
 import { GoogleAnalyticsService } from './google-analytics.service';
 
 import { PageviewDirective } from './pageview.directive';
+import { NavbarComponent } from './navbar/navbar.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { PageviewDirective } from './pageview.directive';
     FooterComponent,
     DisclaimerComponent,
     MainComponent,
-    PageviewDirective
+    PageviewDirective,
+    NavbarComponent
   ],
   imports: [
     BrowserModule,
