@@ -1,1 +1,921 @@
-{"HS402A": {"credit_hours": 2, "satisfies": [], "prerequisites": [], "code": "HS402A", "level": "h", "name": "Marketing"}, "CC473": {"credit_hours": 3, "satisfies": [], "prerequisites": ["CC273", "CC372"], "code": "CC473", "level": "e", "name": "Programming Languages Translation"}, "HS102": {"credit_hours": 1, "satisfies": [], "prerequisites": [], "code": "HS102", "level": "1", "name": "Human Rights"}, "CC491": {"credit_hours": 3, "satisfies": [], "prerequisites": [], "code": "CC491", "level": "e", "name": "New Trends In Cce"}, "CC322": {"credit_hours": 3, "satisfies": ["CC423"], "prerequisites": ["CC321"], "code": "CC322", "level": "6", "name": "Computer Architecture"}, "CC461": {"credit_hours": 3, "satisfies": [], "prerequisites": ["CC421"], "code": "CC461", "level": "8", "name": "Embedded Systems"}, "MP101": {"credit_hours": 3, "satisfies": ["MP102", "MP104", "MP108", "MP204"], "prerequisites": [], "code": "MP101", "level": "1", "name": "Maths 1"}, "CC431": {"credit_hours": 3, "satisfies": ["CC444", "CC445"], "prerequisites": ["MP202", "CC202"], "code": "CC431", "level": "e", "name": "Electromagnetics"}, "HS202": {"credit_hours": 2, "satisfies": [], "prerequisites": [], "code": "HS202", "level": "h", "name": "Economics"}, "MP107": {"credit_hours": 3, "satisfies": ["MP108", "MP204"], "prerequisites": [], "code": "MP107", "level": "1", "name": "Physics 1"}, "CC472": {"credit_hours": 3, "satisfies": [], "prerequisites": ["CC371", "CC471"], "code": "CC472", "level": "e", "name": "Software Engineering"}, "CC490": {"credit_hours": 3, "satisfies": [], "prerequisites": ["CC489"], "code": "CC490", "level": "e", "name": "Computer Vision"}, "CSE102": {"credit_hours": 3, "satisfies": ["CC271"], "prerequisites": [], "code": "CSE102", "level": "2", "name": "Computer Programming"}, "CC484": {"credit_hours": 3, "satisfies": [], "prerequisites": ["MP301"], "code": "CC484", "level": "e", "name": "Pattern Recognition"}, "HS302B": {"credit_hours": 2, "satisfies": [], "prerequisites": [], "code": "HS302B", "level": "h", "name": "Strategic Management"}, "HS501C": {"credit_hours": 2, "satisfies": [], "prerequisites": [], "code": "HS501C", "level": "h", "name": "Communication Laws"}, "CC483": {"credit_hours": 3, "satisfies": [], "prerequisites": ["MP202"], "code": "CC483", "level": "e", "name": "Optimization Techniques"}, "CC401": {"credit_hours": 3, "satisfies": ["CC402"], "prerequisites": ["CC301"], "code": "CC401", "level": "e", "name": "Digital Integrated Circuit Design"}, "MP105": {"credit_hours": 3, "satisfies": ["MP106", "PE102"], "prerequisites": [], "code": "MP105", "level": "1", "name": "Graph 1"}, "CC181": {"credit_hours": 3, "satisfies": ["CC471", "CC474", "CC485"], "prerequisites": ["MP102"], "code": "CC181", "level": "3", "name": "Discrete Structures"}, "CC212": {"credit_hours": 3, "satisfies": ["CC312", "CC321"], "prerequisites": [], "code": "CC212", "level": "4", "name": "Digital Logic 1"}, "CC485": {"credit_hours": 3, "satisfies": [], "prerequisites": ["CC181", "CC273"], "code": "CC485", "level": "e", "name": "Computer Graphics"}, "CC376": {"credit_hours": 3, "satisfies": [], "prerequisites": ["CC273"], "code": "CC376", "level": "6", "name": "Data Structures 2"}, "HS301": {"credit_hours": 2, "satisfies": [], "prerequisites": [], "code": "HS301", "level": "h", "name": "Project Management"}, "CC312": {"credit_hours": 3, "satisfies": ["CC421", "CC462", "CC474"], "prerequisites": ["CC212"], "code": "CC312", "level": "5", "name": "Digital Logic 2"}, "MP103": {"credit_hours": 3, "satisfies": ["MP104"], "prerequisites": [], "code": "MP103", "level": "1", "name": "Mechanics 1"}, "HS502B": {"credit_hours": 2, "satisfies": [], "prerequisites": [], "code": "HS502B", "level": "h", "name": "Principles Of Industrial Health"}, "CC272": {"credit_hours": 4, "satisfies": ["CC552"], "prerequisites": ["CC271"], "code": "CC272", "level": "4", "name": "Programming 2"}, "MP301": {"credit_hours": 3, "satisfies": ["CC331", "CC332", "CC581", "CC482", "CC484"], "prerequisites": ["MP102"], "code": "MP301", "level": "3", "name": "Probability"}, "CC421": {"credit_hours": 3, "satisfies": ["CC461"], "prerequisites": ["CC312"], "code": "CC421", "level": "6", "name": "Microprocessors Systems"}, "CC373": {"credit_hours": 3, "satisfies": ["CC551", "CC581"], "prerequisites": ["CC271", "CC321"], "code": "CC373", "level": "7", "name": "Operating Systems"}, "HS101": {"credit_hours": 2, "satisfies": [], "prerequisites": [], "code": "HS101", "level": "1", "name": "English Language"}, "PE102": {"credit_hours": 3, "satisfies": [], "prerequisites": ["MP105"], "code": "PE102", "level": "2", "name": "Production"}, "CC489": {"credit_hours": 3, "satisfies": ["CC490"], "prerequisites": ["MP202"], "code": "CC489", "level": "e", "name": "Numerical Analysis"}, "CC432": {"credit_hours": 3, "satisfies": [], "prerequisites": ["CC332"], "code": "CC432", "level": "e", "name": "Dsp Implementation"}, "CC441": {"credit_hours": 3, "satisfies": [], "prerequisites": ["CC331"], "code": "CC441", "level": "7", "name": "Analog Communication"}, "HS501D": {"credit_hours": 2, "satisfies": [], "prerequisites": [], "code": "HS501D", "level": "h", "name": "Construction Contracts And Law"}, "HS501A": {"credit_hours": 2, "satisfies": [], "prerequisites": [], "code": "HS501A", "level": "h", "name": "Feasibility"}, "HS103": {"credit_hours": 1, "satisfies": [], "prerequisites": [], "code": "HS103", "level": "2", "name": "History Of Engineering"}, "CC402": {"credit_hours": 3, "satisfies": [], "prerequisites": ["CC401"], "code": "CC402", "level": "e", "name": "Vlsi"}, "CC442": {"credit_hours": 3, "satisfies": ["CC541", "CC443"], "prerequisites": ["CC331"], "code": "CC442", "level": "8", "name": "Digital Communications"}, "CC273": {"credit_hours": 3, "satisfies": ["CC376", "CC371", "CC473", "CC485"], "prerequisites": ["CC271"], "code": "CC273", "level": "4", "name": "Data Structures 1"}, "CC444": {"credit_hours": 3, "satisfies": [], "prerequisites": ["CC431"], "code": "CC444", "level": "e", "name": "Antennas & Wave Propagation"}, "MP201": {"credit_hours": 3, "satisfies": ["MP202"], "prerequisites": ["MP102"], "code": "MP201", "level": "3", "name": "Maths 3"}, "CC445": {"credit_hours": 3, "satisfies": [], "prerequisites": ["CC431"], "code": "CC445", "level": "e", "name": "Microwave"}, "HS401": {"credit_hours": 2, "satisfies": [], "prerequisites": [], "code": "HS401", "level": "h", "name": "Ethics"}, "CC361": {"credit_hours": 3, "satisfies": ["CC462"], "prerequisites": ["MP202", "CC202"], "code": "CC361", "level": "5", "name": "Control Systems"}, "HS302D": {"credit_hours": 2, "satisfies": [], "prerequisites": [], "code": "HS302D", "level": "h", "name": "Accounting"}, "CC451": {"credit_hours": 4, "satisfies": ["CC551"], "prerequisites": ["CC321", "CC331"], "code": "CC451", "level": "8", "name": "Computer Networks"}, "CC581": {"credit_hours": 3, "satisfies": [], "prerequisites": ["MP301", "CC321", "CC373"], "code": "CC581", "level": "10", "name": "Performance Evaluation"}, "HS302A": {"credit_hours": 2, "satisfies": [], "prerequisites": [], "code": "HS302A", "level": "h", "name": "Human Resource Management"}, "MP106": {"credit_hours": 3, "satisfies": [], "prerequisites": ["MP105"], "code": "MP106", "level": "2", "name": "Graph 2"}, "HS502C": {"credit_hours": 2, "satisfies": [], "prerequisites": [], "code": "HS502C", "level": "h", "name": "Social Risks Of Computer Systems"}, "EME207": {"credit_hours": 3, "satisfies": ["CC202"], "prerequisites": ["MP108"], "code": "EME207", "level": "3", "name": "Circuits 1"}, "CC541": {"credit_hours": 3, "satisfies": [], "prerequisites": ["CC442"], "code": "CC541", "level": "9", "name": "Communication Systems"}, "CC331": {"credit_hours": 3, "satisfies": ["CC441", "CC442", "CC451"], "prerequisites": ["MP202", "MP301"], "code": "CC331", "level": "5", "name": "Signals & Systems"}, "CC301": {"credit_hours": 3, "satisfies": ["CC401"], "prerequisites": ["CC202"], "code": "CC301", "level": "5", "name": "Electronic Circuits Analysis"}, "CC591": {"credit_hours": 3, "satisfies": ["CC592"], "prerequisites": [], "code": "CC591", "level": "9", "name": "Senior Project 1"}, "HS502A": {"credit_hours": 2, "satisfies": [], "prerequisites": [], "code": "HS502A", "level": "h", "name": "Communication Skills"}, "CC423": {"credit_hours": 3, "satisfies": [], "prerequisites": ["CC322"], "code": "CC423", "level": "e", "name": "Advanced Computer Architecture"}, "MP102": {"credit_hours": 3, "satisfies": ["MP201", "MP301", "CC181"], "prerequisites": ["MP101"], "code": "MP102", "level": "2", "name": "Maths2"}, "CC372": {"credit_hours": 3, "satisfies": ["CC473"], "prerequisites": ["CC271"], "code": "CC372", "level": "6", "name": "Systems Programming"}, "CC592": {"credit_hours": 4, "satisfies": [], "prerequisites": ["CC591"], "code": "CC592", "level": "10", "name": "Senior Project 2"}, "CC321": {"credit_hours": 3, "satisfies": ["CC322", "CC451", "CC581"], "prerequisites": ["CC212", "CC271"], "code": "CC321", "level": "5", "name": "Organization"}, "CC482": {"credit_hours": 3, "satisfies": [], "prerequisites": ["CC271", "MP301"], "code": "CC482", "level": "e", "name": "Artificial Intelligence"}, "GPE101": {"credit_hours": 3, "satisfies": [], "prerequisites": [], "code": "GPE101", "level": "1", "name": "Engineering Chemistry"}, "MP204": {"credit_hours": 3, "satisfies": [], "prerequisites": ["MP101", "MP107"], "code": "MP204", "level": "3", "name": "Modern Physics"}, "HS402C": {"credit_hours": 2, "satisfies": [], "prerequisites": [], "code": "HS402C", "level": "h", "name": "Human Computer Interaction"}, "MP202": {"credit_hours": 3, "satisfies": ["CC361", "CC331", "CC332", "CC431", "CC489", "CC483"], "prerequisites": ["MP201"], "code": "MP202", "level": "4", "name": "Maths 4"}, "CC332": {"credit_hours": 3, "satisfies": ["CC432"], "prerequisites": ["MP202", "MP301"], "code": "CC332", "level": "6", "name": "Digital Signal Processing"}, "HS201": {"credit_hours": 2, "satisfies": [], "prerequisites": [], "code": "HS201", "level": "h", "name": "Technical Writing"}, "CC552": {"credit_hours": 3, "satisfies": [], "prerequisites": ["CC272"], "code": "CC552", "level": "9", "name": "Net-Centric Computing"}, "HS402B": {"credit_hours": 2, "satisfies": [], "prerequisites": [], "code": "HS402B", "level": "h", "name": "Finance"}, "CC202": {"credit_hours": 3, "satisfies": ["CC361", "CC301", "CC431"], "prerequisites": ["EME207"], "code": "CC202", "level": "4", "name": "Circuits 2"}, "HS501B": {"credit_hours": 2, "satisfies": [], "prerequisites": [], "code": "HS501B", "level": "h", "name": "Analytical Skills"}, "CC471": {"credit_hours": 4, "satisfies": ["CC472"], "prerequisites": ["CC181", "CC271"], "code": "CC471", "level": "8", "name": "Database"}, "MP104": {"credit_hours": 3, "satisfies": [], "prerequisites": ["MP101", "MP103"], "code": "MP104", "level": "2", "name": "Mechanics 2"}, "CC474": {"credit_hours": 3, "satisfies": [], "prerequisites": ["CC181", "CC312"], "code": "CC474", "level": "e", "name": "Switching Theory"}, "CC443": {"credit_hours": 3, "satisfies": [], "prerequisites": ["CC442"], "code": "CC443", "level": "e", "name": "Mobile Communications"}, "MP108": {"credit_hours": 3, "satisfies": ["EME207"], "prerequisites": ["MP101", "MP107"], "code": "MP108", "level": "2", "name": "Physics 2"}, "CC271": {"credit_hours": 3, "satisfies": ["CC272", "CC273", "CC321", "CC372", "CC373", "CC471", "CC482"], "prerequisites": ["CSE102"], "code": "CC271", "level": "3", "name": " Programming 1"}, "CC371": {"credit_hours": 3, "satisfies": ["CC373", "CC472"], "prerequisites": ["CC273"], "code": "CC371", "level": "7", "name": "Algorithms"}, "CC551": {"credit_hours": 3, "satisfies": [], "prerequisites": ["CC373", "CC451"], "code": "CC551", "level": "10", "name": "Computer & Net Security"}, "HS302C": {"credit_hours": 2, "satisfies": [], "prerequisites": [], "code": "HS302C", "level": "h", "name": "Computer And Society"}, "CC462": {"credit_hours": 3, "satisfies": [], "prerequisites": ["CC312", "CC361"], "code": "CC462", "level": "e", "name": "Modern Control Systems"}}
+{
+  "HS402A": {
+    "credit_hours": 2,
+    "satisfies": [],
+    "prerequisites": [],
+    "code": "HS402A",
+    "level": "h",
+    "name": "Marketing"
+  },
+  "CC473": {
+    "credit_hours": 3,
+    "satisfies": [],
+    "prerequisites": [
+      "CC273",
+      "CC372"
+    ],
+    "code": "CC473",
+    "level": "e",
+    "name": "Programming Languages Translation"
+  },
+  "HS102": {
+    "credit_hours": 1,
+    "satisfies": [],
+    "prerequisites": [],
+    "code": "HS102",
+    "level": "1",
+    "name": "Human Rights"
+  },
+  "CC491": {
+    "credit_hours": 3,
+    "satisfies": [],
+    "prerequisites": [],
+    "code": "CC491",
+    "level": "e",
+    "name": "New Trends In Cce"
+  },
+  "CC322": {
+    "credit_hours": 3,
+    "satisfies": [
+      "CC423"
+    ],
+    "prerequisites": [
+      "CC321"
+    ],
+    "code": "CC322",
+    "level": "6",
+    "name": "Computer Architecture"
+  },
+  "CC461": {
+    "credit_hours": 3,
+    "satisfies": [],
+    "prerequisites": [
+      "CC421"
+    ],
+    "code": "CC461",
+    "level": "8",
+    "name": "Embedded Systems"
+  },
+  "MP101": {
+    "credit_hours": 3,
+    "satisfies": [
+      "MP102",
+      "MP104",
+      "MP108",
+      "MP204"
+    ],
+    "prerequisites": [],
+    "code": "MP101",
+    "level": "1",
+    "name": "Maths 1"
+  },
+  "CC431": {
+    "credit_hours": 3,
+    "satisfies": [
+      "CC444",
+      "CC445"
+    ],
+    "prerequisites": [
+      "MP202",
+      "CC202"
+    ],
+    "code": "CC431",
+    "level": "e",
+    "name": "Electromagnetics"
+  },
+  "HS202": {
+    "credit_hours": 2,
+    "satisfies": [],
+    "prerequisites": [],
+    "code": "HS202",
+    "level": "h",
+    "name": "Economics"
+  },
+  "MP107": {
+    "credit_hours": 3,
+    "satisfies": [
+      "MP108",
+      "MP204"
+    ],
+    "prerequisites": [],
+    "code": "MP107",
+    "level": "1",
+    "name": "Physics 1"
+  },
+  "CC472": {
+    "credit_hours": 3,
+    "satisfies": [],
+    "prerequisites": [
+      "CC371",
+      "CC471"
+    ],
+    "code": "CC472",
+    "level": "e",
+    "name": "Software Engineering"
+  },
+  "CC490": {
+    "credit_hours": 3,
+    "satisfies": [],
+    "prerequisites": [
+      "CC489"
+    ],
+    "code": "CC490",
+    "level": "e",
+    "name": "Computer Vision"
+  },
+  "CSE102": {
+    "credit_hours": 3,
+    "satisfies": [
+      "CC271"
+    ],
+    "prerequisites": [],
+    "code": "CSE102",
+    "level": "2",
+    "name": "Computer Programming"
+  },
+  "CC484": {
+    "credit_hours": 3,
+    "satisfies": [],
+    "prerequisites": [
+      "MP301"
+    ],
+    "code": "CC484",
+    "level": "e",
+    "name": "Pattern Recognition"
+  },
+  "HS302B": {
+    "credit_hours": 2,
+    "satisfies": [],
+    "prerequisites": [],
+    "code": "HS302B",
+    "level": "h",
+    "name": "Strategic Management"
+  },
+  "HS501C": {
+    "credit_hours": 2,
+    "satisfies": [],
+    "prerequisites": [],
+    "code": "HS501C",
+    "level": "h",
+    "name": "Communication Laws"
+  },
+  "CC483": {
+    "credit_hours": 3,
+    "satisfies": [],
+    "prerequisites": [
+      "MP202"
+    ],
+    "code": "CC483",
+    "level": "e",
+    "name": "Optimization Techniques"
+  },
+  "CC401": {
+    "credit_hours": 3,
+    "satisfies": [
+      "CC402"
+    ],
+    "prerequisites": [
+      "CC301"
+    ],
+    "code": "CC401",
+    "level": "e",
+    "name": "Digital Integrated Circuit Design"
+  },
+  "MP105": {
+    "credit_hours": 3,
+    "satisfies": [
+      "MP106",
+      "PE102"
+    ],
+    "prerequisites": [],
+    "code": "MP105",
+    "level": "1",
+    "name": "Graph 1"
+  },
+  "CC181": {
+    "credit_hours": 3,
+    "satisfies": [
+      "CC471",
+      "CC474",
+      "CC485"
+    ],
+    "prerequisites": [
+      "MP102"
+    ],
+    "code": "CC181",
+    "level": "3",
+    "name": "Discrete Structures"
+  },
+  "CC212": {
+    "credit_hours": 3,
+    "satisfies": [
+      "CC312",
+      "CC321"
+    ],
+    "prerequisites": [],
+    "code": "CC212",
+    "level": "4",
+    "name": "Digital Logic 1"
+  },
+  "CC485": {
+    "credit_hours": 3,
+    "satisfies": [],
+    "prerequisites": [
+      "CC181",
+      "CC273"
+    ],
+    "code": "CC485",
+    "level": "e",
+    "name": "Computer Graphics"
+  },
+  "CC376": {
+    "credit_hours": 3,
+    "satisfies": [],
+    "prerequisites": [
+      "CC273"
+    ],
+    "code": "CC376",
+    "level": "6",
+    "name": "Data Structures 2"
+  },
+  "HS301": {
+    "credit_hours": 2,
+    "satisfies": [],
+    "prerequisites": [],
+    "code": "HS301",
+    "level": "h",
+    "name": "Project Management"
+  },
+  "CC312": {
+    "credit_hours": 3,
+    "satisfies": [
+      "CC421",
+      "CC462",
+      "CC474"
+    ],
+    "prerequisites": [
+      "CC212"
+    ],
+    "code": "CC312",
+    "level": "5",
+    "name": "Digital Logic 2"
+  },
+  "MP103": {
+    "credit_hours": 3,
+    "satisfies": [
+      "MP104"
+    ],
+    "prerequisites": [],
+    "code": "MP103",
+    "level": "1",
+    "name": "Mechanics 1"
+  },
+  "HS502B": {
+    "credit_hours": 2,
+    "satisfies": [],
+    "prerequisites": [],
+    "code": "HS502B",
+    "level": "h",
+    "name": "Principles Of Industrial Health"
+  },
+  "CC272": {
+    "credit_hours": 4,
+    "satisfies": [
+      "CC552"
+    ],
+    "prerequisites": [
+      "CC271"
+    ],
+    "code": "CC272",
+    "level": "4",
+    "name": "Programming 2"
+  },
+  "MP301": {
+    "credit_hours": 3,
+    "satisfies": [
+      "CC331",
+      "CC332",
+      "CC581",
+      "CC482",
+      "CC484"
+    ],
+    "prerequisites": [
+      "MP102"
+    ],
+    "code": "MP301",
+    "level": "3",
+    "name": "Probability"
+  },
+  "CC421": {
+    "credit_hours": 3,
+    "satisfies": [
+      "CC461"
+    ],
+    "prerequisites": [
+      "CC312"
+    ],
+    "code": "CC421",
+    "level": "6",
+    "name": "Microprocessors Systems"
+  },
+  "CC373": {
+    "credit_hours": 3,
+    "satisfies": [
+      "CC551",
+      "CC581"
+    ],
+    "prerequisites": [
+      "CC271",
+      "CC321"
+    ],
+    "code": "CC373",
+    "level": "7",
+    "name": "Operating Systems"
+  },
+  "HS101": {
+    "credit_hours": 2,
+    "satisfies": [],
+    "prerequisites": [],
+    "code": "HS101",
+    "level": "1",
+    "name": "English Language"
+  },
+  "PE102": {
+    "credit_hours": 3,
+    "satisfies": [],
+    "prerequisites": [
+      "MP105"
+    ],
+    "code": "PE102",
+    "level": "2",
+    "name": "Production"
+  },
+  "CC489": {
+    "credit_hours": 3,
+    "satisfies": [
+      "CC490"
+    ],
+    "prerequisites": [
+      "MP202"
+    ],
+    "code": "CC489",
+    "level": "e",
+    "name": "Numerical Analysis"
+  },
+  "CC432": {
+    "credit_hours": 3,
+    "satisfies": [],
+    "prerequisites": [
+      "CC332"
+    ],
+    "code": "CC432",
+    "level": "e",
+    "name": "Dsp Implementation"
+  },
+  "CC441": {
+    "credit_hours": 3,
+    "satisfies": [],
+    "prerequisites": [
+      "CC331"
+    ],
+    "code": "CC441",
+    "level": "7",
+    "name": "Analog Communication"
+  },
+  "HS501D": {
+    "credit_hours": 2,
+    "satisfies": [],
+    "prerequisites": [],
+    "code": "HS501D",
+    "level": "h",
+    "name": "Construction Contracts And Law"
+  },
+  "HS501A": {
+    "credit_hours": 2,
+    "satisfies": [],
+    "prerequisites": [],
+    "code": "HS501A",
+    "level": "h",
+    "name": "Feasibility"
+  },
+  "HS103": {
+    "credit_hours": 1,
+    "satisfies": [],
+    "prerequisites": [],
+    "code": "HS103",
+    "level": "2",
+    "name": "History Of Engineering"
+  },
+  "CC402": {
+    "credit_hours": 3,
+    "satisfies": [],
+    "prerequisites": [
+      "CC401"
+    ],
+    "code": "CC402",
+    "level": "e",
+    "name": "Vlsi"
+  },
+  "CC442": {
+    "credit_hours": 3,
+    "satisfies": [
+      "CC541",
+      "CC443"
+    ],
+    "prerequisites": [
+      "CC331"
+    ],
+    "code": "CC442",
+    "level": "8",
+    "name": "Digital Communications"
+  },
+  "CC273": {
+    "credit_hours": 3,
+    "satisfies": [
+      "CC376",
+      "CC371",
+      "CC473",
+      "CC485"
+    ],
+    "prerequisites": [
+      "CC271"
+    ],
+    "code": "CC273",
+    "level": "4",
+    "name": "Data Structures 1"
+  },
+  "CC444": {
+    "credit_hours": 3,
+    "satisfies": [],
+    "prerequisites": [
+      "CC431"
+    ],
+    "code": "CC444",
+    "level": "e",
+    "name": "Antennas & Wave Propagation"
+  },
+  "MP201": {
+    "credit_hours": 3,
+    "satisfies": [
+      "MP202"
+    ],
+    "prerequisites": [
+      "MP102"
+    ],
+    "code": "MP201",
+    "level": "3",
+    "name": "Maths 3"
+  },
+  "CC445": {
+    "credit_hours": 3,
+    "satisfies": [],
+    "prerequisites": [
+      "CC431"
+    ],
+    "code": "CC445",
+    "level": "e",
+    "name": "Microwave"
+  },
+  "HS401": {
+    "credit_hours": 2,
+    "satisfies": [],
+    "prerequisites": [],
+    "code": "HS401",
+    "level": "h",
+    "name": "Ethics"
+  },
+  "CC361": {
+    "credit_hours": 3,
+    "satisfies": [
+      "CC462"
+    ],
+    "prerequisites": [
+      "MP202",
+      "CC202"
+    ],
+    "code": "CC361",
+    "level": "5",
+    "name": "Control Systems"
+  },
+  "HS302D": {
+    "credit_hours": 2,
+    "satisfies": [],
+    "prerequisites": [],
+    "code": "HS302D",
+    "level": "h",
+    "name": "Accounting"
+  },
+  "CC451": {
+    "credit_hours": 4,
+    "satisfies": [
+      "CC551"
+    ],
+    "prerequisites": [
+      "CC321",
+      "CC331"
+    ],
+    "code": "CC451",
+    "level": "8",
+    "name": "Computer Networks"
+  },
+  "CC581": {
+    "credit_hours": 3,
+    "satisfies": [],
+    "prerequisites": [
+      "MP301",
+      "CC321",
+      "CC373"
+    ],
+    "code": "CC581",
+    "level": "10",
+    "name": "Performance Evaluation"
+  },
+  "HS302A": {
+    "credit_hours": 2,
+    "satisfies": [],
+    "prerequisites": [],
+    "code": "HS302A",
+    "level": "h",
+    "name": "Human Resource Management"
+  },
+  "MP106": {
+    "credit_hours": 3,
+    "satisfies": [],
+    "prerequisites": [
+      "MP105"
+    ],
+    "code": "MP106",
+    "level": "2",
+    "name": "Graph 2"
+  },
+  "HS502C": {
+    "credit_hours": 2,
+    "satisfies": [],
+    "prerequisites": [],
+    "code": "HS502C",
+    "level": "h",
+    "name": "Social Risks Of Computer Systems"
+  },
+  "EME207": {
+    "credit_hours": 3,
+    "satisfies": [
+      "CC202"
+    ],
+    "prerequisites": [
+      "MP108"
+    ],
+    "code": "EME207",
+    "level": "3",
+    "name": "Circuits 1"
+  },
+  "CC541": {
+    "credit_hours": 3,
+    "satisfies": [],
+    "prerequisites": [
+      "CC442"
+    ],
+    "code": "CC541",
+    "level": "9",
+    "name": "Communication Systems"
+  },
+  "CC331": {
+    "credit_hours": 3,
+    "satisfies": [
+      "CC441",
+      "CC442",
+      "CC451"
+    ],
+    "prerequisites": [
+      "MP202",
+      "MP301"
+    ],
+    "code": "CC331",
+    "level": "5",
+    "name": "Signals & Systems"
+  },
+  "CC301": {
+    "credit_hours": 3,
+    "satisfies": [
+      "CC401"
+    ],
+    "prerequisites": [
+      "CC202"
+    ],
+    "code": "CC301",
+    "level": "5",
+    "name": "Electronic Circuits Analysis"
+  },
+  "CC591": {
+    "credit_hours": 3,
+    "satisfies": [
+      "CC592"
+    ],
+    "prerequisites": [],
+    "code": "CC591",
+    "level": "9",
+    "name": "Senior Project 1"
+  },
+  "HS502A": {
+    "credit_hours": 2,
+    "satisfies": [],
+    "prerequisites": [],
+    "code": "HS502A",
+    "level": "h",
+    "name": "Communication Skills"
+  },
+  "CC423": {
+    "credit_hours": 3,
+    "satisfies": [],
+    "prerequisites": [
+      "CC322"
+    ],
+    "code": "CC423",
+    "level": "e",
+    "name": "Advanced Computer Architecture"
+  },
+  "MP102": {
+    "credit_hours": 3,
+    "satisfies": [
+      "MP201",
+      "MP301",
+      "CC181"
+    ],
+    "prerequisites": [
+      "MP101"
+    ],
+    "code": "MP102",
+    "level": "2",
+    "name": "Maths2"
+  },
+  "CC372": {
+    "credit_hours": 3,
+    "satisfies": [
+      "CC473"
+    ],
+    "prerequisites": [
+      "CC271"
+    ],
+    "code": "CC372",
+    "level": "6",
+    "name": "Systems Programming"
+  },
+  "CC592": {
+    "credit_hours": 4,
+    "satisfies": [],
+    "prerequisites": [
+      "CC591"
+    ],
+    "code": "CC592",
+    "level": "10",
+    "name": "Senior Project 2"
+  },
+  "CC321": {
+    "credit_hours": 3,
+    "satisfies": [
+      "CC322",
+      "CC451",
+      "CC581"
+    ],
+    "prerequisites": [
+      "CC212",
+      "CC271"
+    ],
+    "code": "CC321",
+    "level": "5",
+    "name": "Organization"
+  },
+  "CC482": {
+    "credit_hours": 3,
+    "satisfies": [],
+    "prerequisites": [
+      "CC271",
+      "MP301"
+    ],
+    "code": "CC482",
+    "level": "e",
+    "name": "Artificial Intelligence"
+  },
+  "GPE101": {
+    "credit_hours": 3,
+    "satisfies": [],
+    "prerequisites": [],
+    "code": "GPE101",
+    "level": "1",
+    "name": "Engineering Chemistry"
+  },
+  "MP204": {
+    "credit_hours": 3,
+    "satisfies": [],
+    "prerequisites": [
+      "MP101",
+      "MP107"
+    ],
+    "code": "MP204",
+    "level": "3",
+    "name": "Modern Physics"
+  },
+  "HS402C": {
+    "credit_hours": 2,
+    "satisfies": [],
+    "prerequisites": [],
+    "code": "HS402C",
+    "level": "h",
+    "name": "Human Computer Interaction"
+  },
+  "MP202": {
+    "credit_hours": 3,
+    "satisfies": [
+      "CC361",
+      "CC331",
+      "CC332",
+      "CC431",
+      "CC489",
+      "CC483"
+    ],
+    "prerequisites": [
+      "MP201"
+    ],
+    "code": "MP202",
+    "level": "4",
+    "name": "Maths 4"
+  },
+  "CC332": {
+    "credit_hours": 3,
+    "satisfies": [
+      "CC432"
+    ],
+    "prerequisites": [
+      "MP202",
+      "MP301"
+    ],
+    "code": "CC332",
+    "level": "6",
+    "name": "Digital Signal Processing"
+  },
+  "HS201": {
+    "credit_hours": 2,
+    "satisfies": [],
+    "prerequisites": [],
+    "code": "HS201",
+    "level": "h",
+    "name": "Technical Writing"
+  },
+  "CC552": {
+    "credit_hours": 3,
+    "satisfies": [],
+    "prerequisites": [
+      "CC272"
+    ],
+    "code": "CC552",
+    "level": "9",
+    "name": "Net-Centric Computing"
+  },
+  "HS402B": {
+    "credit_hours": 2,
+    "satisfies": [],
+    "prerequisites": [],
+    "code": "HS402B",
+    "level": "h",
+    "name": "Finance"
+  },
+  "CC202": {
+    "credit_hours": 3,
+    "satisfies": [
+      "CC361",
+      "CC301",
+      "CC431"
+    ],
+    "prerequisites": [
+      "EME207"
+    ],
+    "code": "CC202",
+    "level": "4",
+    "name": "Circuits 2"
+  },
+  "HS501B": {
+    "credit_hours": 2,
+    "satisfies": [],
+    "prerequisites": [],
+    "code": "HS501B",
+    "level": "h",
+    "name": "Analytical Skills"
+  },
+  "CC471": {
+    "credit_hours": 4,
+    "satisfies": [
+      "CC472"
+    ],
+    "prerequisites": [
+      "CC181",
+      "CC271"
+    ],
+    "code": "CC471",
+    "level": "8",
+    "name": "Database"
+  },
+  "MP104": {
+    "credit_hours": 3,
+    "satisfies": [],
+    "prerequisites": [
+      "MP101",
+      "MP103"
+    ],
+    "code": "MP104",
+    "level": "2",
+    "name": "Mechanics 2"
+  },
+  "CC474": {
+    "credit_hours": 3,
+    "satisfies": [],
+    "prerequisites": [
+      "CC181",
+      "CC312"
+    ],
+    "code": "CC474",
+    "level": "e",
+    "name": "Switching Theory"
+  },
+  "CC443": {
+    "credit_hours": 3,
+    "satisfies": [],
+    "prerequisites": [
+      "CC442"
+    ],
+    "code": "CC443",
+    "level": "e",
+    "name": "Mobile Communications"
+  },
+  "MP108": {
+    "credit_hours": 3,
+    "satisfies": [
+      "EME207"
+    ],
+    "prerequisites": [
+      "MP101",
+      "MP107"
+    ],
+    "code": "MP108",
+    "level": "2",
+    "name": "Physics 2"
+  },
+  "CC271": {
+    "credit_hours": 3,
+    "satisfies": [
+      "CC272",
+      "CC273",
+      "CC321",
+      "CC372",
+      "CC373",
+      "CC471",
+      "CC482"
+    ],
+    "prerequisites": [
+      "CSE102"
+    ],
+    "code": "CC271",
+    "level": "3",
+    "name": " Programming 1"
+  },
+  "CC371": {
+    "credit_hours": 3,
+    "satisfies": [
+      "CC472"
+    ],
+    "prerequisites": [
+      "CC273"
+    ],
+    "code": "CC371",
+    "level": "7",
+    "name": "Algorithms"
+  },
+  "CC551": {
+    "credit_hours": 3,
+    "satisfies": [],
+    "prerequisites": [
+      "CC373",
+      "CC451"
+    ],
+    "code": "CC551",
+    "level": "10",
+    "name": "Computer & Net Security"
+  },
+  "HS302C": {
+    "credit_hours": 2,
+    "satisfies": [],
+    "prerequisites": [],
+    "code": "HS302C",
+    "level": "h",
+    "name": "Computer And Society"
+  },
+  "CC462": {
+    "credit_hours": 3,
+    "satisfies": [],
+    "prerequisites": [
+      "CC312",
+      "CC361"
+    ],
+    "code": "CC462",
+    "level": "e",
+    "name": "Modern Control Systems"
+  }
+}
