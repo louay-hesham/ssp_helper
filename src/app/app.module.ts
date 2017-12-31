@@ -3,6 +3,8 @@ import { NgModule } from '@angular/core';
 import { Http, Response, HttpModule } from '@angular/http';
 import { HttpClientModule, HttpClient } from '@angular/common/http';
 
+import { SimpleTimer } from 'ng2-simple-timer';
+
 import { AppComponent } from './app.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { FooterComponent } from './footer/footer.component';
@@ -32,7 +34,8 @@ import { EventClickDirective } from './event-click.directive';
   ],
   providers: [
     CoursesLoaderService,
-    GoogleAnalyticsService
+    GoogleAnalyticsService,
+    SimpleTimer
   ],
   bootstrap: [AppComponent]
 })
