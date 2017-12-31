@@ -10,7 +10,7 @@ export class GoogleAnalyticsService {
   		window['dataLayer'] = window['dataLayer'] || [];
 	  	GoogleAnalyticsService.gtag = function() { window['dataLayer'].push(arguments); }
 		  GoogleAnalyticsService.gtag('js', new Date());
-		  GoogleAnalyticsService.gtag('config', 'UA-111559411-1', { 'send_page_view': false })
+		  GoogleAnalyticsService.gtag('config', 'UA-111559411-2', { 'send_page_view': false })
   	}
   }
 
