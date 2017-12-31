@@ -11,12 +11,15 @@ import { MainComponent } from './main/main.component';
 import { CoursesLoaderService } from './courses-loader.service'
 import { GoogleAnalyticsService } from './google-analytics.service';
 
+import { PageviewDirective } from './pageview.directive';
+
 @NgModule({
   declarations: [
     AppComponent,
     FooterComponent,
     DisclaimerComponent,
-    MainComponent
+    MainComponent,
+    PageviewDirective
   ],
   imports: [
     BrowserModule,
