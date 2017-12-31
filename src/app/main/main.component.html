@@ -20,8 +20,9 @@
 <div *ngFor="let level of levels">
 
 	<h4>{{levelName(level)}}</h4>
-	<a  (click)="completeLevel(level)"
-      *ngIf="completeLevelButtonVisibility(level)"
+	<a  *ngIf="completeLevelButtonVisibility(level)"
+      click-event [term-click]="'Term ' + level"
+      (click)="completeLevel(level)"
       style="cursor: pointer; color: #5588FF">
 		(select the whole term)
 	</a>
@@ -29,8 +30,9 @@
 	<div class="row">
 		<span *ngFor="let course of coursesList()">
 			<button *ngIf="course.level == level"
-		          class="{{buttonClass(course)}}"
+              click-event [course-click]="course"
 		          (click)="course.togglePass()"
+              class="{{buttonClass(course)}}"
 		          disabled="{{buttonDisability(course)}}"
 		          style.cursor="{{buttonStyle(course.isAvailable())}}"
               style.margin="{{'5px'}}">

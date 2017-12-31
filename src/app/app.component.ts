@@ -25,7 +25,7 @@ export class AppComponent implements OnInit {
   showApp() {
   	if (this.timer < 45) {
   		window.alert("Are you sure you have read the entire disclaimer? It usually takes 45 seconds but you made it in A VERY IMPRESSIVE " + this.timer + " SECONDS");
-  	} else {
+    } else {
   		this.appVisible = true;
   		this.st.delTimer(this.timerName);
   	}
