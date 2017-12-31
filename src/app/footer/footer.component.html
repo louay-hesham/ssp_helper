@@ -6,10 +6,14 @@
         This website is my resume. Go to the home page for the full resume. A stripped down PDF version is also available
       </p>
       <div class="row">
-        <a class="btn btn-primary col-md-5" style="margin: 5px" href="http://louay-morsi.me" role="button">
+        <a  class="btn btn-primary col-md-5" style="margin: 5px" 
+            click-event [footer-click]="'Home'" 
+            href="http://louay-morsi.me" role="button">
           <i class="fa fa-home" aria-hidden="true"></i> Home
         </a>
-        <a class="btn btn-primary col-md-5" style="margin: 5px" href="http://louay-morsi.me/Resume.pdf" role="button">
+        <a  class="btn btn-primary col-md-5" style="margin: 5px" 
+            click-event [footer-click]="'Resume'" 
+            href="http://louay-morsi.me/Resume.pdf" role="button">
           PDF Resume &raquo;
         </a>
       </div>
@@ -17,7 +21,10 @@
     <div class="col-md-4">
       <h2><i class="fa fa-github" aria-hidden="true"></i> Github</h2>
       <p>Feel free to take a tour in my github profile</p>
-      <p><a class="btn btn-primary" href="https://github.com/louay-hesham" role="button">To Github &raquo;</a></p>
+      <p><a class="btn btn-primary" click-event [footer-click]="'Github'" 
+            href="https://github.com/louay-hesham" role="button">
+          To Github &raquo;
+      </a></p>
     </div>
     <div class="col-md-4">
       <h2>
@@ -28,12 +35,12 @@
           <b><i class="fa fa-envelope" aria-hidden="true"></i> Email:</b> louay.hesham@gmail.com
         </li>
         <li>
-          <a href="https://www.linkedin.com/in/louay-hesham-03296410a/">
+          <a click-event [footer-click]="'Linkedin'" href="https://www.linkedin.com/in/louay-hesham-03296410a/">
             <b><i class="fa fa-linkedin-square" aria-hidden="true"></i> Linkedin</b>
           </a>
         </li>
         <li>
-          <a href="https://www.facebook.com/lo2ay.hesham">
+          <a click-event [footer-click]="'Facebook'" href="https://www.facebook.com/lo2ay.hesham">
             <b><i class="fa fa-facebook-square" aria-hidden="true"></i> Facebook</b>
           </a>
         </li>
