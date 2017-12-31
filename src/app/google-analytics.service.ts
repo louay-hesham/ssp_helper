@@ -22,9 +22,9 @@ export class GoogleAnalyticsService {
     });
   }
 
-  sendButtonClickEvent(eventLabel: string) {
-    GoogleAnalyticsService.gtag('event', 'select_content', {
-      'event_category': 'engagement',
+  sendButtonClickEvent(eventName: string, eventCategory: string, eventLabel: string) {
+    GoogleAnalyticsService.gtag('event', eventName, {
+      'event_category': eventCategory,
       'event_label': eventLabel
     });
   }

@@ -10,6 +10,7 @@ export class Course {
   public creditHours: number;
   public isPassed: boolean;
   public level: string;
+  public codeWithName: string;
 
   public static loadCourses(data: any) {
     for (let key in data) {
@@ -25,6 +26,7 @@ export class Course {
     this.creditHours = data['credit_hours'];
     this.level = data['level'];
     this.isPassed = false;
+    this.codeWithName = this.code + ' - ' + this.name;
   }
 
   private fail() {
@@ -64,5 +66,15 @@ export class Course {
   public pass() {
     this.isPassed = true;
     Course.CH += this.creditHours;  
+  }
+
+  public getLevelFullName() {
+    if (this.level == 'h') {
+      return 'Humanity Course';
+    } else if (this.level == 'e') {
+      return 'Elective Course';
+    } else {
+      return 'Term ' + this.level;
+    }
   }
 }
