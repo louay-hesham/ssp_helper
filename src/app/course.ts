@@ -56,16 +56,16 @@ export class Course {
   }
 
   public isAvailable(): boolean {
-    if (this.code == "CC591") {
-      return Course.CH >= 129
-    } else {
-      let avail = true;
-      for (let i in this.prerequisites) {
-        let prerequisite = this.prerequisites[i];
-        avail = avail && Course.courses[prerequisite].isPassed;
-      }
-      return avail;
+    let avail = true;
+    if (this.code == Course.seniorProject1Code) {
+      avail = (Course.CH >= 129)
     }
+    for (let i in this.prerequisites) {
+      let prerequisite = this.prerequisites[i];
+      avail = avail && Course.courses[prerequisite].isPassed;
+    }
+    return avail;
+  
   }
 
   public togglePass() {
