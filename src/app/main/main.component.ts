@@ -11,9 +11,17 @@ import { Course } from '../course'
 export class MainComponent implements OnInit {
 
   private coursesData: any;
+  private departmentsCodes: string[] = ['GPE', 'EME', 'CAE', 'CCE', 'OCE'];
 
 	public levels: string[] = ['e','1','2','3','4','5','6','7','8','9','10','h'];
   public department: string = 'CCE';
+  public departments: string[] = [ 
+    'Gas and Petrochemicals Engineering', 
+    'Electromechanical Engineering',
+    'Architectural and Construction Engineering',
+    'Computer and Communications Engineering',
+    'Offshore and Coastal Engineering'
+  ];
 
   constructor(private coursesLoader: CoursesLoaderService) { }
 
@@ -24,6 +32,12 @@ export class MainComponent implements OnInit {
 
   getCH(): number {
     return Course.CH;
+  }
+
+  selectDepartment(i: number) {
+    this.department = this.departmentsCodes[i];
+    console.log('Changed department to ' + this.department);
+    Course.loadCourses(this.coursesData, this.department);
   }
 
   completeLevelButtonVisibility(level: string): boolean {

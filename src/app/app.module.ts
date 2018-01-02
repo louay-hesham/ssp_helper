@@ -4,6 +4,7 @@ import { Http, Response, HttpModule } from '@angular/http';
 import { HttpClientModule, HttpClient } from '@angular/common/http';
 
 import { SimpleTimer } from 'ng2-simple-timer';
+import { DropdownModule } from 'angular-custom-dropdown';
 
 import { AppComponent } from './app.component';
 import { NavbarComponent } from './navbar/navbar.component';
@@ -30,7 +31,8 @@ import { EventClickDirective } from './event-click.directive';
   imports: [
     BrowserModule,
     HttpClientModule,
-    HttpModule
+    HttpModule,
+    DropdownModule
   ],
   providers: [
     CoursesLoaderService,

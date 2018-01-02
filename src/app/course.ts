@@ -2,6 +2,7 @@ export class Course {
 
   public static courses: {[code: string]: Course} = { };
   public static CH: number = 0;
+  public static seniorProject1Code: string = '';
 
   public code: string;
   public name: string;
@@ -14,6 +15,8 @@ export class Course {
 
   public static loadCourses(coursesData: any, department: string) {
     Course.courses = { };
+    Course.CH = 0;
+    Course.seniorProject1Code = '';
     coursesData['General'].subscribe(data => {
       for (let key in data) {
         Course.courses[key] = new Course(data[key]);
@@ -35,6 +38,9 @@ export class Course {
     this.level = data['level'];
     this.isPassed = false;
     this.codeWithName = this.code + ' - ' + this.name;
+    if (this.name == 'Senior Project 1') {
+      Course.seniorProject1Code = this.code;
+    }
   }
 
   private fail() {
@@ -42,7 +48,9 @@ export class Course {
       this.isPassed = false;
       Course.CH -= this.creditHours;
       for (let code in this.satisfies) {
-        Course.courses[this.satisfies[code]].fail();
+        if (code in Course.courses){
+          Course.courses[this.satisfies[code]].fail();
+        }
       }
     }
   }
@@ -64,7 +72,7 @@ export class Course {
     if (this.isPassed) {
       this.fail();
       if (Course.CH < 129) {
-        Course.courses["CC591"].fail();
+        Course.courses[Course.seniorProject1Code].fail();
       }
     } else {
       this.pass();  
