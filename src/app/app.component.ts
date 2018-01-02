@@ -18,13 +18,13 @@ export class AppComponent implements OnInit {
 	constructor(private st: SimpleTimer) { }
 
 	ngOnInit() {
-		this.st.newTimer(this.timerName, 0.75);
+		this.st.newTimer(this.timerName, 1);
 		this.st.subscribe(this.timerName, () => this.timer++);
 	}
 
   showApp() {
-  	if (this.timer < 45) {
-  		window.alert("Are you sure you have read the entire disclaimer? It usually takes 45 seconds but you made it in A VERY IMPRESSIVE " + this.timer + " SECONDS");
+  	if (this.timer < 25) {
+  		window.alert("WOW! How did you read everything in just " + this.timer + " seconds?! IMPRESSIVE!\nPlease read the disclaimer.")
     } else {
   		this.appVisible = true;
   		this.st.delTimer(this.timerName);

@@ -6,8 +6,10 @@ export class CoursesLoaderService {
 
   constructor(public http:HttpClient) {}
 
-	getCourses() {
-    return this.http.get("./Courses.JSON");
+  getCourses() {
+    return {
+	  	'General': this.http.get("./General.JSON"),
+			'CCE': this.http.get("./CCE.JSON"),
+		}
   }
-
 }

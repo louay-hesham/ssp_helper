@@ -10,14 +10,16 @@ import { Course } from '../course'
 })
 export class MainComponent implements OnInit {
 
+  private coursesData: any;
+
 	public levels: string[] = ['e','1','2','3','4','5','6','7','8','9','10','h'];
+  public department: string = 'CCE';
 
   constructor(private coursesLoader: CoursesLoaderService) { }
 
   ngOnInit() {
-  	this.coursesLoader.getCourses().subscribe(data => {
-      Course.loadCourses(data);
-  	});
+    this.coursesData = this.coursesLoader.getCourses()
+    Course.loadCourses(this.coursesData, this.department);
   }
 
   getCH(): number {

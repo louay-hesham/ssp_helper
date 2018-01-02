@@ -12,10 +12,18 @@ export class Course {
   public level: string;
   public codeWithName: string;
 
-  public static loadCourses(data: any) {
-    for (let key in data) {
-      Course.courses[key] = new Course(data[key]);
-    }
+  public static loadCourses(coursesData: any, department: string) {
+    Course.courses = { };
+    coursesData['General'].subscribe(data => {
+      for (let key in data) {
+        Course.courses[key] = new Course(data[key]);
+      }  
+    });
+    coursesData[department].subscribe(data => {
+      for (let key in data) {
+        Course.courses[key] = new Course(data[key]);
+      }  
+    });
   }
 
   constructor(data: any) {
