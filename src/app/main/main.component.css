@@ -61,16 +61,16 @@ a.neat {
 }
 
 .btn-warning.elective {
-  background-color: #e6e600;
-  border-color: #e6e600;
+  background-color: #d5d500;
+  border-color: #d5d500;
 }
 
 .btn-warning.elective:hover {
-  background-color: #d1d100;
-  border-color: #d1d100;
+  background-color: #c0c000;
+  border-color: #c0c000;
 }
 
 .btn-danger.elective {
-  background-color: #cc0000;
-  border-color: #cc0000;
+  background-color: #aa0000;
+  border-color: #aa0000;
 }
