@@ -49,3 +49,18 @@ a.neat {
   color: inherit;
   text-decoration: none;
 }
+
+.btn-primary.elective {
+  background-color: #1abc9c;
+  border-color: #1abc9c;
+}
+
+.btn-warning.elective {
+  background-color: #e6e600;
+  border-color: #e6e600;
+}
+
+.btn-danger.elective {
+  background-color: #cc0000;
+  border-color: #cc0000;
+}

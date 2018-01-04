@@ -88,13 +88,18 @@ export class MainComponent implements OnInit {
   }
 
   buttonClass(course: Course): string {
+    var css: string;
   	if (course.isPassed) {
-  		return "btn btn-primary";
+  		css = "btn btn-primary";
   	} else if (course.isAvailable()) {
-  		return "btn btn-warning";
+  		css = "btn btn-warning";
   	} else {
-  		return "btn btn-danger";
+  		css = "btn btn-danger";
   	}
+    if (/[A-Z]+[0-9]+[A-Z]/.test(course.code) || course.level == 'e') {
+      css = css + ' elective';
+    }
+    return css;
   }
 
   buttonDisability(course: Course): string {

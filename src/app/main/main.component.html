@@ -1,7 +1,19 @@
 <b [pageview]="'Main App'">Instructions</b>
 <ul>
 	<li>
-		<b>Color codes:</b><b style="color:#0000FF"> Passed </b>-<b style="color:#FFA500"> Requirements met </b>-<b style="color:#FF0000"> Requirements not met </b>
+		<b>Color codes:</b>
+    <ul>
+      <li>
+        <b style="color:#0000FF"> Passed </b>-
+        <b style="color:#FFA500"> Requirements met </b>-
+        <b style="color:#FF0000"> Requirements not met </b>-
+      </li>
+      <li>
+        <b style="color:#1abc9c"> Passed (Elective) </b>-
+        <b style="color:#e6e600"> Requirements met (Elective) </b>-
+        <b style="color:#cc0000"> Requirements not met (Elective) </b>
+      </li>
+    </ul>
 	</li>
 	<li>
 		<div class="dropdown" dropdown>
@@ -31,6 +43,9 @@
 <div *ngFor="let level of levels">
 
 	<h4>{{levelName(level)}}</h4>
+  <h5 *ngIf="level == 'e' && (department == 'CAE' || department == 'OCE')">
+    Elective courses can be found in their respective terms, they will be coloured differently.
+  </h5>
 	<a  *ngIf="completeLevelButtonVisibility(level)"
       click-event [term-click]="'Term ' + level"
       (click)="completeLevel(level)"
