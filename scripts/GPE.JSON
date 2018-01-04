@@ -1,578 +1,578 @@
 {
-  "GPE413": {
-    "code": "GPE413",
-    "level": "7",
-    "name": "Corrosion Engineering",
+  "EME203": {
+    "code": "EME203",
     "credit_hours": 3,
-    "satisfies": [
-      "GPE434",
-      "GPE532"
-    ],
+    "level": "4",
+    "name": "Thermodynamics 1",
     "prerequisites": [
-      "GPE315"
+      "MP108"
+    ],
+    "satisfies": [
+      "GPE321"
     ]
   },
-  "GPE334": {
-    "code": "GPE334",
-    "level": "e",
-    "name": "Wastewater Treatment",
+  "EME206": {
+    "code": "EME206",
     "credit_hours": 3,
-    "satisfies": [],
-    "prerequisites": []
+    "level": "4",
+    "name": "Fluid Mechanics 1",
+    "prerequisites": [
+      "MP102"
+    ],
+    "satisfies": [
+      "GPE412",
+      "GPE431",
+      "GPE432",
+      "GPE532"
+    ]
+  },
+  "EME207": {
+    "code": "EME207",
+    "credit_hours": 3,
+    "level": "5",
+    "name": "Electric Circuits",
+    "prerequisites": [
+      "MP108"
+    ],
+    "satisfies": [
+      "GPE533"
+    ]
+  },
+  "GPE201": {
+    "code": "GPE201",
+    "credit_hours": 3,
+    "level": "3",
+    "name": "Principles Of Materials Science",
+    "prerequisites": [
+      "GPE101"
+    ],
+    "satisfies": [
+      "GPE301",
+      "GPE315",
+      "GPE436"
+    ]
+  },
+  "GPE203": {
+    "code": "GPE203",
+    "credit_hours": 3,
+    "level": "3",
+    "name": "Organic Chemistry 1",
+    "prerequisites": [
+      "GPE101"
+    ],
+    "satisfies": [
+      "GPE204"
+    ]
+  },
+  "GPE204": {
+    "code": "GPE204",
+    "credit_hours": 3,
+    "level": "4",
+    "name": "Organic Chemistry 2",
+    "prerequisites": [
+      "GPE203"
+    ],
+    "satisfies": [
+      "GPE301",
+      "GPE422",
+      "GPE433"
+    ]
   },
   "GPE205": {
     "code": "GPE205",
+    "credit_hours": 3,
     "level": "3",
     "name": "Physical Chemistry",
-    "credit_hours": 3,
-    "satisfies": [
-      "GPE421"
-    ],
     "prerequisites": [
       "GPE101"
+    ],
+    "satisfies": [
+      "GPE421"
     ]
   },
-  "GPE431": {
-    "code": "GPE431",
-    "level": "e",
-    "name": "Natural Gas Production And Measurement",
+  "GPE211": {
+    "code": "GPE211",
     "credit_hours": 3,
-    "satisfies": [],
+    "level": "3",
+    "name": "Mass Balance",
     "prerequisites": [
-      "GPE401",
-      "EME206"
+      "GPE101"
+    ],
+    "satisfies": [
+      "GPE212"
     ]
-  },
-  "GPE412": {
-    "code": "GPE412",
-    "level": "8",
-    "name": "Mechanical Unit Operations",
-    "credit_hours": 4,
-    "satisfies": [],
-    "prerequisites": [
-      "GPE312",
-      "EME206",
-      "GPE311"
-    ]
-  },
-  "GPE331": {
-    "code": "GPE331",
-    "level": "e",
-    "name": "Industrial Water Treatment",
-    "credit_hours": 3,
-    "satisfies": [],
-    "prerequisites": []
   },
   "GPE212": {
     "code": "GPE212",
+    "credit_hours": 3,
     "level": "4",
     "name": "Energy Balance",
-    "credit_hours": 3,
+    "prerequisites": [
+      "GPE211"
+    ],
     "satisfies": [
       "GPE311",
       "GPE321",
       "GPE313",
       "GPE312",
       "GPE337"
-    ],
-    "prerequisites": [
-      "GPE211"
     ]
   },
-  "GPE426": {
-    "code": "GPE426",
-    "level": "8",
-    "name": "Modeling And Simulation",
+  "GPE301": {
+    "code": "GPE301",
     "credit_hours": 3,
+    "level": "5",
+    "name": "Polymer Engineering",
+    "prerequisites": [
+      "GPE201",
+      "GPE204"
+    ],
+    "satisfies": []
+  },
+  "GPE311": {
+    "code": "GPE311",
+    "credit_hours": 4,
+    "level": "5",
+    "name": "Separation Processes 1",
+    "prerequisites": [
+      "GPE212"
+    ],
     "satisfies": [
-      "GPE525"
-    ],
-    "prerequisites": [
-      "GPE421",
-      "MP314"
-    ]
-  },
-  "GPE534": {
-    "code": "GPE534",
-    "level": "e",
-    "name": "Natural Gas Handling And Networking",
-    "credit_hours": 3,
-    "satisfies": [],
-    "prerequisites": [
+      "GPE412",
+      "GPE534",
+      "GPE422",
       "GPE424",
-      "GPE312",
-      "GPE311"
+      "GPE423",
+      "GPE401"
     ]
   },
-  "GPE523": {
-    "code": "GPE523",
-    "level": "9",
-    "name": "Hazardous Process & Safety Engineering",
-    "credit_hours": 3,
-    "satisfies": [
-      "GPE524"
-    ],
+  "GPE312": {
+    "code": "GPE312",
+    "credit_hours": 4,
+    "level": "6",
+    "name": "Separation Processes 2",
     "prerequisites": [
-      "GPE422"
+      "GPE212"
+    ],
+    "satisfies": [
+      "GPE423",
+      "GPE422",
+      "GPE424",
+      "GPE412",
+      "GPE534",
+      "GPE401"
+    ]
+  },
+  "GPE313": {
+    "code": "GPE313",
+    "credit_hours": 3,
+    "level": "6",
+    "name": "Heat Transfer",
+    "prerequisites": [
+      "GPE212"
+    ],
+    "satisfies": [
+      "GPE336"
+    ]
+  },
+  "GPE315": {
+    "code": "GPE315",
+    "credit_hours": 3,
+    "level": "6",
+    "name": "Engineering Metallurgy",
+    "prerequisites": [
+      "GPE201"
+    ],
+    "satisfies": [
+      "GPE413"
+    ]
+  },
+  "GPE321": {
+    "code": "GPE321",
+    "credit_hours": 3,
+    "level": "5",
+    "name": "Applied Thermodynamics",
+    "prerequisites": [
+      "EME203",
+      "GPE212"
+    ],
+    "satisfies": [
+      "GPE522"
+    ]
+  },
+  "GPE331": {
+    "code": "GPE331",
+    "credit_hours": 3,
+    "level": "e",
+    "name": "Industrial Water Treatment",
+    "prerequisites": [],
+    "satisfies": []
+  },
+  "GPE332": {
+    "code": "GPE332",
+    "credit_hours": 3,
+    "level": "e",
+    "name": "Environmental Science And Engineering",
+    "prerequisites": [],
+    "satisfies": []
+  },
+  "GPE333": {
+    "code": "GPE333",
+    "credit_hours": 3,
+    "level": "e",
+    "name": "Introduction To Engineering Design",
+    "prerequisites": [],
+    "satisfies": []
+  },
+  "GPE334": {
+    "code": "GPE334",
+    "credit_hours": 3,
+    "level": "e",
+    "name": "Wastewater Treatment",
+    "prerequisites": [],
+    "satisfies": []
+  },
+  "GPE336": {
+    "code": "GPE336",
+    "credit_hours": 3,
+    "level": "e",
+    "name": "Heat Transfer Operations",
+    "prerequisites": [
+      "GPE313"
+    ],
+    "satisfies": []
+  },
+  "GPE337": {
+    "code": "GPE337",
+    "credit_hours": 3,
+    "level": "e",
+    "name": "Combustion Technology",
+    "prerequisites": [
+      "GPE212"
+    ],
+    "satisfies": []
+  },
+  "GPE338": {
+    "code": "GPE338",
+    "credit_hours": 3,
+    "level": "e",
+    "name": "Instrumental Method Of Analysis",
+    "prerequisites": [],
+    "satisfies": []
+  },
+  "GPE401": {
+    "code": "GPE401",
+    "credit_hours": 3,
+    "level": "7",
+    "name": "Natural Gas Engineering",
+    "prerequisites": [
+      "GPE311",
+      "GPE312"
+    ],
+    "satisfies": [
+      "GPE424",
+      "GPE551",
+      "GPE431"
+    ]
+  },
+  "GPE412": {
+    "code": "GPE412",
+    "credit_hours": 4,
+    "level": "8",
+    "name": "Mechanical Unit Operations",
+    "prerequisites": [
+      "GPE312",
+      "EME206",
+      "GPE311"
+    ],
+    "satisfies": []
+  },
+  "GPE413": {
+    "code": "GPE413",
+    "credit_hours": 3,
+    "level": "7",
+    "name": "Corrosion Engineering",
+    "prerequisites": [
+      "GPE315"
+    ],
+    "satisfies": [
+      "GPE434",
+      "GPE532"
+    ]
+  },
+  "GPE421": {
+    "code": "GPE421",
+    "credit_hours": 4,
+    "level": "7",
+    "name": "Kinetics And Reactions",
+    "prerequisites": [
+      "GPE205"
+    ],
+    "satisfies": [
+      "GPE426",
+      "GPE433"
     ]
   },
   "GPE422": {
     "code": "GPE422",
+    "credit_hours": 3,
     "level": "8",
     "name": "Petrochemical Industries 1",
-    "credit_hours": 3,
+    "prerequisites": [
+      "GPE312",
+      "GPE204",
+      "GPE423",
+      "GPE311"
+    ],
     "satisfies": [
       "GPE521",
       "GPE523",
       "GPE551",
       "GPE532"
-    ],
+    ]
+  },
+  "GPE423": {
+    "code": "GPE423",
+    "credit_hours": 3,
+    "level": "7",
+    "name": "Petroleum Refining",
     "prerequisites": [
       "GPE312",
-      "GPE204",
-      "GPE423",
       "GPE311"
-    ]
-  },
-  "MP314": {
-    "code": "MP314",
-    "level": "6",
-    "name": "Numerical Methods",
-    "credit_hours": 3,
-    "satisfies": [
-      "GPE426",
-      "GPE435"
     ],
-    "prerequisites": [
-      "MP202"
-    ]
-  },
-  "MP301": {
-    "code": "MP301",
-    "level": "5",
-    "name": "Probability",
-    "credit_hours": 3,
     "satisfies": [
-      "GPE435"
-    ],
-    "prerequisites": [
-      "MP201"
-    ]
-  },
-  "GPE551": {
-    "code": "GPE551",
-    "level": "9",
-    "name": "Senior Project 1",
-    "credit_hours": 3,
-    "satisfies": [
-      "GPE552"
-    ],
-    "prerequisites": [
-      "GPE401",
       "GPE422",
-      "GPE423"
-    ]
-  },
-  "GPE211": {
-    "code": "GPE211",
-    "level": "3",
-    "name": "Mass Balance",
-    "credit_hours": 3,
-    "satisfies": [
-      "GPE212"
-    ],
-    "prerequisites": [
-      "GPE101"
-    ]
-  },
-  "GPE333": {
-    "code": "GPE333",
-    "level": "e",
-    "name": "Introduction To Engineering Design",
-    "credit_hours": 3,
-    "satisfies": [],
-    "prerequisites": []
-  },
-  "EME207": {
-    "code": "EME207",
-    "level": "5",
-    "name": "Electric Circuits",
-    "credit_hours": 3,
-    "satisfies": [
-      "GPE533"
-    ],
-    "prerequisites": [
-      "MP108"
-    ]
-  },
-  "GPE315": {
-    "code": "GPE315",
-    "level": "6",
-    "name": "Engineering Metallurgy",
-    "credit_hours": 3,
-    "satisfies": [
-      "GPE413"
-    ],
-    "prerequisites": [
-      "GPE201"
-    ]
-  },
-  "GPE337": {
-    "code": "GPE337",
-    "level": "e",
-    "name": "Combustion Technology",
-    "credit_hours": 3,
-    "satisfies": [],
-    "prerequisites": [
-      "GPE212"
+      "GPE551",
+      "GPE532"
     ]
   },
   "GPE424": {
     "code": "GPE424",
+    "credit_hours": 3,
     "level": "8",
     "name": "Natural Gas Treatment And Purification",
-    "credit_hours": 3,
-    "satisfies": [
-      "GPE522",
-      "GPE534"
-    ],
     "prerequisites": [
       "GPE401",
       "GPE312",
       "GPE311"
-    ]
-  },
-  "GPE522": {
-    "code": "GPE522",
-    "level": "10",
-    "name": "Natural Gas Liquefaction",
-    "credit_hours": 3,
-    "satisfies": [],
-    "prerequisites": [
-      "GPE321",
-      "GPE424"
-    ]
-  },
-  "GPE311": {
-    "code": "GPE311",
-    "level": "5",
-    "name": "Separation Processes 1",
-    "credit_hours": 4,
-    "satisfies": [
-      "GPE412",
-      "GPE534",
-      "GPE422",
-      "GPE424",
-      "GPE423",
-      "GPE401"
     ],
-    "prerequisites": [
-      "GPE212"
-    ]
-  },
-  "GPE312": {
-    "code": "GPE312",
-    "level": "6",
-    "name": "Separation Processes 2",
-    "credit_hours": 4,
     "satisfies": [
-      "GPE423",
-      "GPE422",
-      "GPE424",
-      "GPE412",
-      "GPE534",
-      "GPE401"
-    ],
-    "prerequisites": [
-      "GPE212"
+      "GPE522",
+      "GPE534"
     ]
   },
-  "GPE332": {
-    "code": "GPE332",
-    "level": "e",
-    "name": "Environmental Science And Engineering",
+  "GPE426": {
+    "code": "GPE426",
     "credit_hours": 3,
-    "satisfies": [],
-    "prerequisites": []
-  },
-  "EME203": {
-    "code": "EME203",
-    "level": "4",
-    "name": "Thermodynamics 1",
-    "credit_hours": 3,
+    "level": "8",
+    "name": "Modeling And Simulation",
+    "prerequisites": [
+      "GPE421",
+      "MP314"
+    ],
     "satisfies": [
-      "GPE321"
+      "GPE525"
+    ]
+  },
+  "GPE431": {
+    "code": "GPE431",
+    "credit_hours": 3,
+    "level": "e",
+    "name": "Natural Gas Production And Measurement",
+    "prerequisites": [
+      "GPE401",
+      "EME206"
     ],
-    "prerequisites": [
-      "MP108"
-    ]
+    "satisfies": []
   },
-  "GPE436": {
-    "code": "GPE436",
-    "level": "e",
-    "name": "Mechanics Of Materials",
+  "GPE432": {
+    "code": "GPE432",
     "credit_hours": 3,
-    "satisfies": [],
+    "level": "e",
+    "name": "Measurements",
     "prerequisites": [
-      "GPE201"
-    ]
+      "EME206"
+    ],
+    "satisfies": []
   },
-  "GPE336": {
-    "code": "GPE336",
-    "level": "e",
-    "name": "Heat Transfer Operations",
+  "GPE433": {
+    "code": "GPE433",
     "credit_hours": 3,
-    "satisfies": [],
+    "level": "e",
+    "name": "Biochemical Engineering",
     "prerequisites": [
-      "GPE313"
-    ]
+      "GPE204",
+      "GPE421"
+    ],
+    "satisfies": []
   },
   "GPE434": {
     "code": "GPE434",
+    "credit_hours": 3,
     "level": "e",
     "name": "Principles Of Industrial Electrochemistry",
-    "credit_hours": 3,
-    "satisfies": [],
     "prerequisites": [
       "GPE413"
+    ],
+    "satisfies": []
+  },
+  "GPE435": {
+    "code": "GPE435",
+    "credit_hours": 3,
+    "level": "e",
+    "name": "Operation Research",
+    "prerequisites": [
+      "MP301",
+      "MP314"
+    ],
+    "satisfies": []
+  },
+  "GPE436": {
+    "code": "GPE436",
+    "credit_hours": 3,
+    "level": "e",
+    "name": "Mechanics Of Materials",
+    "prerequisites": [
+      "GPE201"
+    ],
+    "satisfies": []
+  },
+  "GPE521": {
+    "code": "GPE521",
+    "credit_hours": 3,
+    "level": "9",
+    "name": "Petrochemical Industries 2",
+    "prerequisites": [
+      "GPE422"
+    ],
+    "satisfies": []
+  },
+  "GPE522": {
+    "code": "GPE522",
+    "credit_hours": 3,
+    "level": "10",
+    "name": "Natural Gas Liquefaction",
+    "prerequisites": [
+      "GPE321",
+      "GPE424"
+    ],
+    "satisfies": []
+  },
+  "GPE523": {
+    "code": "GPE523",
+    "credit_hours": 3,
+    "level": "9",
+    "name": "Hazardous Process & Safety Engineering",
+    "prerequisites": [
+      "GPE422"
+    ],
+    "satisfies": [
+      "GPE524"
     ]
   },
   "GPE524": {
     "code": "GPE524",
+    "credit_hours": 3,
     "level": "10",
     "name": "Process Design",
-    "credit_hours": 3,
-    "satisfies": [],
     "prerequisites": [
       "GPE523"
-    ]
-  },
-  "GPE521": {
-    "code": "GPE521",
-    "level": "9",
-    "name": "Petrochemical Industries 2",
-    "credit_hours": 3,
-    "satisfies": [],
-    "prerequisites": [
-      "GPE422"
-    ]
-  },
-  "GPE433": {
-    "code": "GPE433",
-    "level": "e",
-    "name": "Biochemical Engineering",
-    "credit_hours": 3,
-    "satisfies": [],
-    "prerequisites": [
-      "GPE204",
-      "GPE421"
-    ]
-  },
-  "GPE201": {
-    "code": "GPE201",
-    "level": "3",
-    "name": "Principles Of Materials Science",
-    "credit_hours": 3,
-    "satisfies": [
-      "GPE301",
-      "GPE315",
-      "GPE436"
     ],
-    "prerequisites": [
-      "GPE101"
-    ]
-  },
-  "GPE435": {
-    "code": "GPE435",
-    "level": "e",
-    "name": "Operation Research",
-    "credit_hours": 3,
-    "satisfies": [],
-    "prerequisites": [
-      "MP301",
-      "MP314"
-    ]
-  },
-  "GPE338": {
-    "code": "GPE338",
-    "level": "e",
-    "name": "Instrumental Method Of Analysis",
-    "credit_hours": 3,
-    "satisfies": [],
-    "prerequisites": []
-  },
-  "GPE423": {
-    "code": "GPE423",
-    "level": "7",
-    "name": "Petroleum Refining",
-    "credit_hours": 3,
-    "satisfies": [
-      "GPE422",
-      "GPE551",
-      "GPE532"
-    ],
-    "prerequisites": [
-      "GPE312",
-      "GPE311"
-    ]
-  },
-  "GPE552": {
-    "code": "GPE552",
-    "level": "10",
-    "name": "Senior Project 2",
-    "credit_hours": 4,
-    "satisfies": [],
-    "prerequisites": [
-      "GPE551"
-    ]
-  },
-  "GPE421": {
-    "code": "GPE421",
-    "level": "7",
-    "name": "Kinetics And Reactions",
-    "credit_hours": 4,
-    "satisfies": [
-      "GPE426",
-      "GPE433"
-    ],
-    "prerequisites": [
-      "GPE205"
-    ]
-  },
-  "GPE533": {
-    "code": "GPE533",
-    "level": "e",
-    "name": "Engineering Instrumentation",
-    "credit_hours": 3,
-    "satisfies": [],
-    "prerequisites": [
-      "GPE525",
-      "EME207"
-    ]
-  },
-  "GPE321": {
-    "code": "GPE321",
-    "level": "5",
-    "name": "Applied Thermodynamics",
-    "credit_hours": 3,
-    "satisfies": [
-      "GPE522"
-    ],
-    "prerequisites": [
-      "EME203",
-      "GPE212"
-    ]
-  },
-  "GPE401": {
-    "code": "GPE401",
-    "level": "7",
-    "name": "Natural Gas Engineering",
-    "credit_hours": 3,
-    "satisfies": [
-      "GPE424",
-      "GPE551",
-      "GPE431"
-    ],
-    "prerequisites": [
-    	"GPE311",
-    	"GPE312"
-    ]
-  },
-  "GPE204": {
-    "code": "GPE204",
-    "level": "4",
-    "name": "Organic Chemistry 2",
-    "credit_hours": 3,
-    "satisfies": [
-      "GPE301",
-      "GPE422",
-      "GPE433"
-    ],
-    "prerequisites": [
-      "GPE203"
-    ]
+    "satisfies": []
   },
   "GPE525": {
     "code": "GPE525",
+    "credit_hours": 3,
     "level": "9",
     "name": "Process Dynamics And Control",
-    "credit_hours": 3,
-    "satisfies": [
-      "GPE533"
-    ],
     "prerequisites": [
       "GPE426"
-    ]
-  },
-  "GPE432": {
-    "code": "GPE432",
-    "level": "e",
-    "name": "Measurements",
-    "credit_hours": 3,
-    "satisfies": [],
-    "prerequisites": [
-      "EME206"
-    ]
-  },
-  "GPE203": {
-    "code": "GPE203",
-    "level": "3",
-    "name": "Organic Chemistry 1",
-    "credit_hours": 3,
-    "satisfies": [
-      "GPE204"
     ],
-    "prerequisites": [
-      "GPE101"
+    "satisfies": [
+      "GPE533"
     ]
   },
   "GPE532": {
     "code": "GPE532",
+    "credit_hours": 3,
     "level": "e",
     "name": "Materials Selection In The Petrochemicals Industry",
-    "credit_hours": 3,
-    "satisfies": [],
     "prerequisites": [
       "GPE413",
       "GPE422"
-    ]
-  },
-  "GPE313": {
-    "code": "GPE313",
-    "level": "6",
-    "name": "Heat Transfer",
-    "credit_hours": 3,
-    "satisfies": [
-      "GPE336"
     ],
-    "prerequisites": [
-      "GPE212"
-    ]
+    "satisfies": []
   },
-  "EME206": {
-    "code": "EME206",
-    "level": "4",
-    "name": "Fluid Mechanics 1",
+  "GPE533": {
+    "code": "GPE533",
     "credit_hours": 3,
-    "satisfies": [
-      "GPE412",
-      "GPE431",
-      "GPE432",
-      "GPE532"
-    ],
+    "level": "e",
+    "name": "Engineering Instrumentation",
     "prerequisites": [
-      "MP102"
+      "GPE525",
+      "EME207"
+    ],
+    "satisfies": []
+  },
+  "GPE534": {
+    "code": "GPE534",
+    "credit_hours": 3,
+    "level": "e",
+    "name": "Natural Gas Handling And Networking",
+    "prerequisites": [
+      "GPE424",
+      "GPE312",
+      "GPE311"
+    ],
+    "satisfies": []
+  },
+  "GPE551": {
+    "code": "GPE551",
+    "credit_hours": 3,
+    "level": "9",
+    "name": "Senior Project 1",
+    "prerequisites": [
+      "GPE401",
+      "GPE422",
+      "GPE423"
+    ],
+    "satisfies": [
+      "GPE552"
     ]
   },
-  "GPE301": {
-    "code": "GPE301",
+  "GPE552": {
+    "code": "GPE552",
+    "credit_hours": 4,
+    "level": "10",
+    "name": "Senior Project 2",
+    "prerequisites": [
+      "GPE551"
+    ],
+    "satisfies": []
+  },
+  "MP301": {
+    "code": "MP301",
+    "credit_hours": 3,
     "level": "5",
-    "name": "Polymer Engineering",
-    "credit_hours": 3,
-    "satisfies": [],
+    "name": "Probability",
     "prerequisites": [
-      "GPE201",
-      "GPE204"
+      "MP201"
+    ],
+    "satisfies": [
+      "GPE435"
+    ]
+  },
+  "MP314": {
+    "code": "MP314",
+    "credit_hours": 3,
+    "level": "6",
+    "name": "Numerical Methods",
+    "prerequisites": [
+      "MP202"
+    ],
+    "satisfies": [
+      "GPE426",
+      "GPE435"
     ]
   }
 }

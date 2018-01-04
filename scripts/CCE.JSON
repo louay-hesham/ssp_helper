@@ -1,158 +1,9 @@
 {
-  "EME207": {
-    "name": "Circuits 1",
-    "code": "EME207",
-    "prerequisites": [
-      "MP108"
-    ],
-    "satisfies": [
-      "CC202"
-    ],
-    "credit_hours": 3,
-    "level": "3"
-  },
-  "CC444": {
-    "name": "Antennas & Wave Propagation",
-    "code": "CC444",
-    "prerequisites": [
-      "CC431"
-    ],
-    "satisfies": [],
-    "credit_hours": 3,
-    "level": "e"
-  },
-  "MP301": {
-    "name": "Probability",
-    "code": "MP301",
-    "prerequisites": [
-      "MP102"
-    ],
-    "satisfies": [
-      "CC331",
-      "CC332",
-      "CC581",
-      "CC482",
-      "CC484"
-    ],
-    "credit_hours": 3,
-    "level": "3"
-  },
-  "CC472": {
-    "name": "Software Engineering",
-    "code": "CC472",
-    "prerequisites": [
-      "CC371",
-      "CC471"
-    ],
-    "satisfies": [],
-    "credit_hours": 3,
-    "level": "e"
-  },
-  "MP204": {
-    "name": "Modern Physics",
-    "code": "MP204",
-    "prerequisites": [
-      "MP101",
-      "MP107"
-    ],
-    "satisfies": [],
-    "credit_hours": 3,
-    "level": "3"
-  },
-  "CC272": {
-    "name": "Programming 2",
-    "code": "CC272",
-    "prerequisites": [
-      "CC271"
-    ],
-    "satisfies": [
-      "CC552"
-    ],
-    "credit_hours": 4,
-    "level": "4"
-  },
-  "CC372": {
-    "name": "Systems Programming",
-    "code": "CC372",
-    "prerequisites": [
-      "CC271"
-    ],
-    "satisfies": [
-      "CC473"
-    ],
-    "credit_hours": 3,
-    "level": "6"
-  },
-  "CC421": {
-    "name": "Microprocessors Systems",
-    "code": "CC421",
-    "prerequisites": [
-      "CC312"
-    ],
-    "satisfies": [
-      "CC461"
-    ],
-    "credit_hours": 3,
-    "level": "6"
-  },
-  "CC551": {
-    "name": "Computer & Net Security",
-    "code": "CC551",
-    "prerequisites": [
-      "CC373",
-      "CC451"
-    ],
-    "satisfies": [],
-    "credit_hours": 3,
-    "level": "10"
-  },
-  "CC432": {
-    "name": "Dsp Implementation",
-    "code": "CC432",
-    "prerequisites": [
-      "CC332"
-    ],
-    "satisfies": [],
-    "credit_hours": 3,
-    "level": "e"
-  },
-  "CC552": {
-    "name": "Net-Centric Computing",
-    "code": "CC552",
-    "prerequisites": [
-      "CC272"
-    ],
-    "satisfies": [],
-    "credit_hours": 3,
-    "level": "9"
-  },
-  "CC371": {
-    "name": "Algorithms",
-    "code": "CC371",
-    "prerequisites": [
-      "CC273"
-    ],
-    "satisfies": [
-      "CC472"
-    ],
-    "credit_hours": 3,
-    "level": "7"
-  },
-  "CC322": {
-    "name": "Computer Architecture",
-    "code": "CC322",
-    "prerequisites": [
-      "CC321"
-    ],
-    "satisfies": [
-      "CC423"
-    ],
-    "credit_hours": 3,
-    "level": "6"
-  },
   "CC181": {
-    "name": "Discrete Structures",
     "code": "CC181",
+    "credit_hours": 3,
+    "level": "3",
+    "name": "Discrete Structures",
     "prerequisites": [
       "MP102"
     ],
@@ -160,27 +11,38 @@
       "CC471",
       "CC474",
       "CC485"
-    ],
-    "credit_hours": 3,
-    "level": "3"
+    ]
   },
-  "CC312": {
-    "name": "Digital Logic 2",
-    "code": "CC312",
+  "CC202": {
+    "code": "CC202",
+    "credit_hours": 3,
+    "level": "4",
+    "name": "Circuits 2",
     "prerequisites": [
-      "CC212"
+      "EME207"
     ],
     "satisfies": [
-      "CC421",
-      "CC462",
-      "CC474"
-    ],
+      "CC361",
+      "CC301",
+      "CC431"
+    ]
+  },
+  "CC212": {
+    "code": "CC212",
     "credit_hours": 3,
-    "level": "5"
+    "level": "4",
+    "name": "Digital Logic 1",
+    "prerequisites": [],
+    "satisfies": [
+      "CC312",
+      "CC321"
+    ]
   },
   "CC271": {
-    "name": " Programming 1",
     "code": "CC271",
+    "credit_hours": 3,
+    "level": "3",
+    "name": " Programming 1",
     "prerequisites": [
       "CSE102"
     ],
@@ -192,359 +54,25 @@
       "CC373",
       "CC471",
       "CC482"
-    ],
-    "credit_hours": 3,
-    "level": "3"
+    ]
   },
-  "CC212": {
-    "name": "Digital Logic 1",
-    "code": "CC212",
-    "prerequisites": [],
-    "satisfies": [
-      "CC312",
-      "CC321"
-    ],
-    "credit_hours": 3,
-    "level": "4"
-  },
-  "CC402": {
-    "name": "Vlsi",
-    "code": "CC402",
+  "CC272": {
+    "code": "CC272",
+    "credit_hours": 4,
+    "level": "4",
+    "name": "Programming 2",
     "prerequisites": [
-      "CC401"
-    ],
-    "satisfies": [],
-    "credit_hours": 3,
-    "level": "e"
-  },
-  "CC321": {
-    "name": "Organization",
-    "code": "CC321",
-    "prerequisites": [
-      "CC212",
       "CC271"
     ],
     "satisfies": [
-      "CC322",
-      "CC451",
-      "CC581"
-    ],
-    "credit_hours": 3,
-    "level": "5"
-  },
-  "CC581": {
-    "name": "Performance Evaluation",
-    "code": "CC581",
-    "prerequisites": [
-      "MP301",
-      "CC321",
-      "CC373"
-    ],
-    "satisfies": [],
-    "credit_hours": 3,
-    "level": "10"
-  },
-  "CC591": {
-    "name": "Senior Project 1",
-    "code": "CC591",
-    "prerequisites": [],
-    "satisfies": [
-      "CC592"
-    ],
-    "credit_hours": 3,
-    "level": "9"
-  },
-  "CC461": {
-    "name": "Embedded Systems",
-    "code": "CC461",
-    "prerequisites": [
-      "CC421"
-    ],
-    "satisfies": [],
-    "credit_hours": 3,
-    "level": "8"
-  },
-  "CC482": {
-    "name": "Artificial Intelligence",
-    "code": "CC482",
-    "prerequisites": [
-      "CC271",
-      "MP301"
-    ],
-    "satisfies": [],
-    "credit_hours": 3,
-    "level": "e"
-  },
-  "CC462": {
-    "name": "Modern Control Systems",
-    "code": "CC462",
-    "prerequisites": [
-      "CC312",
-      "CC361"
-    ],
-    "satisfies": [],
-    "credit_hours": 3,
-    "level": "e"
-  },
-  "CC474": {
-    "name": "Switching Theory",
-    "code": "CC474",
-    "prerequisites": [
-      "CC181",
-      "CC312"
-    ],
-    "satisfies": [],
-    "credit_hours": 3,
-    "level": "e"
-  },
-  "CC485": {
-    "name": "Computer Graphics",
-    "code": "CC485",
-    "prerequisites": [
-      "CC181",
-      "CC273"
-    ],
-    "satisfies": [],
-    "credit_hours": 3,
-    "level": "e"
-  },
-  "CC489": {
-    "name": "Numerical Analysis",
-    "code": "CC489",
-    "prerequisites": [
-      "MP202"
-    ],
-    "satisfies": [
-      "CC490"
-    ],
-    "credit_hours": 3,
-    "level": "e"
-  },
-  "CC376": {
-    "name": "Data Structures 2",
-    "code": "CC376",
-    "prerequisites": [
-      "CC273"
-    ],
-    "satisfies": [],
-    "credit_hours": 3,
-    "level": "6"
-  },
-  "CC331": {
-    "name": "Signals & Systems",
-    "code": "CC331",
-    "prerequisites": [
-      "MP202",
-      "MP301"
-    ],
-    "satisfies": [
-      "CC441",
-      "CC442",
-      "CC451"
-    ],
-    "credit_hours": 3,
-    "level": "5"
-  },
-  "CC491": {
-    "name": "New Trends In Cce",
-    "code": "CC491",
-    "prerequisites": [],
-    "satisfies": [],
-    "credit_hours": 3,
-    "level": "e"
-  },
-  "CC431": {
-    "name": "Electromagnetics",
-    "code": "CC431",
-    "prerequisites": [
-      "MP202",
-      "CC202"
-    ],
-    "satisfies": [
-      "CC444",
-      "CC445"
-    ],
-    "credit_hours": 3,
-    "level": "e"
-  },
-  "CC471": {
-    "name": "Database",
-    "code": "CC471",
-    "prerequisites": [
-      "CC181",
-      "CC271"
-    ],
-    "satisfies": [
-      "CC472"
-    ],
-    "credit_hours": 4,
-    "level": "8"
-  },
-  "CC592": {
-    "name": "Senior Project 2",
-    "code": "CC592",
-    "prerequisites": [
-      "CC591"
-    ],
-    "satisfies": [],
-    "credit_hours": 4,
-    "level": "10"
-  },
-  "CC445": {
-    "name": "Microwave",
-    "code": "CC445",
-    "prerequisites": [
-      "CC431"
-    ],
-    "satisfies": [],
-    "credit_hours": 3,
-    "level": "e"
-  },
-  "CC483": {
-    "name": "Optimization Techniques",
-    "code": "CC483",
-    "prerequisites": [
-      "MP202"
-    ],
-    "satisfies": [],
-    "credit_hours": 3,
-    "level": "e"
-  },
-  "CC301": {
-    "name": "Electronic Circuits Analysis",
-    "code": "CC301",
-    "prerequisites": [
-      "CC202"
-    ],
-    "satisfies": [
-      "CC401"
-    ],
-    "credit_hours": 3,
-    "level": "5"
-  },
-  "CC423": {
-    "name": "Advanced Computer Architecture",
-    "code": "CC423",
-    "prerequisites": [
-      "CC322"
-    ],
-    "satisfies": [],
-    "credit_hours": 3,
-    "level": "e"
-  },
-  "CC441": {
-    "name": "Analog Communication",
-    "code": "CC441",
-    "prerequisites": [
-      "CC331"
-    ],
-    "satisfies": [],
-    "credit_hours": 3,
-    "level": "7"
-  },
-  "CC361": {
-    "name": "Control Systems",
-    "code": "CC361",
-    "prerequisites": [
-      "MP202",
-      "CC202"
-    ],
-    "satisfies": [
-      "CC462"
-    ],
-    "credit_hours": 3,
-    "level": "5"
-  },
-  "CC484": {
-    "name": "Pattern Recognition",
-    "code": "CC484",
-    "prerequisites": [
-      "MP301"
-    ],
-    "satisfies": [],
-    "credit_hours": 3,
-    "level": "e"
-  },
-  "CC451": {
-    "name": "Computer Networks",
-    "code": "CC451",
-    "prerequisites": [
-      "CC321",
-      "CC331"
-    ],
-    "satisfies": [
-      "CC551"
-    ],
-    "credit_hours": 4,
-    "level": "8"
-  },
-  "CC373": {
-    "name": "Operating Systems",
-    "code": "CC373",
-    "prerequisites": [
-      "CC271",
-      "CC321"
-    ],
-    "satisfies": [
-      "CC551",
-      "CC581"
-    ],
-    "credit_hours": 3,
-    "level": "7"
-  },
-  "CC442": {
-    "name": "Digital Communications",
-    "code": "CC442",
-    "prerequisites": [
-      "CC331"
-    ],
-    "satisfies": [
-      "CC541",
-      "CC443"
-    ],
-    "credit_hours": 3,
-    "level": "8"
-  },
-  "CC332": {
-    "name": "Digital Signal Processing",
-    "code": "CC332",
-    "prerequisites": [
-      "MP202",
-      "MP301"
-    ],
-    "satisfies": [
-      "CC432"
-    ],
-    "credit_hours": 3,
-    "level": "6"
-  },
-  "CC202": {
-    "name": "Circuits 2",
-    "code": "CC202",
-    "prerequisites": [
-      "EME207"
-    ],
-    "satisfies": [
-      "CC361",
-      "CC301",
-      "CC431"
-    ],
-    "credit_hours": 3,
-    "level": "4"
-  },
-  "CC490": {
-    "name": "Computer Vision",
-    "code": "CC490",
-    "prerequisites": [
-      "CC489"
-    ],
-    "satisfies": [],
-    "credit_hours": 3,
-    "level": "e"
+      "CC552"
+    ]
   },
   "CC273": {
-    "name": "Data Structures 1",
     "code": "CC273",
+    "credit_hours": 3,
+    "level": "4",
+    "name": "Data Structures 1",
     "prerequisites": [
       "CC271"
     ],
@@ -553,51 +81,523 @@
       "CC371",
       "CC473",
       "CC485"
-    ],
+    ]
+  },
+  "CC301": {
+    "code": "CC301",
     "credit_hours": 3,
-    "level": "4"
+    "level": "5",
+    "name": "Electronic Circuits Analysis",
+    "prerequisites": [
+      "CC202"
+    ],
+    "satisfies": [
+      "CC401"
+    ]
+  },
+  "CC312": {
+    "code": "CC312",
+    "credit_hours": 3,
+    "level": "5",
+    "name": "Digital Logic 2",
+    "prerequisites": [
+      "CC212"
+    ],
+    "satisfies": [
+      "CC421",
+      "CC462",
+      "CC474"
+    ]
+  },
+  "CC321": {
+    "code": "CC321",
+    "credit_hours": 3,
+    "level": "5",
+    "name": "Organization",
+    "prerequisites": [
+      "CC212",
+      "CC271"
+    ],
+    "satisfies": [
+      "CC322",
+      "CC451",
+      "CC581"
+    ]
+  },
+  "CC322": {
+    "code": "CC322",
+    "credit_hours": 3,
+    "level": "6",
+    "name": "Computer Architecture",
+    "prerequisites": [
+      "CC321"
+    ],
+    "satisfies": [
+      "CC423"
+    ]
+  },
+  "CC331": {
+    "code": "CC331",
+    "credit_hours": 3,
+    "level": "5",
+    "name": "Signals & Systems",
+    "prerequisites": [
+      "MP202",
+      "MP301"
+    ],
+    "satisfies": [
+      "CC441",
+      "CC442",
+      "CC451"
+    ]
+  },
+  "CC332": {
+    "code": "CC332",
+    "credit_hours": 3,
+    "level": "6",
+    "name": "Digital Signal Processing",
+    "prerequisites": [
+      "MP202",
+      "MP301"
+    ],
+    "satisfies": [
+      "CC432"
+    ]
+  },
+  "CC361": {
+    "code": "CC361",
+    "credit_hours": 3,
+    "level": "5",
+    "name": "Control Systems",
+    "prerequisites": [
+      "MP202",
+      "CC202"
+    ],
+    "satisfies": [
+      "CC462"
+    ]
+  },
+  "CC371": {
+    "code": "CC371",
+    "credit_hours": 3,
+    "level": "7",
+    "name": "Algorithms",
+    "prerequisites": [
+      "CC273"
+    ],
+    "satisfies": [
+      "CC472"
+    ]
+  },
+  "CC372": {
+    "code": "CC372",
+    "credit_hours": 3,
+    "level": "6",
+    "name": "Systems Programming",
+    "prerequisites": [
+      "CC271"
+    ],
+    "satisfies": [
+      "CC473"
+    ]
+  },
+  "CC373": {
+    "code": "CC373",
+    "credit_hours": 3,
+    "level": "7",
+    "name": "Operating Systems",
+    "prerequisites": [
+      "CC271",
+      "CC321"
+    ],
+    "satisfies": [
+      "CC551",
+      "CC581"
+    ]
+  },
+  "CC376": {
+    "code": "CC376",
+    "credit_hours": 3,
+    "level": "6",
+    "name": "Data Structures 2",
+    "prerequisites": [
+      "CC273"
+    ],
+    "satisfies": []
   },
   "CC401": {
-    "name": "Digital Integrated Circuit Design",
     "code": "CC401",
+    "credit_hours": 3,
+    "level": "e",
+    "name": "Digital Integrated Circuit Design",
     "prerequisites": [
       "CC301"
     ],
     "satisfies": [
       "CC402"
-    ],
+    ]
+  },
+  "CC402": {
+    "code": "CC402",
     "credit_hours": 3,
-    "level": "e"
+    "level": "e",
+    "name": "Vlsi",
+    "prerequisites": [
+      "CC401"
+    ],
+    "satisfies": []
+  },
+  "CC421": {
+    "code": "CC421",
+    "credit_hours": 3,
+    "level": "6",
+    "name": "Microprocessors Systems",
+    "prerequisites": [
+      "CC312"
+    ],
+    "satisfies": [
+      "CC461"
+    ]
+  },
+  "CC423": {
+    "code": "CC423",
+    "credit_hours": 3,
+    "level": "e",
+    "name": "Advanced Computer Architecture",
+    "prerequisites": [
+      "CC322"
+    ],
+    "satisfies": []
+  },
+  "CC431": {
+    "code": "CC431",
+    "credit_hours": 3,
+    "level": "e",
+    "name": "Electromagnetics",
+    "prerequisites": [
+      "MP202",
+      "CC202"
+    ],
+    "satisfies": [
+      "CC444",
+      "CC445"
+    ]
+  },
+  "CC432": {
+    "code": "CC432",
+    "credit_hours": 3,
+    "level": "e",
+    "name": "Dsp Implementation",
+    "prerequisites": [
+      "CC332"
+    ],
+    "satisfies": []
+  },
+  "CC441": {
+    "code": "CC441",
+    "credit_hours": 3,
+    "level": "7",
+    "name": "Analog Communication",
+    "prerequisites": [
+      "CC331"
+    ],
+    "satisfies": []
+  },
+  "CC442": {
+    "code": "CC442",
+    "credit_hours": 3,
+    "level": "8",
+    "name": "Digital Communications",
+    "prerequisites": [
+      "CC331"
+    ],
+    "satisfies": [
+      "CC541",
+      "CC443"
+    ]
+  },
+  "CC443": {
+    "code": "CC443",
+    "credit_hours": 3,
+    "level": "e",
+    "name": "Mobile Communications",
+    "prerequisites": [
+      "CC442"
+    ],
+    "satisfies": []
+  },
+  "CC444": {
+    "code": "CC444",
+    "credit_hours": 3,
+    "level": "e",
+    "name": "Antennas & Wave Propagation",
+    "prerequisites": [
+      "CC431"
+    ],
+    "satisfies": []
+  },
+  "CC445": {
+    "code": "CC445",
+    "credit_hours": 3,
+    "level": "e",
+    "name": "Microwave",
+    "prerequisites": [
+      "CC431"
+    ],
+    "satisfies": []
+  },
+  "CC451": {
+    "code": "CC451",
+    "credit_hours": 4,
+    "level": "8",
+    "name": "Computer Networks",
+    "prerequisites": [
+      "CC321",
+      "CC331"
+    ],
+    "satisfies": [
+      "CC551"
+    ]
+  },
+  "CC461": {
+    "code": "CC461",
+    "credit_hours": 3,
+    "level": "8",
+    "name": "Embedded Systems",
+    "prerequisites": [
+      "CC421"
+    ],
+    "satisfies": []
+  },
+  "CC462": {
+    "code": "CC462",
+    "credit_hours": 3,
+    "level": "e",
+    "name": "Modern Control Systems",
+    "prerequisites": [
+      "CC312",
+      "CC361"
+    ],
+    "satisfies": []
+  },
+  "CC471": {
+    "code": "CC471",
+    "credit_hours": 4,
+    "level": "8",
+    "name": "Database",
+    "prerequisites": [
+      "CC181",
+      "CC271"
+    ],
+    "satisfies": [
+      "CC472"
+    ]
+  },
+  "CC472": {
+    "code": "CC472",
+    "credit_hours": 3,
+    "level": "e",
+    "name": "Software Engineering",
+    "prerequisites": [
+      "CC371",
+      "CC471"
+    ],
+    "satisfies": []
   },
   "CC473": {
-    "name": "Programming Languages Translation",
     "code": "CC473",
+    "credit_hours": 3,
+    "level": "e",
+    "name": "Programming Languages Translation",
     "prerequisites": [
       "CC273",
       "CC372"
     ],
-    "satisfies": [],
+    "satisfies": []
+  },
+  "CC474": {
+    "code": "CC474",
     "credit_hours": 3,
-    "level": "e"
+    "level": "e",
+    "name": "Switching Theory",
+    "prerequisites": [
+      "CC181",
+      "CC312"
+    ],
+    "satisfies": []
+  },
+  "CC482": {
+    "code": "CC482",
+    "credit_hours": 3,
+    "level": "e",
+    "name": "Artificial Intelligence",
+    "prerequisites": [
+      "CC271",
+      "MP301"
+    ],
+    "satisfies": []
+  },
+  "CC483": {
+    "code": "CC483",
+    "credit_hours": 3,
+    "level": "e",
+    "name": "Optimization Techniques",
+    "prerequisites": [
+      "MP202"
+    ],
+    "satisfies": []
+  },
+  "CC484": {
+    "code": "CC484",
+    "credit_hours": 3,
+    "level": "e",
+    "name": "Pattern Recognition",
+    "prerequisites": [
+      "MP301"
+    ],
+    "satisfies": []
+  },
+  "CC485": {
+    "code": "CC485",
+    "credit_hours": 3,
+    "level": "e",
+    "name": "Computer Graphics",
+    "prerequisites": [
+      "CC181",
+      "CC273"
+    ],
+    "satisfies": []
+  },
+  "CC489": {
+    "code": "CC489",
+    "credit_hours": 3,
+    "level": "e",
+    "name": "Numerical Analysis",
+    "prerequisites": [
+      "MP202"
+    ],
+    "satisfies": [
+      "CC490"
+    ]
+  },
+  "CC490": {
+    "code": "CC490",
+    "credit_hours": 3,
+    "level": "e",
+    "name": "Computer Vision",
+    "prerequisites": [
+      "CC489"
+    ],
+    "satisfies": []
+  },
+  "CC491": {
+    "code": "CC491",
+    "credit_hours": 3,
+    "level": "e",
+    "name": "New Trends In Cce",
+    "prerequisites": [],
+    "satisfies": []
   },
   "CC541": {
-    "name": "Communication Systems",
     "code": "CC541",
+    "credit_hours": 3,
+    "level": "9",
+    "name": "Communication Systems",
     "prerequisites": [
       "CC442"
     ],
-    "satisfies": [],
-    "credit_hours": 3,
-    "level": "9"
+    "satisfies": []
   },
-  "CC443": {
-    "name": "Mobile Communications",
-    "code": "CC443",
-    "prerequisites": [
-      "CC442"
-    ],
-    "satisfies": [],
+  "CC551": {
+    "code": "CC551",
     "credit_hours": 3,
-    "level": "e"
+    "level": "10",
+    "name": "Computer & Net Security",
+    "prerequisites": [
+      "CC373",
+      "CC451"
+    ],
+    "satisfies": []
+  },
+  "CC552": {
+    "code": "CC552",
+    "credit_hours": 3,
+    "level": "9",
+    "name": "Net-Centric Computing",
+    "prerequisites": [
+      "CC272"
+    ],
+    "satisfies": []
+  },
+  "CC581": {
+    "code": "CC581",
+    "credit_hours": 3,
+    "level": "10",
+    "name": "Performance Evaluation",
+    "prerequisites": [
+      "MP301",
+      "CC321",
+      "CC373"
+    ],
+    "satisfies": []
+  },
+  "CC591": {
+    "code": "CC591",
+    "credit_hours": 3,
+    "level": "9",
+    "name": "Senior Project 1",
+    "prerequisites": [],
+    "satisfies": [
+      "CC592"
+    ]
+  },
+  "CC592": {
+    "code": "CC592",
+    "credit_hours": 4,
+    "level": "10",
+    "name": "Senior Project 2",
+    "prerequisites": [
+      "CC591"
+    ],
+    "satisfies": []
+  },
+  "EME207": {
+    "code": "EME207",
+    "credit_hours": 3,
+    "level": "3",
+    "name": "Circuits 1",
+    "prerequisites": [
+      "MP108"
+    ],
+    "satisfies": [
+      "CC202"
+    ]
+  },
+  "MP204": {
+    "code": "MP204",
+    "credit_hours": 3,
+    "level": "3",
+    "name": "Modern Physics",
+    "prerequisites": [
+      "MP101",
+      "MP107"
+    ],
+    "satisfies": []
+  },
+  "MP301": {
+    "code": "MP301",
+    "credit_hours": 3,
+    "level": "3",
+    "name": "Probability",
+    "prerequisites": [
+      "MP102"
+    ],
+    "satisfies": [
+      "CC331",
+      "CC332",
+      "CC581",
+      "CC482",
+      "CC484"
+    ]
   }
 }
