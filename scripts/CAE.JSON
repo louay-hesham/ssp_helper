@@ -268,9 +268,7 @@
     "prerequisites": [
       "CAE209"
     ],
-    "satisfies": [
-      "CAE509C"
-    ]
+    "satisfies": []
   },
   "CAE401": {
     "code": "CAE401",
@@ -318,7 +316,8 @@
     ],
     "satisfies": [
       "CAE507A",
-      "CAE508B"
+      "CAE508B",
+      "CAE510"
     ]
   },
   "CAE405": {
@@ -331,7 +330,7 @@
       "CAE308"
     ],
     "satisfies": [
-      "CAE501B"
+      "CAE411B"
     ]
   },
   "CAE406": {
@@ -354,7 +353,9 @@
     "prerequisites": [
       "CAE310"
     ],
-    "satisfies": []
+    "satisfies": [
+      "CAE510"
+    ]
   },
   "CAE408": {
     "code": "CAE408",
@@ -394,7 +395,9 @@
     "credit_hours": 3,
     "level": "8",
     "name": "Design Studio 4",
-    "prerequisites": [],
+    "prerequisites": [
+      "CAE405"
+    ],
     "satisfies": [
       "CAE501C"
     ]
@@ -424,9 +427,7 @@
     "credit_hours": 3,
     "level": "9",
     "name": "Projects Management 2",
-    "prerequisites": [
-      "CAE405"
-    ],
+    "prerequisites": [],
     "satisfies": []
   },
   "CAE501C": {
@@ -447,7 +448,9 @@
     "prerequisites": [
       "CAE406"
     ],
-    "satisfies": []
+    "satisfies": [
+      "CAE510"
+    ]
   },
   "CAE503A": {
     "code": "CAE503A",
@@ -538,7 +541,7 @@
     "satisfies": []
   },
   "CAE508": {
-    "code": "CAE508",
+    "code": "CAE508C",
     "credit_hours": 3,
     "level": "10",
     "name": "Site Analysis Study",
@@ -563,9 +566,7 @@
     "prerequisites": [
       "CAE404"
     ],
-    "satisfies": [
-      "CAE509A"
-    ]
+    "satisfies": []
   },
   "CAE509A": {
     "code": "CAE509A",
@@ -573,8 +574,7 @@
     "level": "10",
     "name": "Concrete And Steel Bridges",
     "prerequisites": [
-      "CAE408",
-      "CAE508B"
+      "CAE408"
     ],
     "satisfies": []
   },
@@ -583,9 +583,7 @@
     "credit_hours": 2,
     "level": "10",
     "name": "Geographical Information Systems",
-    "prerequisites": [
-      "CAE509C"
-    ],
+    "prerequisites": [],
     "satisfies": []
   },
   "CAE509C": {
@@ -593,12 +591,8 @@
     "credit_hours": 2,
     "level": "10",
     "name": "Theory Of Urban Planning",
-    "prerequisites": [
-      "CAE312"
-    ],
-    "satisfies": [
-      "CAE509B"
-    ]
+    "prerequisites": [],
+    "satisfies": []
   },
   "CAE510": {
     "code": "CAE510",
@@ -606,7 +600,10 @@
     "level": "10",
     "name": "Senior Project 2",
     "prerequisites": [
-      "CAE504"
+      "CAE504",
+      "CAE404",
+      "CAE407",
+      "CAE502"
     ],
     "satisfies": []
   },

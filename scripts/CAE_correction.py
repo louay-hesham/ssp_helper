@@ -1,4 +1,5 @@
 import json
+import collections
 
 general = { }
 CAE = { }
@@ -9,6 +10,12 @@ def get_department(code):
     return CAE
   else:
     return
+
+def sort_dict(d):
+  d = collections.OrderedDict(sorted(d.items()))
+  for code, course in d.items():
+    d[code] = collections.OrderedDict(sorted(course.items()))
+  return d;
 
 with open('General.JSON') as data_file:
   general = json.load(data_file)
@@ -37,7 +44,7 @@ while(True):
       dep2[st]['prerequisites'].append(code)
 
 with open('General.JSON', 'w') as outfile:
-  json.dump(general, outfile)
+  json.dump(sort_dict(general), outfile)
 
 with open('CAE.JSON', 'w') as outfile:
-  json.dump(CAE, outfile)
+  json.dump(sort_dict(CAE), outfile)
