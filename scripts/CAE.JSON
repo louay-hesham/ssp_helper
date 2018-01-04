@@ -1,0 +1,621 @@
+{
+  "CAE306": {
+    "level": "5",
+    "name": "Construction Engineering Drawings",
+    "code": "CAE306",
+    "satisfies": [],
+    "prerequisites": [
+      "MP105"
+    ],
+    "credit_hours": 3
+  },
+  "CAE507C": {
+    "level": "10",
+    "name": "Project Planning And Scheduling",
+    "code": "CAE507C",
+    "satisfies": [],
+    "prerequisites": [],
+    "credit_hours": 3
+  },
+  "CAE402": {
+    "level": "7",
+    "prerequisites": [
+      "CAE303"
+    ],
+    "code": "CAE402",
+    "satisfies": [],
+    "name": "Environment-2 (Environmental & Sanitary Engineering)",
+    "credit_hours": 3
+  },
+  "CAE309A": {
+    "level": "6",
+    "name": "Computer Visualization",
+    "code": "CAE309A",
+    "satisfies": [],
+    "prerequisites": [
+      "CAE204",
+      "CAE208"
+    ],
+    "credit_hours": 3
+  },
+  "CAE305": {
+    "level": "5",
+    "name": "Construction Management 1",
+    "code": "CAE305",
+    "satisfies": [
+      "CAE503C"
+    ],
+    "prerequisites": [],
+    "credit_hours": 2
+  },
+  "CAE207": {
+    "level": "4",
+    "name": "Construction Materials 1",
+    "code": "CAE207",
+    "satisfies": [],
+    "prerequisites": [],
+    "credit_hours": 3
+  },
+  "CAE311": {
+    "level": "6",
+    "name": "Tender-1 (Cost Estimation & Control)",
+    "code": "CAE311",
+    "satisfies": [
+      "CAE411C"
+    ],
+    "prerequisites": [],
+    "credit_hours": 2
+  },
+  "CAE510": {
+    "level": "10",
+    "name": "Senior Project 2",
+    "code": "CAE510",
+    "satisfies": [],
+    "prerequisites": [
+      "CAE504"
+    ],
+    "credit_hours": 4
+  },
+  "CAE404": {
+    "level": "7",
+    "prerequisites": [
+      "CAE206",
+      "CAE301"
+    ],
+    "code": "CAE404",
+    "satisfies": [
+      "CAE507A",
+      "CAE508B"
+    ],
+    "name": "Design Of Metallic Structures 1",
+    "credit_hours": 3
+  },
+  "CAE407": {
+    "level": "8",
+    "prerequisites": [
+      "CAE310"
+    ],
+    "code": "CAE407",
+    "satisfies": [],
+    "name": "Design Of Foundations & Retaining Structures",
+    "credit_hours": 3
+  },
+  "CAE309B": {
+    "level": "6",
+    "name": "Advanced Engineering Materials",
+    "code": "CAE309B",
+    "satisfies": [],
+    "prerequisites": [
+      "CAE206"
+    ],
+    "credit_hours": 3
+  },
+  "CAE508B": {
+    "level": "10",
+    "name": "Design Of Metallic Structures 2",
+    "code": "CAE508B",
+    "satisfies": [
+      "CAE509A"
+    ],
+    "prerequisites": [
+      "CAE404"
+    ],
+    "credit_hours": 3
+  },
+  "CAE405": {
+    "level": "7",
+    "prerequisites": [
+      "CAE307",
+      "CAE308"
+    ],
+    "code": "CAE405",
+    "satisfies": [
+      "CAE501B"
+    ],
+    "name": "Design Studio 2",
+    "credit_hours": 3
+  },
+  "EME212": {
+    "level": "8",
+    "prerequisites": [],
+    "code": "EME212",
+    "satisfies": [],
+    "name": "Environment-3 (Fund. Of Mech. & Elec. System)",
+    "credit_hours": 3
+  },
+  "CAE206": {
+    "level": "4",
+    "name": "Engineering Material & Stress Analysis",
+    "code": "CAE206",
+    "satisfies": [
+      "CAE301",
+      "CAE309B",
+      "CAE401",
+      "CAE404",
+      "CAE411A"
+    ],
+    "prerequisites": [
+      "CAE201"
+    ],
+    "credit_hours": 3
+  },
+  "CAE501B": {
+    "level": "9",
+    "name": "Projects Management 2",
+    "code": "CAE501B",
+    "satisfies": [],
+    "prerequisites": [
+      "CAE405"
+    ],
+    "credit_hours": 3
+  },
+  "CAE408": {
+    "level": "8",
+    "prerequisites": [
+      "CAE401"
+    ],
+    "code": "CAE408",
+    "satisfies": [
+      "CAE501A",
+      "CAE507A",
+      "CAE509A"
+    ],
+    "name": "Design Of R.C. Structures 2",
+    "credit_hours": 3
+  },
+  "CAE509C": {
+    "level": "10",
+    "name": "Theory Of Urban Planning",
+    "code": "CAE509C",
+    "satisfies": [
+      "CAE509B"
+    ],
+    "prerequisites": [
+      "CAE312"
+    ],
+    "credit_hours": 2
+  },
+  "CAE411B": {
+    "level": "8",
+    "prerequisites": [
+      "CAE308"
+    ],
+    "code": "CAE411B",
+    "satisfies": [
+      "CAE501C"
+    ],
+    "name": "Design Studio 4",
+    "credit_hours": 3
+  },
+  "CAE401": {
+    "level": "7",
+    "prerequisites": [
+      "CAE206",
+      "CAE301"
+    ],
+    "code": "CAE401",
+    "satisfies": [
+      "CAE408"
+    ],
+    "name": "Design Of R.C. Structures 1",
+    "credit_hours": 3
+  },
+  "CAE507B": {
+    "level": "10",
+    "name": "Heritage Preservation",
+    "code": "CAE507B",
+    "satisfies": [],
+    "prerequisites": [
+      "CAE308"
+    ],
+    "credit_hours": 3
+  },
+  "CAE505": {
+    "level": "10",
+    "name": "Methods & Equipment For Construction 2",
+    "code": "CAE505",
+    "satisfies": [],
+    "prerequisites": [
+      "CAE403"
+    ],
+    "credit_hours": 3
+  },
+  "CAE503C": {
+    "level": "9",
+    "name": "Construction Management 2",
+    "code": "CAE503C",
+    "satisfies": [],
+    "prerequisites": [
+      "CAE305"
+    ],
+    "credit_hours": 3
+  },
+  "CAE202": {
+    "level": "3",
+    "name": "Construction Surveying",
+    "code": "CAE202",
+    "satisfies": [],
+    "prerequisites": [
+      "MP102"
+    ],
+    "credit_hours": 3
+  },
+  "CAE209": {
+    "level": "4",
+    "name": "Environment-1 (Climate & Environment)",
+    "code": "CAE209",
+    "satisfies": [
+      "CAE312",
+      "CAE508A"
+    ],
+    "prerequisites": [],
+    "credit_hours": 2
+  },
+  "CAE308": {
+    "level": "6",
+    "name": "History And Theory Of Architecture 2",
+    "code": "CAE308",
+    "satisfies": [
+      "CAE405",
+      "CAE406",
+      "CAE411B",
+      "CAE507B"
+    ],
+    "prerequisites": [
+      "CAE203"
+    ],
+    "credit_hours": 2
+  },
+  "CAE303": {
+    "level": "5",
+    "name": "Hydraulics For Civil Engineers",
+    "code": "CAE303",
+    "satisfies": [
+      "CAE310",
+      "CAE402"
+    ],
+    "prerequisites": [
+      "MP101"
+    ],
+    "credit_hours": 3
+  },
+  "CAE301": {
+    "level": "5",
+    "name": "Structural Analysis 2",
+    "code": "CAE301",
+    "satisfies": [
+      "CAE401",
+      "CAE404",
+      "CAE411A"
+    ],
+    "prerequisites": [
+      "CAE201",
+      "CAE206"
+    ],
+    "credit_hours": 3
+  },
+  "CAE208": {
+    "level": "4",
+    "name": "Visual Design",
+    "code": "CAE208",
+    "satisfies": [
+      "CAE309A"
+    ],
+    "prerequisites": [
+      "MP105"
+    ],
+    "credit_hours": 3
+  },
+  "CAE509A": {
+    "level": "10",
+    "name": "Concrete And Steel Bridges",
+    "code": "CAE509A",
+    "satisfies": [],
+    "prerequisites": [
+      "CAE408",
+      "CAE508B"
+    ],
+    "credit_hours": 2
+  },
+  "CAE501A": {
+    "level": "9",
+    "name": "Prefabricated Water And Pre-Stressed Concrete Structures",
+    "code": "CAE501A",
+    "satisfies": [],
+    "prerequisites": [
+      "CAE408"
+    ],
+    "credit_hours": 3
+  },
+  "CAE503A": {
+    "level": "9",
+    "name": "Highway Engineering",
+    "code": "CAE503A",
+    "satisfies": [],
+    "prerequisites": [
+      "CAE304",
+      "CAE310"
+    ],
+    "credit_hours": 3
+  },
+  "CAE310": {
+    "level": "6",
+    "name": "Soil Mechanics",
+    "code": "CAE310",
+    "satisfies": [
+      "CAE407",
+      "CAE503A"
+    ],
+    "prerequisites": [
+      "CAE303"
+    ],
+    "credit_hours": 3
+  },
+  "CAE204": {
+    "level": "3",
+    "name": "Architectural Drafting",
+    "code": "CAE204",
+    "satisfies": [
+      "CAE309A"
+    ],
+    "prerequisites": [
+      "MP105"
+    ],
+    "credit_hours": 2
+  },
+  "CAE210": {
+    "level": "4",
+    "name": "Architectural Design Fundamentals",
+    "code": "CAE210",
+    "satisfies": [
+      "CAE302",
+      "CAE503B"
+    ],
+    "prerequisites": [],
+    "credit_hours": 3
+  },
+  "CAE508A": {
+    "level": "10",
+    "name": "Advanced Environmental Control",
+    "code": "CAE508A",
+    "satisfies": [],
+    "prerequisites": [
+      "CAE209"
+    ],
+    "credit_hours": 3
+  },
+  "CAE507A": {
+    "level": "10",
+    "name": "Analysis And Design Of Composite Structures",
+    "code": "CAE507A",
+    "satisfies": [],
+    "prerequisites": [
+      "CAE404",
+      "CAE408"
+    ],
+    "credit_hours": 3
+  },
+  "CAE201": {
+    "level": "3",
+    "name": "Structural Analysis 1",
+    "code": "CAE201",
+    "satisfies": [
+      "CAE206",
+      "CAE301",
+      "CAE403"
+    ],
+    "prerequisites": [
+      "MP104"
+    ],
+    "credit_hours": 3
+  },
+  "CAE502": {
+    "level": "9",
+    "name": "Theory Of Architecture 2",
+    "code": "CAE502",
+    "satisfies": [],
+    "prerequisites": [
+      "CAE406"
+    ],
+    "credit_hours": 2
+  },
+  "CAE304": {
+    "level": "5",
+    "name": "Transportation Engineering & Urban Planning",
+    "code": "CAE304",
+    "satisfies": [
+      "CAE503A"
+    ],
+    "prerequisites": [
+      "MP104"
+    ],
+    "credit_hours": 3
+  },
+  "CAE504": {
+    "level": "9",
+    "name": "Senior Project 1",
+    "code": "CAE504",
+    "satisfies": [
+      "CAE510"
+    ],
+    "prerequisites": [],
+    "credit_hours": 3
+  },
+  "CAE307": {
+    "level": "6",
+    "name": "Design Studio 2",
+    "code": "CAE307",
+    "satisfies": [
+      "CAE405"
+    ],
+    "prerequisites": [
+      "CAE302"
+    ],
+    "credit_hours": 3
+  },
+  "CAE411C": {
+    "level": "8",
+    "prerequisites": [
+      "CAE311"
+    ],
+    "code": "CAE411C",
+    "satisfies": [],
+    "name": "Tender 2 (Specifications & Codes)",
+    "credit_hours": 3
+  },
+  "CAE506": {
+    "level": "10",
+    "name": "Quality Control And Repair Of Structures",
+    "code": "CAE506",
+    "satisfies": [],
+    "prerequisites": [],
+    "credit_hours": 3
+  },
+  "CAE509B": {
+    "level": "10",
+    "name": "Geographical Information Systems",
+    "code": "CAE509B",
+    "satisfies": [],
+    "prerequisites": [
+      "CAE509C"
+    ],
+    "credit_hours": 2
+  },
+  "CAE501C": {
+    "level": "9",
+    "name": "Theory Of Housing",
+    "code": "CAE501C",
+    "satisfies": [],
+    "prerequisites": [
+      "CAE411B"
+    ],
+    "credit_hours": 3
+  },
+  "CAE411A": {
+    "level": "8",
+    "prerequisites": [
+      "CAE206",
+      "CAE301"
+    ],
+    "code": "CAE411A",
+    "satisfies": [],
+    "name": "Dynamics Of Structures",
+    "credit_hours": 3
+  },
+  "CAE406": {
+    "level": "8",
+    "prerequisites": [
+      "CAE308"
+    ],
+    "code": "CAE406",
+    "satisfies": [
+      "CAE502"
+    ],
+    "name": "Theory Of Architecture 1",
+    "credit_hours": 2
+  },
+  "CAE503B": {
+    "level": "9",
+    "name": "Advanced Interior Design",
+    "code": "CAE503B",
+    "satisfies": [],
+    "prerequisites": [
+      "CAE210"
+    ],
+    "credit_hours": 3
+  },
+  "CAE410": {
+    "level": "8",
+    "prerequisites": [],
+    "code": "CAE410",
+    "satisfies": [],
+    "name": "Computer Applications In Construction Eng.",
+    "credit_hours": 3
+  },
+  "CAE508": {
+    "level": "10",
+    "name": "Site Analysis Study",
+    "code": "CAE508",
+    "satisfies": [],
+    "prerequisites": [],
+    "credit_hours": 3
+  },
+  "CAE203": {
+    "level": "3",
+    "name": "History And Theory Of Architecture 1",
+    "code": "CAE203",
+    "satisfies": [
+      "CAE302",
+      "CAE308"
+    ],
+    "prerequisites": [],
+    "credit_hours": 2
+  },
+  "CAE302": {
+    "level": "5",
+    "name": "Design Studio 1",
+    "code": "CAE302",
+    "satisfies": [
+      "CAE307"
+    ],
+    "prerequisites": [
+      "CAE203",
+      "CAE210"
+    ],
+    "credit_hours": 3
+  },
+  "CAE205": {
+    "level": "3",
+    "name": "Building Technology",
+    "code": "CAE205",
+    "satisfies": [],
+    "prerequisites": [
+      "MP105"
+    ],
+    "credit_hours": 3
+  },
+  "CAE312": {
+    "level": "6",
+    "name": "Urban Design And Landscape",
+    "code": "CAE312",
+    "satisfies": [
+      "CAE509C"
+    ],
+    "prerequisites": [
+      "CAE209"
+    ],
+    "credit_hours": 3
+  },
+  "CAE403": {
+    "level": "7",
+    "prerequisites": [
+      "CAE201"
+    ],
+    "code": "CAE403",
+    "satisfies": [
+      "CAE505"
+    ],
+    "name": "Methods & Equipment For Construction 1",
+    "credit_hours": 3
+  }
+}
