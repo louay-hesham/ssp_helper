@@ -1,39 +1,266 @@
 {
-  "HS402A": {
+  "HS102": {
+    "code": "HS102",
+    "satisfies": [],
+    "level": "1",
+    "credit_hours": 1,
+    "name": "Human Rights",
+    "prerequisites": []
+  },
+  "HS401": {
+    "code": "HS401",
+    "satisfies": [],
     "level": "h",
-    "name": "Marketing",
+    "credit_hours": 2,
+    "name": "Ethics",
+    "prerequisites": []
+  },
+  "HS202": {
+    "code": "HS202",
+    "satisfies": [],
+    "level": "h",
+    "credit_hours": 2,
+    "name": "Economics",
+    "prerequisites": []
+  },
+  "HS402A": {
     "code": "HS402A",
     "satisfies": [],
-    "prerequisites": [],
-    "credit_hours": 2
+    "level": "h",
+    "credit_hours": 2,
+    "name": "Marketing",
+    "prerequisites": []
+  },
+  "CSE102": {
+    "code": "CSE102",
+    "satisfies": [
+      "CC271",
+      "EME410"
+    ],
+    "level": "2",
+    "credit_hours": 3,
+    "name": "Computer Programming",
+    "prerequisites": []
+  },
+  "HS402C": {
+    "code": "HS402C",
+    "satisfies": [],
+    "level": "h",
+    "credit_hours": 2,
+    "name": "Human Computer Interaction",
+    "prerequisites": []
+  },
+  "MP108": {
+    "code": "MP108",
+    "satisfies": [
+      "EME207",
+      "EME203",
+      "EME207",
+      "EME207",
+      "EME209"
+    ],
+    "level": "2",
+    "credit_hours": 3,
+    "name": "Physics 2",
+    "prerequisites": [
+      "MP101",
+      "MP107"
+    ]
   },
   "HS302C": {
-    "level": "h",
-    "name": "Computer And Society",
     "code": "HS302C",
     "satisfies": [],
-    "prerequisites": [],
-    "credit_hours": 2
+    "level": "h",
+    "credit_hours": 2,
+    "name": "Computer And Society",
+    "prerequisites": []
   },
   "HS302D": {
-    "level": "h",
-    "name": "Accounting",
     "code": "HS302D",
     "satisfies": [],
-    "prerequisites": [],
-    "credit_hours": 2
+    "level": "h",
+    "credit_hours": 2,
+    "name": "Accounting",
+    "prerequisites": []
+  },
+  "PE102": {
+    "code": "PE102",
+    "satisfies": [
+      "EME410"
+    ],
+    "level": "2",
+    "credit_hours": 3,
+    "name": "Production",
+    "prerequisites": [
+      "MP105"
+    ]
+  },
+  "MP201": {
+    "code": "MP201",
+    "satisfies": [
+      "MP202",
+      "MP301"
+    ],
+    "level": "3",
+    "credit_hours": 3,
+    "name": "Maths 3",
+    "prerequisites": [
+      "MP102"
+    ]
+  },
+  "HS501D": {
+    "code": "HS501D",
+    "satisfies": [],
+    "level": "h",
+    "credit_hours": 2,
+    "name": "Construction Contracts And Law",
+    "prerequisites": []
+  },
+  "HS302B": {
+    "code": "HS302B",
+    "satisfies": [],
+    "level": "h",
+    "credit_hours": 2,
+    "name": "Strategic Management",
+    "prerequisites": []
+  },
+  "MP103": {
+    "code": "MP103",
+    "satisfies": [
+      "MP104"
+    ],
+    "level": "1",
+    "credit_hours": 3,
+    "name": "Mechanics 1",
+    "prerequisites": []
+  },
+  "HS402B": {
+    "code": "HS402B",
+    "satisfies": [],
+    "level": "h",
+    "credit_hours": 2,
+    "name": "Finance",
+    "prerequisites": []
+  },
+  "HS501C": {
+    "code": "HS501C",
+    "satisfies": [],
+    "level": "h",
+    "credit_hours": 2,
+    "name": "Communication Laws",
+    "prerequisites": []
+  },
+  "HS501A": {
+    "code": "HS501A",
+    "satisfies": [],
+    "level": "h",
+    "credit_hours": 2,
+    "name": "Feasibility",
+    "prerequisites": []
+  },
+  "HS302A": {
+    "code": "HS302A",
+    "satisfies": [],
+    "level": "h",
+    "credit_hours": 2,
+    "name": "Human Resource Management",
+    "prerequisites": []
   },
   "HS501B": {
-    "level": "h",
-    "name": "Analytical Skills",
     "code": "HS501B",
     "satisfies": [],
-    "prerequisites": [],
-    "credit_hours": 2
+    "level": "h",
+    "credit_hours": 2,
+    "name": "Analytical Skills",
+    "prerequisites": []
+  },
+  "HS201": {
+    "code": "HS201",
+    "satisfies": [],
+    "level": "h",
+    "credit_hours": 2,
+    "name": "Technical Writing",
+    "prerequisites": []
+  },
+  "HS502A": {
+    "code": "HS502A",
+    "satisfies": [],
+    "level": "h",
+    "credit_hours": 2,
+    "name": "Communication Skills",
+    "prerequisites": []
+  },
+  "MP106": {
+    "code": "MP106",
+    "satisfies": [],
+    "level": "2",
+    "credit_hours": 3,
+    "name": "Graph 2",
+    "prerequisites": [
+      "MP105"
+    ]
+  },
+  "MP107": {
+    "code": "MP107",
+    "satisfies": [
+      "MP108",
+      "MP204",
+      "EME203",
+      "EME206"
+    ],
+    "level": "1",
+    "credit_hours": 3,
+    "name": "Physics 1",
+    "prerequisites": []
+  },
+  "HS502B": {
+    "code": "HS502B",
+    "satisfies": [],
+    "level": "h",
+    "credit_hours": 2,
+    "name": "Principles Of Industrial Health",
+    "prerequisites": []
+  },
+  "HS502C": {
+    "code": "HS502C",
+    "satisfies": [],
+    "level": "h",
+    "credit_hours": 2,
+    "name": "Social Risks Of Computer Systems",
+    "prerequisites": []
+  },
+  "MP104": {
+    "code": "MP104",
+    "satisfies": [
+      "EME303",
+      "CAE201",
+      "CAE304"
+    ],
+    "level": "2",
+    "credit_hours": 3,
+    "name": "Mechanics 2",
+    "prerequisites": [
+      "MP101",
+      "MP103"
+    ]
+  },
+  "HS301": {
+    "code": "HS301",
+    "satisfies": [],
+    "level": "h",
+    "credit_hours": 2,
+    "name": "Project Management",
+    "prerequisites": []
+  },
+  "HS103": {
+    "code": "HS103",
+    "satisfies": [],
+    "level": "2",
+    "credit_hours": 1,
+    "name": "History Of Engineering",
+    "prerequisites": []
   },
   "MP105": {
-    "level": "1",
-    "name": "Graph 1",
     "code": "MP105",
     "satisfies": [
       "MP106",
@@ -44,100 +271,12 @@
       "CAE208",
       "CAE306"
     ],
-    "prerequisites": [],
-    "credit_hours": 3
-  },
-  "MP104": {
-    "level": "2",
-    "name": "Mechanics 2",
-    "code": "MP104",
-    "satisfies": [
-      "EME303",
-      "CAE201",
-      "CAE304"
-    ],
-    "prerequisites": [
-      "MP101",
-      "MP103"
-    ],
-    "credit_hours": 3
-  },
-  "CSE102": {
-    "level": "2",
-    "name": "Computer Programming",
-    "code": "CSE102",
-    "satisfies": [
-      "CC271",
-      "EME410"
-    ],
-    "prerequisites": [],
-    "credit_hours": 3
-  },
-  "HS301": {
-    "level": "h",
-    "name": "Project Management",
-    "code": "HS301",
-    "satisfies": [],
-    "prerequisites": [],
-    "credit_hours": 2
-  },
-  "MP108": {
-    "level": "2",
-    "name": "Physics 2",
-    "code": "MP108",
-    "satisfies": [
-      "EME207",
-      "EME203",
-      "EME207",
-      "EME207",
-      "EME209"
-    ],
-    "prerequisites": [
-      "MP101",
-      "MP107"
-    ],
-    "credit_hours": 3
-  },
-  "HS501D": {
-    "level": "h",
-    "name": "Construction Contracts And Law",
-    "code": "HS501D",
-    "satisfies": [],
-    "prerequisites": [],
-    "credit_hours": 2
-  },
-  "HS502B": {
-    "level": "h",
-    "name": "Principles Of Industrial Health",
-    "code": "HS502B",
-    "satisfies": [],
-    "prerequisites": [],
-    "credit_hours": 2
-  },
-  "HS102": {
     "level": "1",
-    "name": "Human Rights",
-    "code": "HS102",
-    "satisfies": [],
-    "prerequisites": [],
-    "credit_hours": 1
-  },
-  "MP107": {
-    "level": "1",
-    "name": "Physics 1",
-    "code": "MP107",
-    "satisfies": [
-      "MP108",
-      "MP204",
-      "EME203",
-      "EME206"
-    ],
-    "prerequisites": [],
-    "credit_hours": 3
+    "credit_hours": 3,
+    "name": "Graph 1",
+    "prerequisites": []
   },
   "GPE101": {
-    "level": "1",
-    "name": "Engineering Chemistry",
     "code": "GPE101",
     "satisfies": [
       "GPE205",
@@ -145,126 +284,12 @@
       "GPE211",
       "GPE201"
     ],
-    "prerequisites": [],
-    "credit_hours": 3
-  },
-  "HS302A": {
-    "level": "h",
-    "name": "Human Resource Management",
-    "code": "HS302A",
-    "satisfies": [],
-    "prerequisites": [],
-    "credit_hours": 2
-  },
-  "HS502C": {
-    "level": "h",
-    "name": "Social Risks Of Computer Systems",
-    "code": "HS502C",
-    "satisfies": [],
-    "prerequisites": [],
-    "credit_hours": 2
-  },
-  "MP102": {
-    "level": "2",
-    "name": "Maths2",
-    "code": "MP102",
-    "satisfies": [
-      "MP201",
-      "MP301",
-      "CC181",
-      "EME206",
-      "CAE202"
-    ],
-    "prerequisites": [
-      "MP101"
-    ],
-    "credit_hours": 3
-  },
-  "HS103": {
-    "level": "2",
-    "name": "History Of Engineering",
-    "code": "HS103",
-    "satisfies": [],
-    "prerequisites": [],
-    "credit_hours": 1
-  },
-  "HS101": {
     "level": "1",
-    "name": "English Language",
-    "code": "HS101",
-    "satisfies": [],
-    "prerequisites": [],
-    "credit_hours": 2
-  },
-  "PE102": {
-    "level": "2",
-    "name": "Production",
-    "code": "PE102",
-    "satisfies": [
-      "EME410"
-    ],
-    "prerequisites": [
-      "MP105"
-    ],
-    "credit_hours": 3
-  },
-  "HS201": {
-    "level": "h",
-    "name": "Technical Writing",
-    "code": "HS201",
-    "satisfies": [],
-    "prerequisites": [],
-    "credit_hours": 2
-  },
-  "HS401": {
-    "level": "h",
-    "name": "Ethics",
-    "code": "HS401",
-    "satisfies": [],
-    "prerequisites": [],
-    "credit_hours": 2
-  },
-  "HS202": {
-    "level": "h",
-    "name": "Economics",
-    "code": "HS202",
-    "satisfies": [],
-    "prerequisites": [],
-    "credit_hours": 2
-  },
-  "MP101": {
-    "level": "1",
-    "name": "Maths 1",
-    "code": "MP101",
-    "satisfies": [
-      "MP102",
-      "MP104",
-      "MP108",
-      "MP204",
-      "CAE303"
-    ],
-    "prerequisites": [],
-    "credit_hours": 3
-  },
-  "HS501A": {
-    "level": "h",
-    "name": "Feasibility",
-    "code": "HS501A",
-    "satisfies": [],
-    "prerequisites": [],
-    "credit_hours": 2
-  },
-  "HS402C": {
-    "level": "h",
-    "name": "Human Computer Interaction",
-    "code": "HS402C",
-    "satisfies": [],
-    "prerequisites": [],
-    "credit_hours": 2
+    "credit_hours": 3,
+    "name": "Engineering Chemistry",
+    "prerequisites": []
   },
   "MP202": {
-    "level": "4",
-    "name": "Maths 4",
     "code": "MP202",
     "satisfies": [
       "CC361",
@@ -275,74 +300,49 @@
       "CC483",
       "MP314"
     ],
+    "level": "4",
+    "credit_hours": 3,
+    "name": "Maths 4",
     "prerequisites": [
       "MP201"
-    ],
-    "credit_hours": 3
+    ]
   },
-  "HS502A": {
-    "level": "h",
-    "name": "Communication Skills",
-    "code": "HS502A",
-    "satisfies": [],
-    "prerequisites": [],
-    "credit_hours": 2
-  },
-  "MP201": {
-    "level": "3",
-    "name": "Maths 3",
-    "code": "MP201",
+  "MP102": {
+    "code": "MP102",
     "satisfies": [
-      "MP202",
-      "MP301"
+      "MP201",
+      "MP301",
+      "CC181",
+      "EME206",
+      "CAE202"
     ],
-    "prerequisites": [
-      "MP102"
-    ],
-    "credit_hours": 3
-  },
-  "MP106": {
     "level": "2",
-    "name": "Graph 2",
-    "code": "MP106",
-    "satisfies": [],
+    "credit_hours": 3,
+    "name": "Maths2",
     "prerequisites": [
-      "MP105"
-    ],
-    "credit_hours": 3
+      "MP101"
+    ]
   },
-  "MP103": {
-    "level": "1",
-    "name": "Mechanics 1",
-    "code": "MP103",
+  "MP101": {
+    "code": "MP101",
     "satisfies": [
-      "MP104"
+      "MP102",
+      "MP104",
+      "MP108",
+      "MP204",
+      "CAE303"
     ],
-    "prerequisites": [],
-    "credit_hours": 3
+    "level": "1",
+    "credit_hours": 3,
+    "name": "Maths 1",
+    "prerequisites": []
   },
-  "HS501C": {
-    "level": "h",
-    "name": "Communication Laws",
-    "code": "HS501C",
+  "HS101": {
+    "code": "HS101",
     "satisfies": [],
-    "prerequisites": [],
-    "credit_hours": 2
-  },
-  "HS402B": {
-    "level": "h",
-    "name": "Finance",
-    "code": "HS402B",
-    "satisfies": [],
-    "prerequisites": [],
-    "credit_hours": 2
-  },
-  "HS302B": {
-    "level": "h",
-    "name": "Strategic Management",
-    "code": "HS302B",
-    "satisfies": [],
-    "prerequisites": [],
-    "credit_hours": 2
+    "level": "1",
+    "credit_hours": 2,
+    "name": "English Language",
+    "prerequisites": []
   }
 }
