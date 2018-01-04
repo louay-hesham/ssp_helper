@@ -55,9 +55,19 @@ a.neat {
   border-color: #1abc9c;
 }
 
+.btn-primary.elective:hover {
+  background-color: #16a085;
+  border-color: #16a085;
+}
+
 .btn-warning.elective {
   background-color: #e6e600;
   border-color: #e6e600;
+}
+
+.btn-warning.elective:hover {
+  background-color: #d1d100;
+  border-color: #d1d100;
 }
 
 .btn-danger.elective {
