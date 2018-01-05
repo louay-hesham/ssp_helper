@@ -3,9 +3,16 @@
 
 import json
 import sys
+import collections
 
 general = { }
 department = { }
+
+def sort_dict(d):
+  d = collections.OrderedDict(sorted(d.items()))
+  for code, course in d.items():
+    d[code] = collections.OrderedDict(sorted(course.items()))
+  return d;
 
 def get_courses_info(courses):
   level = 0
@@ -89,7 +96,7 @@ except (OSError, IOError, ValueError) as e:
 
 get_courses_info(department)
 with open(file_name, 'w') as outfile:
-  json.dump(department, outfile)
+  json.dump(sort_dict(department), outfile)
 
 with open('General.JSON', 'w') as outfile:
-  json.dump(general, outfile)
+  json.dump(sort_dict(general), outfile)
