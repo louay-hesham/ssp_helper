@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { BrowserModule } from '@angular/platform-browser';
 import { CoursesLoaderService } from '../courses-loader.service'
 import { Course } from '../course'
 
@@ -28,6 +29,7 @@ export class MainComponent implements OnInit {
   ngOnInit() {
     this.coursesData = this.coursesLoader.getCourses()
     Course.loadCourses(this.coursesData, this.department);
+    this.electivesDict();
   }
 
   getCH(): number {
@@ -49,8 +51,8 @@ export class MainComponent implements OnInit {
   }
 
   completeLevel(level: string) {
-  	for (let key in Course.courses) {
-  		let course = Course.courses[key];
+  	for (let key in Course.coreCourses) {
+  		let course = Course.coreCourses[key];
   		if (course.level == level && course.isAvailable() && !course.isPassed) {
   			course.pass();
   		}
@@ -69,8 +71,8 @@ export class MainComponent implements OnInit {
 
   coursesList() {
   	var coursesArray: Course[] = []
-  	for (let key in Course.courses) {
-  		let course = Course.courses[key];
+  	for (let key in Course.coreCourses) {
+  		let course = Course.coreCourses[key];
   		coursesArray.push(course);
   	}
   	coursesArray.sort((c1:Course,c2:Course) => {
@@ -85,6 +87,19 @@ export class MainComponent implements OnInit {
       }
     });
     return coursesArray;
+  }
+
+  electivesDict() {
+    let electivesByLevel = { };
+    for (let level in Course.electivesGroups) {
+      electivesByLevel[level] = [];
+      let groups = Course.electivesGroups[level];
+      for (let groupCode in groups) {
+        let courses = groups[groupCode];
+        electivesByLevel[level].push(courses);
+      }
+    }
+    return electivesByLevel;
   }
 
   buttonClass(course: Course): string {

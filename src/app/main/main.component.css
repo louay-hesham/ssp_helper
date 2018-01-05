@@ -75,10 +75,15 @@ a.neat {
   border-color: #aa0000;
 }
 
-.right{
+.right {
   float:right;
 }
 
-.left{
+.left {
   float:left;
+}
+
+.elective-group {
+  margin-top: 5px;
+  margin-bottom: 5px;
 }

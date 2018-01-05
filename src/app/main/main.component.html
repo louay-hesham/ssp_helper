@@ -69,4 +69,19 @@
 		</span>
 	</div>
 
+  <div *ngIf="electivesDict()[level] != undefined">
+    <div class="row btn-group elective-group" *ngFor="let electives of electivesDict()[level]">
+      <button *ngFor="let course of electives"
+              click-event [course-click]="course"
+              (click)="course.togglePass()"
+              class="{{buttonClass(course)}}"
+              disabled="{{buttonDisability(course)}}"
+              style.cursor="{{buttonStyle(course.isAvailable())}}">
+        <b>{{course.name}}</b>
+        <br>
+        <span class="left">{{course.code}}</span><span class="right">({{course.creditHours}} CH)</span>​
+      </button>
+    </div>
+  </div>
+
 </div>

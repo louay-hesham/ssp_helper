@@ -1,6 +1,9 @@
 export class Course {
 
-  public static courses: {[code: string]: Course} = { };
+  private static allCourses: {[code: string]: Course} = { };
+
+  public static coreCourses: {[code: string]: Course} = { };
+  public static electivesGroups: {[level :string] : {[code: string]: Course[]}} = { };
   public static CH: number = 0;
   public static seniorProject1Code: string = '';
 
@@ -13,19 +16,38 @@ export class Course {
   public level: string;
   public codeWithName: string;
 
+  private static addData(data: any) {
+    for (let key in data) {
+      let course = new Course(data[key]);
+      Course.allCourses[key] = course;
+      if (/[A-Z]+[0-9]+[A-Z]/.test(course.code)) {
+        let majorGroup = course.code.slice(0, -1);
+        if (!(course.level in Course.electivesGroups)) {
+          Course.electivesGroups[course.level] = { }
+        }
+        if (!(majorGroup in Course.electivesGroups[course.level])) {
+          Course.electivesGroups[course.level][majorGroup] = [];
+        }
+
+        Course.electivesGroups[course.level][majorGroup].push(course)
+      } else {
+        Course.coreCourses[key] = course;
+      }
+    }
+  }
+
   public static loadCourses(coursesData: any, department: string) {
-    Course.courses = { };
+    Course.coreCourses = { };
     Course.CH = 0;
     Course.seniorProject1Code = '';
+    Course.electivesGroups = { };
+
     coursesData['General'].subscribe(data => {
-      for (let key in data) {
-        Course.courses[key] = new Course(data[key]);
-      }  
+      Course.addData(data);
     });
+
     coursesData[department].subscribe(data => {
-      for (let key in data) {
-        Course.courses[key] = new Course(data[key]);
-      }  
+      Course.addData(data);  
     });
   }
 
@@ -47,9 +69,9 @@ export class Course {
     if (this.isPassed) {
       this.isPassed = false;
       Course.CH -= this.creditHours;
-      for (let code in this.satisfies) {
-        if (code in Course.courses){
-          Course.courses[this.satisfies[code]].fail();
+      for (let code of this.satisfies) {
+        if (code in Course.allCourses){
+          Course.allCourses[code].fail();
         }
       }
     }
@@ -62,7 +84,7 @@ export class Course {
     }
     for (let i in this.prerequisites) {
       let prerequisite = this.prerequisites[i];
-      avail = avail && Course.courses[prerequisite].isPassed;
+      avail = avail && Course.allCourses[prerequisite].isPassed;
     }
     return avail;
   
@@ -72,7 +94,7 @@ export class Course {
     if (this.isPassed) {
       this.fail();
       if (Course.CH < 129) {
-        Course.courses[Course.seniorProject1Code].fail();
+        Course.coreCourses[Course.seniorProject1Code].fail();
       }
     } else {
       this.pass();  
