@@ -74,7 +74,7 @@
       <button *ngFor="let course of electives"
               click-event [course-click]="course"
               (click)="course.togglePass()"
-              class="{{buttonClass(course)}}"
+              class="{{buttonClass(course) + ' elective'}}"
               disabled="{{buttonDisability(course)}}"
               style.cursor="{{buttonStyle(course.isAvailable())}}">
         <b>{{course.name}}</b>

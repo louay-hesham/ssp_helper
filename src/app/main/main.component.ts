@@ -111,7 +111,7 @@ export class MainComponent implements OnInit {
   	} else {
   		css = "btn btn-danger";
   	}
-    if (/[A-Z]+[0-9]+[A-Z]/.test(course.code) || course.level == 'e') {
+    if (course.level == 'e') {
       css = css + ' elective';
     }
     return css;

@@ -16,24 +16,34 @@ export class Course {
   public level: string;
   public codeWithName: string;
 
+  private static initElectivesGroup(level: string, majorGroup: string) {
+    if (!(level in Course.electivesGroups)) {
+      Course.electivesGroups[level] = { }
+    }
+    if (!(majorGroup in Course.electivesGroups[level])) {
+      Course.electivesGroups[level][majorGroup] = [];
+    }
+  }
+
   private static addData(data: any) {
     for (let key in data) {
       let course = new Course(data[key]);
       Course.allCourses[key] = course;
-      if (/[A-Z]+[0-9]+[A-Z]/.test(course.code)) {
+      if (/[0-9]+-e[0-9]+/.test(course.level)) {
+        let trueLevel = /[0-9]+/.exec(course.level)[0];
+        let electiveGroup = /e[0-9]+/.exec(course.level)[0];
+        course.level = trueLevel;
+        Course.initElectivesGroup(trueLevel, electiveGroup);
+        Course.electivesGroups[trueLevel][electiveGroup].push(course)
+      } else if (/[A-Z]+[0-9]+[A-Z]/.test(course.code)) {
         let majorGroup = course.code.slice(0, -1);
-        if (!(course.level in Course.electivesGroups)) {
-          Course.electivesGroups[course.level] = { }
-        }
-        if (!(majorGroup in Course.electivesGroups[course.level])) {
-          Course.electivesGroups[course.level][majorGroup] = [];
-        }
-
+        Course.initElectivesGroup(course.level, majorGroup);
         Course.electivesGroups[course.level][majorGroup].push(course)
       } else {
         Course.coreCourses[key] = course;
       }
     }
+    console.log(Course.electivesGroups);
   }
 
   public static loadCourses(coursesData: any, department: string) {
