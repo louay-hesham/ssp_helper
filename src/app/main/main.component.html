@@ -63,7 +63,8 @@
 		          style.cursor="{{buttonStyle(course.isAvailable())}}"
               style.margin="{{'5px'}}">
 		    <b>{{course.name}}</b>
-		    <br>{{course.code}}
+		    <br>
+        <span class="left">{{course.code}}</span><span class="right">({{course.creditHours}} CH)</span>​
 		  </button>
 		</span>
 	</div>

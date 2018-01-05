@@ -74,3 +74,11 @@ a.neat {
   background-color: #aa0000;
   border-color: #aa0000;
 }
+
+.right{
+  float:right;
+}
+
+.left{
+  float:left;
+}
