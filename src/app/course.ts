@@ -16,12 +16,12 @@ export class Course {
   public level: string;
   public codeWithName: string;
 
-  private static initElectivesGroup(level: string, majorGroup: string) {
+  private static initElectivesGroup(level: string, electiveGroup: string) {
     if (!(level in Course.electivesGroups)) {
       Course.electivesGroups[level] = { }
     }
-    if (!(majorGroup in Course.electivesGroups[level])) {
-      Course.electivesGroups[level][majorGroup] = [];
+    if (!(electiveGroup in Course.electivesGroups[level])) {
+      Course.electivesGroups[level][electiveGroup] = [];
     }
   }
 
@@ -29,16 +29,12 @@ export class Course {
     for (let key in data) {
       let course = new Course(data[key]);
       Course.allCourses[key] = course;
-      if (/[0-9]+-e[0-9]+/.test(course.level)) {
-        let trueLevel = /[0-9]+/.exec(course.level)[0];
+      if (/([0-9]+|h)-e[0-9]+/.test(course.level)) {
+        let trueLevel = /([0-9]+|h)/.exec(course.level)[0];
         let electiveGroup = /e[0-9]+/.exec(course.level)[0];
         course.level = trueLevel;
         Course.initElectivesGroup(trueLevel, electiveGroup);
         Course.electivesGroups[trueLevel][electiveGroup].push(course)
-      } else if (/[A-Z]+[0-9]+[A-Z]/.test(course.code)) {
-        let majorGroup = course.code.slice(0, -1);
-        Course.initElectivesGroup(course.level, majorGroup);
-        Course.electivesGroups[course.level][majorGroup].push(course)
       } else {
         Course.coreCourses[key] = course;
       }
