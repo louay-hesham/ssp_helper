@@ -74,7 +74,7 @@
   "HS302A": {
     "code": "HS302A",
     "credit_hours": 2,
-    "level": "h",
+    "level": "h-e1",
     "name": "Human Resource Management",
     "prerequisites": [],
     "satisfies": []
@@ -82,7 +82,7 @@
   "HS302B": {
     "code": "HS302B",
     "credit_hours": 2,
-    "level": "h",
+    "level": "h-e1",
     "name": "Strategic Management",
     "prerequisites": [],
     "satisfies": []
@@ -90,7 +90,7 @@
   "HS302C": {
     "code": "HS302C",
     "credit_hours": 2,
-    "level": "h",
+    "level": "h-e1",
     "name": "Computer And Society",
     "prerequisites": [],
     "satisfies": []
@@ -98,7 +98,7 @@
   "HS302D": {
     "code": "HS302D",
     "credit_hours": 2,
-    "level": "h",
+    "level": "h-e1",
     "name": "Accounting",
     "prerequisites": [],
     "satisfies": []
@@ -114,7 +114,7 @@
   "HS402A": {
     "code": "HS402A",
     "credit_hours": 2,
-    "level": "h",
+    "level": "h-e2",
     "name": "Marketing",
     "prerequisites": [],
     "satisfies": []
@@ -122,7 +122,7 @@
   "HS402B": {
     "code": "HS402B",
     "credit_hours": 2,
-    "level": "h",
+    "level": "h-e2",
     "name": "Finance",
     "prerequisites": [],
     "satisfies": []
@@ -130,7 +130,7 @@
   "HS402C": {
     "code": "HS402C",
     "credit_hours": 2,
-    "level": "h",
+    "level": "h-e2",
     "name": "Human Computer Interaction",
     "prerequisites": [],
     "satisfies": []
@@ -138,7 +138,7 @@
   "HS501A": {
     "code": "HS501A",
     "credit_hours": 2,
-    "level": "h",
+    "level": "h-e3",
     "name": "Feasibility",
     "prerequisites": [],
     "satisfies": []
@@ -146,7 +146,7 @@
   "HS501B": {
     "code": "HS501B",
     "credit_hours": 2,
-    "level": "h",
+    "level": "h-e3",
     "name": "Analytical Skills",
     "prerequisites": [],
     "satisfies": []
@@ -154,7 +154,7 @@
   "HS501C": {
     "code": "HS501C",
     "credit_hours": 2,
-    "level": "h",
+    "level": "h-e3",
     "name": "Communication Laws",
     "prerequisites": [],
     "satisfies": []
@@ -162,7 +162,7 @@
   "HS501D": {
     "code": "HS501D",
     "credit_hours": 2,
-    "level": "h",
+    "level": "h-e3",
     "name": "Construction Contracts And Law",
     "prerequisites": [],
     "satisfies": []
@@ -170,7 +170,7 @@
   "HS502A": {
     "code": "HS502A",
     "credit_hours": 2,
-    "level": "h",
+    "level": "h-e4",
     "name": "Communication Skills",
     "prerequisites": [],
     "satisfies": []
@@ -178,7 +178,7 @@
   "HS502B": {
     "code": "HS502B",
     "credit_hours": 2,
-    "level": "h",
+    "level": "h-e4",
     "name": "Principles Of Industrial Health",
     "prerequisites": [],
     "satisfies": []
@@ -186,7 +186,7 @@
   "HS502C": {
     "code": "HS502C",
     "credit_hours": 2,
-    "level": "h",
+    "level": "h-e4",
     "name": "Social Risks Of Computer Systems",
     "prerequisites": [],
     "satisfies": []

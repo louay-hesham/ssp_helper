@@ -219,7 +219,7 @@
   "CAE309A": {
     "code": "CAE309A",
     "credit_hours": 3,
-    "level": "6",
+    "level": "6-e1",
     "name": "Computer Visualization",
     "prerequisites": [
       "CAE204",
@@ -230,7 +230,7 @@
   "CAE309B": {
     "code": "CAE309B",
     "credit_hours": 3,
-    "level": "6",
+    "level": "6-e1",
     "name": "Advanced Engineering Materials",
     "prerequisites": [
       "CAE206"
@@ -382,7 +382,7 @@
   "CAE411A": {
     "code": "CAE411A",
     "credit_hours": 3,
-    "level": "8",
+    "level": "8-e3",
     "name": "Dynamics Of Structures",
     "prerequisites": [
       "CAE206",
@@ -393,7 +393,7 @@
   "CAE411B": {
     "code": "CAE411B",
     "credit_hours": 3,
-    "level": "8",
+    "level": "8-e3",
     "name": "Design Studio 4",
     "prerequisites": [
       "CAE405"
@@ -405,7 +405,7 @@
   "CAE411C": {
     "code": "CAE411C",
     "credit_hours": 3,
-    "level": "8",
+    "level": "8-e3",
     "name": "Tender 2 (Specifications & Codes)",
     "prerequisites": [
       "CAE311"
@@ -415,7 +415,7 @@
   "CAE501A": {
     "code": "CAE501A",
     "credit_hours": 3,
-    "level": "9",
+    "level": "9-e4",
     "name": "Prefabricated Water And Pre-Stressed Concrete Structures",
     "prerequisites": [
       "CAE408"
@@ -425,7 +425,7 @@
   "CAE501B": {
     "code": "CAE501B",
     "credit_hours": 3,
-    "level": "9",
+    "level": "9-e4",
     "name": "Projects Management 2",
     "prerequisites": [],
     "satisfies": []
@@ -433,7 +433,7 @@
   "CAE501C": {
     "code": "CAE501C",
     "credit_hours": 3,
-    "level": "9",
+    "level": "9-e4",
     "name": "Theory Of Housing",
     "prerequisites": [
       "CAE411B"
@@ -455,7 +455,7 @@
   "CAE503A": {
     "code": "CAE503A",
     "credit_hours": 3,
-    "level": "9",
+    "level": "9-e6",
     "name": "Highway Engineering",
     "prerequisites": [
       "CAE304",
@@ -466,7 +466,7 @@
   "CAE503B": {
     "code": "CAE503B",
     "credit_hours": 3,
-    "level": "9",
+    "level": "9-e6",
     "name": "Advanced Interior Design",
     "prerequisites": [
       "CAE210"
@@ -476,7 +476,7 @@
   "CAE503C": {
     "code": "CAE503C",
     "credit_hours": 3,
-    "level": "9",
+    "level": "9-e6",
     "name": "Construction Management 2",
     "prerequisites": [
       "CAE305"
@@ -514,7 +514,7 @@
   "CAE507A": {
     "code": "CAE507A",
     "credit_hours": 3,
-    "level": "10",
+    "level": "10-e8",
     "name": "Analysis And Design Of Composite Structures",
     "prerequisites": [
       "CAE404",
@@ -525,7 +525,7 @@
   "CAE507B": {
     "code": "CAE507B",
     "credit_hours": 3,
-    "level": "10",
+    "level": "10-e8",
     "name": "Heritage Preservation",
     "prerequisites": [
       "CAE308"
@@ -535,23 +535,15 @@
   "CAE507C": {
     "code": "CAE507C",
     "credit_hours": 3,
-    "level": "10",
+    "level": "10-e8",
     "name": "Project Planning And Scheduling",
-    "prerequisites": [],
-    "satisfies": []
-  },
-  "CAE508": {
-    "code": "CAE508C",
-    "credit_hours": 3,
-    "level": "10",
-    "name": "Site Analysis Study",
     "prerequisites": [],
     "satisfies": []
   },
   "CAE508A": {
     "code": "CAE508A",
     "credit_hours": 3,
-    "level": "10",
+    "level": "10-e9",
     "name": "Advanced Environmental Control",
     "prerequisites": [
       "CAE209"
@@ -561,17 +553,25 @@
   "CAE508B": {
     "code": "CAE508B",
     "credit_hours": 3,
-    "level": "10",
+    "level": "10-e9",
     "name": "Design Of Metallic Structures 2",
     "prerequisites": [
       "CAE404"
     ],
     "satisfies": []
   },
+  "CAE508C": {
+    "code": "CAE508C",
+    "credit_hours": 3,
+    "level": "10-e9",
+    "name": "Site Analysis Study",
+    "prerequisites": [],
+    "satisfies": []
+  },
   "CAE509A": {
     "code": "CAE509A",
     "credit_hours": 2,
-    "level": "10",
+    "level": "10-e10",
     "name": "Concrete And Steel Bridges",
     "prerequisites": [
       "CAE408"
@@ -581,7 +581,7 @@
   "CAE509B": {
     "code": "CAE509B",
     "credit_hours": 2,
-    "level": "10",
+    "level": "10-e10",
     "name": "Geographical Information Systems",
     "prerequisites": [],
     "satisfies": []
@@ -589,7 +589,7 @@
   "CAE509C": {
     "code": "CAE509C",
     "credit_hours": 2,
-    "level": "10",
+    "level": "10-e10",
     "name": "Theory Of Urban Planning",
     "prerequisites": [],
     "satisfies": []
@@ -613,6 +613,16 @@
     "level": "8",
     "name": "Environment-3 (Fund. Of Mech. & Elec. System)",
     "prerequisites": [],
+    "satisfies": []
+  },
+  "MP301": {
+    "code": "MP301",
+    "credit_hours": 3,
+    "level": "6-e1",
+    "name": "Probability",
+    "prerequisites": [
+      "MP102"
+    ],
     "satisfies": []
   }
 }
