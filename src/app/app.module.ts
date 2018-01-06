@@ -17,6 +17,7 @@ import { GoogleAnalyticsService } from './google-analytics.service';
 
 import { PageviewDirective } from './pageview.directive';
 import { EventClickDirective } from './event-click.directive';
+import { InstructionsComponent } from './instructions/instructions.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +27,8 @@ import { EventClickDirective } from './event-click.directive';
     MainComponent,
     PageviewDirective,
     NavbarComponent,
-    EventClickDirective
+    EventClickDirective,
+    InstructionsComponent
   ],
   imports: [
     BrowserModule,

@@ -1,42 +1,18 @@
-<b [pageview]="'Main App'">Instructions</b>
-<ul>
-	<li>
-		<b>Color codes:</b>
-    <ul>
-      <li>
-        <b style="color:#0000FF"> Passed </b>-
-        <b style="color:#FFA500"> Requirements met </b>-
-        <b style="color:#FF0000"> Requirements not met </b>-
-      </li>
-      <li>
-        <b style="color:#1abc9c"> Passed (Elective) </b>-
-        <b style="color:#d5d500"> Requirements met (Elective) </b>-
-        <b style="color:#aa0000"> Requirements not met (Elective) </b>
-      </li>
-    </ul>
-	</li>
-	<li>
-		<div class="dropdown" dropdown>
-			<b>Select department </b>
-			<p class="pointer" dropdownToggle>{{department}} ▼</p>
-		  <ul class="dropdown-menu" dropdownMenu>
-		    <li *ngFor="let d of departments; let i = index" (click)="selectDepartment(i)" class="pointer">
-		    	{{d}}
-		    </li>
-		  </ul>
-		</div>
-	</li>
-	<li>Only select courses which you have already passed. As you select these courses, other courses will be available</li>
-	<li>If taking an elective course in a term, select the elective courses first before the core ones</li>
-	<li>Humanity courses are present in the bottom as they aren't prerequisites of any courses</li>
-	<li>Deselecting a course will remove all other courses that depends on it</li>
-	<li>Senior project 1 can only be registered after completing 129 credit hours</li>
-</ul>
+<div [pageview]="'Main App'" id="depDropdown" class="dropdown" dropdown>
+  <b>Select department: </b>
+  <label class="pointer highlight" dropdownToggle>{{departmentName}} ({{departmentCode}})▼</label>
+  <ul class="dropdown-menu" dropdownMenu>
+    <li *ngFor="let d of departmentsNames; let i = index" (click)="selectDepartment(i)" class="pointer">
+      {{d}}
+    </li>
+  </ul>
+</div>
+
+<instructions></instructions>
 
 <div style="position: fixed; top: 65px; right: 1px;">
 	<span style="background-color: cyan">
-    <b>CHs complete: </b>
-    {{getCH()}}
+    <b>CHs complete: </b>{{getCH()}}
   </span>
 </div>
 

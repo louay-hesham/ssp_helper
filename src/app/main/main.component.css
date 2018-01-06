@@ -1,5 +1,12 @@
+.highlight {
+  border-style: groove;
+  border-color: black;
+  background-color: white;
+}
+
 .dropdown  {
   position: relative;
+  font-size: 20px;
 }
 
 .pointer {

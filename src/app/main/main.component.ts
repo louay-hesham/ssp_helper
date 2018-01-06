@@ -15,8 +15,9 @@ export class MainComponent implements OnInit {
   private departmentsCodes: string[] = ['GPE', 'EME', 'CAE', 'CCE', 'OCE'];
 
 	public levels: string[] = ['e','1','2','3','4','5','6','7','8','9','10','h'];
-  public department: string = 'CCE';
-  public departments: string[] = [ 
+  public departmentCode: string = 'CCE';
+  public departmentName: string = 'Computer and Communications Engineering';
+  public departmentsNames: string[] = [ 
     'Gas and Petrochemicals Engineering', 
     'Electromechanical Engineering',
     'Architectural and Construction Engineering',
@@ -28,7 +29,7 @@ export class MainComponent implements OnInit {
 
   ngOnInit() {
     this.coursesData = this.coursesLoader.getCourses()
-    Course.loadCourses(this.coursesData, this.department);
+    Course.loadCourses(this.coursesData, this.departmentCode);
     this.electivesDict();
   }
 
@@ -37,9 +38,11 @@ export class MainComponent implements OnInit {
   }
 
   selectDepartment(i: number) {
-    this.department = this.departmentsCodes[i];
-    console.log('Changed department to ' + this.department);
-    Course.loadCourses(this.coursesData, this.department);
+    this.departmentCode = this.departmentsCodes[i];
+    this.departmentName = this.departmentsNames[i];
+    console.log('Changed department to ' + this.departmentCode);
+    Course.loadCourses(this.coursesData, this.departmentCode);
+    document.getElementById('depDropdown').classList.toggle('open');
   }
 
   completeLevelButtonVisibility(level: string): boolean {
