@@ -23,7 +23,7 @@ export class AppComponent implements OnInit {
 	}
 
   showApp() {
-  	if (this.timer < 40) {
+  	if (this.timer < 35) {
   		window.alert("WOW! How did you read everything in just " + this.timer + " seconds?! IMPRESSIVE!\nPlease read the entire disclaimer.")
     } else {
   		this.appVisible = true;
