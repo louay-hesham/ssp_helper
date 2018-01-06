@@ -621,7 +621,7 @@
     "level": "6-e1",
     "name": "Probability",
     "prerequisites": [
-      "MP102"
+      "MP201"
     ],
     "satisfies": []
   }
