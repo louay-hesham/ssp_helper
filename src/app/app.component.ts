@@ -23,10 +23,8 @@ export class AppComponent implements OnInit {
 	}
 
   showApp() {
-  	if (this.timer < 25) {
-  		window.alert("WOW! How did you read everything in just " + this.timer + " seconds?! IMPRESSIVE!\nPlease read the disclaimer.")
-      // this.appVisible = true;
-      // this.st.delTimer(this.timerName);
+  	if (this.timer < 40) {
+  		window.alert("WOW! How did you read everything in just " + this.timer + " seconds?! IMPRESSIVE!\nPlease read the entire disclaimer.")
     } else {
   		this.appVisible = true;
   		this.st.delTimer(this.timerName);
