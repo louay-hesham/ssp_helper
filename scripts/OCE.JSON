@@ -164,7 +164,7 @@
   "OCE303": {
     "code": "OCE303",
     "credit_hours": 3,
-    "level": "6",
+    "level": "7",
     "name": "Marine Structural Analysis 2",
     "prerequisites": [
       "OCE222"
@@ -328,7 +328,7 @@
   "OCE421": {
     "code": "OCE421",
     "credit_hours": 3,
-    "level": "7",
+    "level": "6",
     "name": "Introduction To Offshore Engineering",
     "prerequisites": [],
     "satisfies": [
