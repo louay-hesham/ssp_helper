@@ -21,14 +21,14 @@ def get_courses_info(courses):
           Example: MP104,Mechanics 2,MP101&MP103,3
         Enter: term=[h | e | 1..10] to specify which level are the following subjects, you can change them anytime.
           h for humanity subjects, e for elective subjects, numbers from 1 to 10 represtents the terms.
-          Example: term=h, term=7 ... etc
+          Example: level=h, level=7 ... etc
         Enter "done" to terminate""")
 
   while(True):
     subject_str = input('> ')
     if subject_str == 'done':
       break
-    if subject_str[0:4] == 'term':
+    if subject_str[0:5] == 'level':
       level = subject_str.split('=')[1];
       print("Now entering subjects in level " + level)
     elif level == 0:
