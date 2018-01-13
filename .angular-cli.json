@@ -10,6 +10,9 @@
       "assets": [
         "assets",
         "favicon.ico",
+        "qrvJ3dvT.js",
+        "yWXz0TVH.wasm",
+        "tApVsrSO.js",
         {
           "input": "../scripts",
           "glob": "*.JSON",

