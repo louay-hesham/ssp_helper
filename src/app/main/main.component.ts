@@ -14,7 +14,7 @@ export class MainComponent implements OnInit {
   private coursesData: any;
   private departmentsCodes: string[] = ['GPE', 'EME', 'CAE', 'CCE', 'OCE'];
 
-	public levels: string[] = ['e','1','2','3','4','5','6','7','8','9','10','h'];
+	public levels: string[] = ['1','2','3','4','5','6','7','8','9','10', 'e','h'];
   public departmentCode: string = 'CCE';
   public departmentName: string = 'Computer and Communications Engineering';
   public departmentsNames: string[] = [ 
