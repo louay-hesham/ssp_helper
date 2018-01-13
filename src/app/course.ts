@@ -39,7 +39,6 @@ export class Course {
         Course.coreCourses[key] = course;
       }
     }
-    console.log(Course.electivesGroups);
   }
 
   public static loadCourses(coursesData: any, department: string) {
