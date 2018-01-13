@@ -18,7 +18,7 @@ export class EventClickDirective {
 	public disclaimerClick: string = undefined;
 
 	@Input('course-click')
-	public courseClick: Course = undefined;
+	public courseClick: [string, Course] = undefined;
 
 	@Input('term-click')
 	public termClick: string = undefined;
@@ -37,10 +37,10 @@ export class EventClickDirective {
   		this._GAService.sendButtonClickEvent('disclaimer-click', 'disclaimer', this.disclaimerClick);
   	}
   	if (this.courseClick != undefined) {
-  		this._GAService.sendButtonClickEvent('course-click', this.courseClick.getLevelFullName(), this.courseClick.codeWithName);
+  		this._GAService.sendButtonClickEvent('course-click', this.courseClick[0], this.courseClick[1].codeWithName);
   	}
   	if (this.termClick != undefined) {
-  		this._GAService.sendButtonClickEvent('term-click', 'all term select', this.termClick);
+  		this._GAService.sendButtonClickEvent('term-click', 'Term', this.termClick);
   	}
   }
 }

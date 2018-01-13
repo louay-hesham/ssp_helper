@@ -19,7 +19,7 @@
 <div *ngFor="let level of levels">
 
 	<h4>{{levelName(level)}}</h4>
-  <h5 *ngIf="level == 'e' && (department == 'CAE' || department == 'OCE')">
+  <h5 *ngIf="level == 'e' && (departmentCode == 'CAE' || departmentCode == 'OCE')">
     Elective courses can be found in their respective terms, they will be coloured differently.
   </h5>
 	<a  *ngIf="completeLevelButtonVisibility(level)"
@@ -32,7 +32,7 @@
 	<div class="row">
 		<span *ngFor="let course of coursesList()">
 			<button *ngIf="course.level == level"
-              click-event [course-click]="course"
+              click-event [course-click]="[departmentCode, course]"
 		          (click)="course.togglePass()"
               class="{{buttonClass(course)}}"
 		          disabled="{{buttonDisability(course)}}"
@@ -48,7 +48,7 @@
   <div *ngIf="electivesDict()[level] != undefined">
     <div class="row btn-group elective-group" *ngFor="let electives of electivesDict()[level]">
       <button *ngFor="let course of electives"
-              click-event [course-click]="course"
+              click-event [course-click]="[departmentCode, course]"
               (click)="course.togglePass()"
               class="{{buttonClass(course) + ' elective'}}"
               disabled="{{buttonDisability(course)}}"
