@@ -10,7 +10,6 @@
       "assets": [
         "assets",
         "favicon.ico",
-        "mewtwo.js",
         {
           "input": "../scripts",
           "glob": "*.JSON",
