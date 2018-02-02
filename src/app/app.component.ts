@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
 import { SimpleTimer } from 'ng2-simple-timer';
+import { CookieService } from 'ngx-cookie-service';
 
 @Component({
   selector: 'app-root',
@@ -15,7 +16,7 @@ export class AppComponent implements OnInit {
 
 	public appVisible: boolean = false;
 
-	constructor(private st: SimpleTimer) { }
+	constructor(private st: SimpleTimer, private cookie: CookieService) { }
 
 	ngOnInit() {
 		this.st.newTimer(this.timerName, 1);
@@ -23,11 +24,12 @@ export class AppComponent implements OnInit {
 	}
 
   showApp() {
-  	if (this.timer < 20) {
+  	if (this.timer < 20 && !this.cookie.check('disclaimerPassed')) {
   		window.alert("WOW! How did you read everything in just " + this.timer + " seconds?! IMPRESSIVE!\nPlease read the entire disclaimer.")
     } else {
   		this.appVisible = true;
   		this.st.delTimer(this.timerName);
+      this.cookie.set('disclaimerPassed', 'true');
   	}
   }
 }

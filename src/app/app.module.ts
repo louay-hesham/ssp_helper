@@ -5,6 +5,7 @@ import { HttpClientModule, HttpClient } from '@angular/common/http';
 
 import { SimpleTimer } from 'ng2-simple-timer';
 import { DropdownModule } from 'angular-custom-dropdown';
+import { CookieService } from 'ngx-cookie-service';
 
 import { AppComponent } from './app.component';
 import { NavbarComponent } from './navbar/navbar.component';
@@ -39,7 +40,8 @@ import { InstructionsComponent } from './instructions/instructions.component';
   providers: [
     CoursesLoaderService,
     GoogleAnalyticsService,
-    SimpleTimer
+    SimpleTimer,
+    CookieService
   ],
   bootstrap: [AppComponent]
 })
