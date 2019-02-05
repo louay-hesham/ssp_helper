@@ -297,7 +297,7 @@
     ],
     "satisfies": [
       "GPE434",
-      "GPE532"
+      "GPE531"
     ]
   },
   "GPE421": {
@@ -328,7 +328,7 @@
       "GPE521",
       "GPE523",
       "GPE551",
-      "GPE532"
+      "GPE531"
     ]
   },
   "GPE423": {
@@ -492,14 +492,25 @@
       "GPE533"
     ]
   },
-  "GPE532": {
-    "code": "GPE532",
+  "GPE531": {
+    "code": "GPE531",
     "credit_hours": 3,
     "level": "e",
     "name": "Materials Selection In The Petrochemicals Industry",
     "prerequisites": [
       "GPE413",
       "GPE422"
+    ],
+    "satisfies": []
+  },
+  "GPE532": {
+    "code": "GPE532",
+    "credit_hours": 3,
+    "level": "e",
+    "name": "Petroleum Recovery Technology",
+    "prerequisites": [
+      "EME206",
+      "GPE423"
     ],
     "satisfies": []
   },
