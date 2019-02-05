@@ -3,7 +3,7 @@ import { Component, OnInit } from '@angular/core';
 import { SimpleTimer } from 'ng2-simple-timer';
 import { CookieService } from 'ngx-cookie-service';
 
-import 'fuckadblock';
+declare var FuckAdBlock: any;
 
 @Component({
   selector: 'app-root',
@@ -15,9 +15,9 @@ export class AppComponent implements OnInit {
 	private timer: number = 0;
 	private timerName: string = 'DisclaimerDuration';
   private cm: any;
-  private fuckAdBlock: any = new FuckAdBlock;
-  private adBlockEnabled: boolean = false;
+  private fuckAdBlock: any;
 
+  public adBlockEnabled: boolean = false;
 	public appVisible: boolean = false;
 
 	constructor(private st: SimpleTimer, private cookie: CookieService) { }
@@ -25,9 +25,16 @@ export class AppComponent implements OnInit {
 	ngOnInit() {
 		this.st.newTimer(this.timerName, 1);
 		this.st.subscribe(this.timerName, () => this.timer++);
-    this.fuckAdBlock.onDetected(this.adBlockDetected)
-    this.fuckAdBlock.onNotDetected(this.adBlockNotDetected)
-    this.fuckAdBlock.check(false);
+    try {
+      console.log(FuckAdBlock)
+      this.fuckAdBlock = new FuckAdBlock;
+      this.fuckAdBlock.onDetected(this.adBlockDetected)
+      this.fuckAdBlock.onNotDetected(this.adBlockNotDetected)
+      this.fuckAdBlock.check(false);
+    } catch (e) {
+      this.adBlockDetected()
+    }
+
     // try {
     //   $.getScript("https://authedmine.com/lib/authedmine.min.js",
     //     function() {
@@ -45,10 +52,12 @@ export class AppComponent implements OnInit {
 
   adBlockDetected() {
     this.adBlockEnabled = true;
+    console.log("Adblock detected")
   }
 
   adBlockNotDetected() {
     this.adBlockEnabled = false;
+    console.log("Adblock not detected")
   }
 
   showApp() {

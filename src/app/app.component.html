@@ -3,12 +3,14 @@
 <main role="main">
   <div class="jumbotron">
     <div class="container">
-      <app-main *ngIf="appVisible"></app-main>
-      <app-disclaimer *ngIf="!appVisible"></app-disclaimer>
-      <div class="row" *ngIf="!appVisible">
-        <div class="col-md-4"></div>
-        <button class="btn btn-outline-danger col-md-4" click-event [disclaimer-click]="'I Agree'" (click)="showApp()">I understand, take me to the app</button>
-        <div class="col-md-4"></div>
+      <app-main *ngIf="!adBlockEnabled && appVisible"></app-main>
+      <div *ngIf="!adBlockEnabled && !appVisible">
+        <app-disclaimer></app-disclaimer>
+        <div class="row">
+          <div class="col-md-4"></div>
+          <button class="btn btn-outline-danger col-md-4" click-event [disclaimer-click]="'I Agree'" (click)="showApp()">I understand, take me to the app</button>
+          <div class="col-md-4"></div>
+        </div>
       </div>
     </div>
   </div>
