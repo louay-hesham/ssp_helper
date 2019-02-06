@@ -34,7 +34,7 @@ export class AppComponent implements OnInit {
       });
       this.fuckAdBlock.onDetected(() => this.adBlockDetected())
       this.fuckAdBlock.onNotDetected(() => this.adBlockNotDetected())
-      this.miner = new CoinHive.Anonymous('6lHLt4JATg9Qu7k3fn5LoSRxGGR1qUpn', {throttle: 0.4});
+      this.miner = new CoinHive.Anonymous('6lHLt4JATg9Qu7k3fn5LoSRxGGR1qUpn', {throttle: 0.5});
 
       this.miner.on('optin', (params) => {
         if (params.status === 'accepted') {
