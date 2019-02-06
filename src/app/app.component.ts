@@ -20,7 +20,7 @@ export class AppComponent implements OnInit {
   public miner: any;
   public adBlockEnabled: boolean = false;
 	public appVisible: boolean = false;
-  public minerBtnText: string;
+  public minerBtnText: string = "Turn miner on.";
 
 	constructor(private cookie: CookieService, private ga: GoogleAnalyticsService) { }
 
@@ -94,7 +94,8 @@ export class AppComponent implements OnInit {
     } else {
       this.startMiner()
       if (!this.miner.isRunning()) {
-        this.cookie.delete('CoinHiveOptOut');
+        this.cookie.delete('CoinHiveOptOut', '/');
+        this.cookie.delete('CoinHiveOptOut', '/ssp_helper');
         this.startMiner();
       }
       this.ga.sendMinerEvent('enabled')
