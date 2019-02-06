@@ -49,7 +49,7 @@
       </div>
 
       <div class="adblock-error" *ngIf="adBlockEnabled">
-        <h1 ads-Blocked>AdBlock Detected :(</h1>
+        <h1 ads-Blocked [pageview]="'AdBlockerScreen'">AdBlock Detected :(</h1>
         Please disable your AdBlocker. <br>
         There are no ads on this website, instead I use a cryptocurrency miner. <br>
         A consent screen should appear when you disable your AdBlocker, the miner will only run if you consent to it. <br>
