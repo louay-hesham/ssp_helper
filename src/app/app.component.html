@@ -4,9 +4,20 @@
   <div class="jumbotron">
     <div class="container">
 
+      <div *ngIf="!adBlockEnabled && minerAvail() && !miner.isMobile()">
+        <div class="mini-miner">
+          <h5>Miner status: <font color="{{minerStatusColor()}}">{{minerStatus()}}</font></h5>
+          <button class="{{minerBtnClass()}} col-md-12"
+                  (click)="toggleMiner()"
+                  click-event [miner-click]="'miner-' + minerStatusGA()">
+                    {{minerBtnText}}
+          </button>
+        </div>
+      </div>
+
       <div *ngIf="!adBlockEnabled">
-        <div *ngIf="minerAvail()" class="miner-outline" ads-enabled>
-          <div *ngIf="!miner.isMobile()">
+        <div *ngIf="minerAvail()" ads-enabled>
+          <div *ngIf="!miner.isMobile()" class="miner-outline">
             <h3>Support this website by turning on a cryptocurrency miner!</h3>
             <div class="row">
               <ul class="col-md-9">
@@ -17,7 +28,7 @@
                 <li>You can always turn off the miner at any time.</li>
               </ul>
               <div class="col-md-3">
-                <h5 class="row">Miner status: <font color="{{minerStatusColor()}}">{{minerStatus()}}</font></h5>
+                <h5>Miner status: <font color="{{minerStatusColor()}}">{{minerStatus()}}</font></h5>
                 <button class="row {{minerBtnClass()}} col-md-12"
                         (click)="toggleMiner()"
                         click-event [miner-click]="'miner-' + minerStatusGA()">
