@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
+import { GoogleAnalyticsService } from './google-analytics.service';
+
 import { SimpleTimer } from 'ng2-simple-timer';
 import { CookieService } from 'ngx-cookie-service';
 
@@ -23,7 +25,7 @@ export class AppComponent implements OnInit {
 	public appVisible: boolean = false;
   public minerBtnText: string;
 
-	constructor(private st: SimpleTimer, private cookie: CookieService) { }
+	constructor(private st: SimpleTimer, private cookie: CookieService, private ga: GoogleAnalyticsService) { }
 
 	ngOnInit() {
 		this.st.newTimer(this.timerName, 1);
@@ -40,9 +42,11 @@ export class AppComponent implements OnInit {
         if (params.status === 'accepted') {
           this.minerBtnText = "Thank You!"
           setTimeout(() => this.minerBtnText = "Turn miner off.", 500)
+          this.ga.sendMinerEvent('opt-in')
         } else {
           this.minerBtnText = ":("
           setTimeout(() => this.minerBtnText = "Turn miner on.", 500)
+          this.ga.sendMinerEvent('opt-out')
         }
       });
 
@@ -97,12 +101,14 @@ export class AppComponent implements OnInit {
   toggleMiner() {
     if (this.miner.isRunning()) {
       this.stopMiner();
+      this.ga.sendMinerEvent('disabled')
     } else {
       this.startMiner()
       if (!this.miner.isRunning()) {
         this.cookie.delete('CoinHiveOptOut');
         this.startMiner();
       }
+      this.ga.sendMinerEvent('enabled')
     }
   }
 

@@ -8,8 +8,7 @@
         <div class="mini-miner">
           <h5>Miner status: <font color="{{minerStatusColor()}}">{{minerStatus()}}</font></h5>
           <button class="{{minerBtnClass()}} col-md-12"
-                  (click)="toggleMiner()"
-                  click-event [miner-click]="'miner-' + minerStatusGA()">
+                  (click)="toggleMiner()">
                     {{minerBtnText}}
           </button>
         </div>
@@ -30,8 +29,7 @@
               <div class="col-md-3">
                 <h5>Miner status: <font color="{{minerStatusColor()}}">{{minerStatus()}}</font></h5>
                 <button class="row {{minerBtnClass()}} col-md-12"
-                        (click)="toggleMiner()"
-                        click-event [miner-click]="'miner-' + minerStatusGA()">
+                        (click)="toggleMiner()">
                           {{minerBtnText}}
                 </button>
               </div>

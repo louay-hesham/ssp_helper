@@ -43,4 +43,11 @@ export class GoogleAnalyticsService {
     });
 	}
 
+	sendMinerEvent(minerStatus: string) {
+		GoogleAnalyticsService.gtag('event', 'miner-' + minerStatus, {
+      'event_category': 'miner',
+      'event_label': 'miner-' + minerStatus
+    });
+	}
+
 }

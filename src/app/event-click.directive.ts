@@ -23,9 +23,6 @@ export class EventClickDirective {
 	@Input('term-click')
 	public termClick: string = undefined;
 
-  @Input('miner-click')
-	public minerClick: string = undefined;
-
   constructor(private _GAService: GoogleAnalyticsService) { }
 
   @HostListener('click')
@@ -44,9 +41,6 @@ export class EventClickDirective {
   	}
   	if (this.termClick != undefined) {
   		this._GAService.sendButtonClickEvent('term-click', 'Term', this.termClick);
-  	}
-    if (this.minerClick != undefined) {
-  		this._GAService.sendButtonClickEvent(this.minerClick, 'miner', this.minerClick);
   	}
   }
 }
