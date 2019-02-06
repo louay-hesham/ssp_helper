@@ -26,7 +26,6 @@ export class AppComponent implements OnInit {
 		this.st.newTimer(this.timerName, 1);
 		this.st.subscribe(this.timerName, () => this.timer++);
     try {
-      console.log(FuckAdBlock)
       this.fuckAdBlock = new FuckAdBlock;
       this.fuckAdBlock.onDetected(this.adBlockDetected)
       this.fuckAdBlock.onNotDetected(this.adBlockNotDetected)
@@ -50,14 +49,12 @@ export class AppComponent implements OnInit {
     // alert(this.adsBlocked);
 	}
 
-  adBlockDetected() {
+  private adBlockDetected() {
     this.adBlockEnabled = true;
-    console.log("Adblock detected")
   }
 
-  adBlockNotDetected() {
+  private adBlockNotDetected() {
     this.adBlockEnabled = false;
-    console.log("Adblock not detected")
   }
 
   showApp() {
