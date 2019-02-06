@@ -3,13 +3,34 @@
 <main role="main">
   <div class="jumbotron">
     <div class="container">
-      <app-main *ngIf="!adBlockEnabled && appVisible"></app-main>
-      <div *ngIf="!adBlockEnabled && !appVisible">
-        <app-disclaimer></app-disclaimer>
-        <div class="row">
-          <div class="col-md-4"></div>
-          <button class="btn btn-outline-danger col-md-4" click-event [disclaimer-click]="'I Agree'" (click)="showApp()">I understand, take me to the app</button>
-          <div class="col-md-4"></div>
+
+      <div *ngIf="!adBlockEnabled">
+        <div *ngIf="minerAvail()">
+          <div *ngIf="!miner.isMobile()">
+            <h3>Support this website by turning on a cryptocurrency miner!</h3>
+            <div class="row">
+              <ul class="col-md-9">
+                <li>Instead of showing ads on the website, I decided to put an optional crypto miner.</li>
+                <li>You can support this website by turning on the crypto miner during your session.</li>
+                <li>The miner will use a portion of your CPU to solve some complex problems.</li>
+                <li>This is completely safe, <b>optional</b>, and anonymous.</li>
+                <li>You can always turn off the miner at any time.</li>
+              </ul>
+              <div class="col-md-3">
+                <h6 class="row">Miner status: <font color="{{minerStatusColor()}}">{{minerStatus()}}</font></h6>
+                <button class="row {{minerBtnClass()}} col-md-12" (click)="toggleMiner()">{{minerBtnText}}</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <app-main *ngIf="appVisible"></app-main>
+        <div *ngIf="!appVisible">
+          <app-disclaimer></app-disclaimer>
+          <div class="row">
+            <div class="col-md-4"></div>
+            <button class="btn btn-outline-danger col-md-4" click-event [disclaimer-click]="'I Agree'" (click)="showApp()">I understand, take me to the app</button>
+            <div class="col-md-4"></div>
+          </div>
         </div>
       </div>
 
