@@ -40,13 +40,12 @@ export class AppComponent implements OnInit {
         if (params.status === 'accepted') {
           this.minerBtnText = "Thank You!"
           setTimeout(() => this.minerBtnText = "Turn miner off.", 500)
-        }
-        else {
+        } else {
           this.minerBtnText = ":("
           setTimeout(() => this.minerBtnText = "Turn miner on.", 500)
         }
       });
-      
+
       this.toggleMiner();
     } catch (e) {
       this.adBlockDetected()
@@ -119,9 +118,17 @@ export class AppComponent implements OnInit {
 
   minerStatus(): string {
     if (this.miner.isRunning()) {
-      return "  ON"
+      return "ON"
     } else {
-      return "  OFF"
+      return "OFF"
+    }
+  }
+
+  minerStatusGA(): string {
+    if (!this.miner.isRunning()) {
+      return "on"
+    } else {
+      return "off"
     }
   }
 

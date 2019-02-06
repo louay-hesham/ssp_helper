@@ -18,7 +18,11 @@
               </ul>
               <div class="col-md-3">
                 <h5 class="row">Miner status: <font color="{{minerStatusColor()}}">{{minerStatus()}}</font></h5>
-                <button class="row {{minerBtnClass()}} col-md-12" (click)="toggleMiner()">{{minerBtnText}}</button>
+                <button class="row {{minerBtnClass()}} col-md-12"
+                        (click)="toggleMiner()"
+                        click-event [miner-click]="'miner-' + minerStatusGA()">
+                          {{minerBtnText}}
+                </button>
               </div>
             </div>
           </div>
