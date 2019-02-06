@@ -2,7 +2,6 @@ import { Component, OnInit } from '@angular/core';
 
 import { GoogleAnalyticsService } from './google-analytics.service';
 
-import { SimpleTimer } from 'ng2-simple-timer';
 import { CookieService } from 'ngx-cookie-service';
 
 declare var CoinHive: any;
@@ -15,8 +14,6 @@ declare var FuckAdBlock: any;
 })
 export class AppComponent implements OnInit {
 
-	private timer: number = 0;
-	private timerName: string = 'DisclaimerDuration';
   private cm: any;
   private fuckAdBlock: any;
 
@@ -25,11 +22,9 @@ export class AppComponent implements OnInit {
 	public appVisible: boolean = false;
   public minerBtnText: string;
 
-	constructor(private st: SimpleTimer, private cookie: CookieService, private ga: GoogleAnalyticsService) { }
+	constructor(private cookie: CookieService, private ga: GoogleAnalyticsService) { }
 
 	ngOnInit() {
-		this.st.newTimer(this.timerName, 1);
-		this.st.subscribe(this.timerName, () => this.timer++);
     try {
       this.fuckAdBlock = new FuckAdBlock({
         checkOnLoad: true
@@ -77,13 +72,7 @@ export class AppComponent implements OnInit {
   }
 
   showApp() {
-  	if (this.timer < 20 && !this.cookie.check('disclaimerPassed')) {
-  		window.alert("WOW! How did you read everything in just " + this.timer + " seconds?! IMPRESSIVE!\nPlease read the entire disclaimer.")
-    } else {
-  		this.appVisible = true;
-  		this.st.delTimer(this.timerName);
-      this.cookie.set('disclaimerPassed', 'true');
-  	}
+		this.appVisible = true;
   }
 
   minerAvail(): boolean {
