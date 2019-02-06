@@ -29,4 +29,18 @@ export class GoogleAnalyticsService {
     });
   }
 
+	sendAdsBlockedEvent() {
+    GoogleAnalyticsService.gtag('event', 'ads-blocked', {
+      'event_category': 'ads',
+      'event_label': 'ads-blocked'
+    });
+  }
+
+	sendAdsEnabledEvent() {
+    GoogleAnalyticsService.gtag('event', 'ads-enabled', {
+      'event_category': 'ads',
+      'event_label': 'ads-enabled'
+    });
+	}
+
 }
