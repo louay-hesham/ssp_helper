@@ -19,8 +19,6 @@ import { GoogleAnalyticsService } from './google-analytics.service';
 import { PageviewDirective } from './pageview.directive';
 import { EventClickDirective } from './event-click.directive';
 import { InstructionsComponent } from './instructions/instructions.component';
-import { AdsBlockedDirective } from './ads-blocked.directive';
-import { AdsEnabledDirective } from './ads-enabled.directive';
 
 @NgModule({
   declarations: [
@@ -31,9 +29,7 @@ import { AdsEnabledDirective } from './ads-enabled.directive';
     PageviewDirective,
     NavbarComponent,
     EventClickDirective,
-    InstructionsComponent,
-    AdsBlockedDirective,
-    AdsEnabledDirective
+    InstructionsComponent
   ],
   imports: [
     BrowserModule,
