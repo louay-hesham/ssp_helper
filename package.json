@@ -9,7 +9,7 @@
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
-    "predeploy": "ng build -prod -aot --base-href /ssp_helper/",
+    "predeploy": "ng build --prod --aot --base-href /ssp_helper/",
     "deploy": "node ./scripts/deploy.js"
   },
   "private": true,
