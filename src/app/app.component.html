@@ -3,58 +3,14 @@
 <main role="main">
   <div class="jumbotron">
     <div class="container">
-
-      <div *ngIf="!adBlockEnabled && minerAvail() && !miner.isMobile()">
-        <div class="mini-miner">
-          <h5>Miner status: <font color="{{minerStatusColor()}}">{{minerStatus()}}</font></h5>
-          <button class="{{minerBtnClass()}} col-md-12"
-                  (click)="toggleMiner()">
-                    {{minerBtnText}}
-          </button>
+      <app-main *ngIf="appVisible"></app-main>
+      <div *ngIf="!appVisible">
+        <app-disclaimer></app-disclaimer>
+        <div class="row">
+          <div class="col-md-4"></div>
+          <button class="btn btn-outline-danger col-md-4" click-event [disclaimer-click]="'I Agree'" (click)="showApp()">I understand, take me to the app</button>
+          <div class="col-md-4"></div>
         </div>
-      </div>
-
-      <div *ngIf="!adBlockEnabled">
-        <div *ngIf="minerAvail()" ads-enabled>
-          <div *ngIf="!miner.isMobile()" class="miner-outline">
-            <h3>Support this website by turning on a cryptocurrency miner!</h3>
-            <div class="row">
-              <ul class="col-md-9">
-                <li>Instead of showing ads on the website, I decided to put an optional crypto miner.</li>
-                <li>You can support this website by turning on the crypto miner during your session.</li>
-                <li>The miner will use a portion of your CPU to solve some complex problems.</li>
-                <li>This is completely safe, <b>optional</b>, and anonymous.</li>
-                <li>You can always turn off the miner at any time.</li>
-              </ul>
-              <div class="col-md-3">
-                <h5>Miner status: <font color="{{minerStatusColor()}}">{{minerStatus()}}</font></h5>
-                <button class="row {{minerBtnClass()}} col-md-12"
-                        (click)="toggleMiner()">
-                          {{minerBtnText}}
-                </button>
-              </div>
-            </div>
-          </div>
-        </div>
-        <br> <br>
-        <app-main *ngIf="appVisible"></app-main>
-        <div *ngIf="!appVisible">
-          <app-disclaimer></app-disclaimer>
-          <div class="row">
-            <div class="col-md-4"></div>
-            <button class="btn btn-outline-danger col-md-4" click-event [disclaimer-click]="'I Agree'" (click)="showApp()">I understand, take me to the app</button>
-            <div class="col-md-4"></div>
-          </div>
-        </div>
-      </div>
-
-      <div class="adblock-error" *ngIf="adBlockEnabled">
-        <h1 ads-Blocked [pageview]="'AdBlockerScreen'">AdBlock Detected :(</h1>
-        Please disable your AdBlocker. <br>
-        There are no ads on this website, instead I use a cryptocurrency miner. <br>
-        A consent screen should appear when you disable your AdBlocker, the miner will only run if you consent to it. <br>
-        If you don't, you can still use the website normally. <br>
-        Please consider supporting the website by letting the miner run, thanks!
       </div>
     </div>
   </div>
