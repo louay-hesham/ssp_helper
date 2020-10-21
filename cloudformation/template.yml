@@ -1,0 +1,18 @@
+AWSTemplateFormatVersion: 2010-09-09
+Description: AWS CloudFormation template for SSP Helper web app
+Resources:
+
+  BylawsTable:
+    Type: AWS::DynamoDB::Table
+    Properties:
+      AttributeDefinitions:
+        - AttributeName: Year
+          AttributeType: N
+      BillingMode: PROVISIONED
+      KeySchema:
+        - AttributeName: Year
+          KeyType: HASH
+      ProvisionedThroughput:
+        ReadCapacityUnits: 1
+        WriteCapacityUnits: 1
+      TableName: Bylaws
