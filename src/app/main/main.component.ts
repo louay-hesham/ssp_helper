@@ -15,10 +15,12 @@ export class MainComponent implements OnInit {
   private departmentsCodes: string[] = ['GPE', 'EME', 'CAE', 'CCE', 'OCE'];
 
 	public levels: string[] = ['1','2','3','4','5','6','7','8','9','10', 'e','h'];
+  public bylawsStatus: any[] = [{year: 2019, status: "AVAILABLE"}]; // TODO: Load years from DDB
+  public bylawYear: number = 2019
   public departmentCode: string = 'CCE';
   public departmentName: string = 'Computer and Communications Engineering';
-  public departmentsNames: string[] = [ 
-    'Gas and Petrochemicals Engineering', 
+  public departmentsNames: string[] = [
+    'Gas and Petrochemicals Engineering',
     'Electromechanical Engineering',
     'Architectural and Construction Engineering',
     'Computer and Communications Engineering',
@@ -28,7 +30,13 @@ export class MainComponent implements OnInit {
   constructor(private coursesLoader: CoursesLoaderService) { }
 
   ngOnInit() {
-    this.coursesData = this.coursesLoader.getCourses()
+    this.loadBylaw(this.bylawYear);
+  }
+
+  loadBylaw(year: number) {
+    console.log(year);
+    console.log(this.bylawsStatus)
+    this.coursesData = this.coursesLoader.getCourses(this.bylawYear);
     Course.loadCourses(this.coursesData, this.departmentCode);
     this.electivesDict();
   }

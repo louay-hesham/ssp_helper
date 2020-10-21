@@ -1,19 +1,19 @@
 import { Injectable } from '@angular/core';
-import { HttpClient } from '@angular/common/http'; 
+import { HttpClient } from '@angular/common/http';
 
 @Injectable()
 export class CoursesLoaderService {
 
   constructor(public http:HttpClient) {}
 
-  getCourses() {
+  getCourses(year: number) {
     return {
-	  	'General': this.http.get("./General.JSON"),
-      'GPE': this.http.get("./GPE.JSON"),
-			'EME': this.http.get("./EME.JSON"),
-			'CAE': this.http.get("./CAE.JSON"),
-			'CCE': this.http.get("./CCE.JSON"),
-			'OCE': this.http.get("./OCE.JSON")
+	  	'General': this.http.get(`./Bylaws/${year}/General.JSON`),
+      'GPE': this.http.get(`./Bylaws/${year}/GPE.JSON`),
+			'EME': this.http.get(`./Bylaws/${year}/EME.JSON`),
+			'CAE': this.http.get(`./Bylaws/${year}/CAE.JSON`),
+			'CCE': this.http.get(`./Bylaws/${year}/CCE.JSON`),
+			'OCE': this.http.get(`./Bylaws/${year}/OCE.JSON`)
 		}
   }
 }

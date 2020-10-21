@@ -20,7 +20,7 @@
               "src/assets",
               "src/favicon.ico",
               {
-                "glob": "*.JSON",
+                "glob": "Bylaws/*/*.JSON",
                 "input": "scripts",
                 "output": "/"
               }

@@ -1,11 +1,20 @@
-<div [pageview]="'Main App'" id="depDropdown" class="dropdown" dropdown>
-  <b>Select department: </b>
-  <label class="pointer highlight" dropdownToggle>{{departmentName}} ({{departmentCode}})▼</label>
+<div [pageview]="'Main App'" id="bylawDropdown" class="dropdown" dropdown>
+  <b>Select Bylaw year: </b>
+  <label class="pointer highlight" dropdownToggle>{{bylawYear}}▼</label>
   <ul class="dropdown-menu" dropdownMenu>
-    <li *ngFor="let d of departmentsNames; let i = index" (click)="selectDepartment(i)" class="pointer">
-      {{d}}
+    <li *ngFor="let bylaw of bylawsStatus;" (click)="loadBylaw(bylaw.year)" class="pointer">
+      {{bylaw.year}}
     </li>
   </ul>
+</div>
+<div id="depDropdown" class="dropdown" dropdown>
+    <b>Select department: </b>
+    <label class="pointer highlight" dropdownToggle>{{departmentName}} ({{departmentCode}})▼</label>
+    <ul class="dropdown-menu" dropdownMenu>
+      <li *ngFor="let d of departmentsNames; let i = index" (click)="selectDepartment(i)" class="pointer">
+        {{d}}
+      </li>
+    </ul>
 </div>
 
 <instructions></instructions>
