@@ -9,7 +9,7 @@
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
-    "deploy-cloudformation": "aws cloudformation deploy --stack-name SSPHelper --template-file cloudformation/template.yml",
+    "deploy-cloudformation": "sh scripts/deploy_cloudformation.sh",
     "predeploy": "ng build --prod --aot --base-href /ssp_helper/",
     "deploy": "npm deploy-cloudformation && node ./scripts/deploy.js"
   },

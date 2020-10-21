@@ -16,3 +16,27 @@ Resources:
         ReadCapacityUnits: 1
         WriteCapacityUnits: 1
       TableName: Bylaws
+
+  BylawsInfoReaderLambdaRole:
+    Type: AWS::IAM::Role
+    Properties:
+      AssumeRolePolicyDocument:
+        Version: 2012-10-17
+        Statement:
+          - Effect: Allow
+            Principal:
+              Service: lambda.amazonaws.com
+            Action: sts:AssumeRole
+      ManagedPolicyArns:
+        - arn:aws:iam::aws:policy/AmazonDynamoDBReadOnlyAccess
+      RoleName: BylawsInfoReaderLambdaRole
+
+
+  # BylawsInfoReaderLambda:
+  #   Type: AWS::Lambda::Function
+  #   Properties:
+  #     FunctionName: BylawsInfoReaderLambda
+  #     Handler: index.lambda_handler
+  #     Code:
+  #       ZipFile: |
+  #         {BylawsInfoReaderPlaceholder}
