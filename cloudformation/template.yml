@@ -32,11 +32,13 @@ Resources:
       RoleName: BylawsInfoReaderLambdaRole
 
 
-  # BylawsInfoReaderLambda:
-  #   Type: AWS::Lambda::Function
-  #   Properties:
-  #     FunctionName: BylawsInfoReaderLambda
-  #     Handler: index.lambda_handler
-  #     Code:
-  #       ZipFile: |
-  #         {BylawsInfoReaderPlaceholder}
+  BylawsInfoReaderLambda:
+    Type: AWS::Lambda::Function
+    Properties:
+      FunctionName: BylawsInfoReaderLambda
+      Handler: index.lambda_handler
+      Role: !GetAtt BylawsInfoReaderLambdaRole.Arn
+      Runtime: python3.7
+      Code:
+        ZipFile: |
+%BylawsInfoReaderPlaceholder%

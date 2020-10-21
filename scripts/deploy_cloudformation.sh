@@ -1,9 +1,15 @@
 #!/bin/bash
-# pushd lambdas
+IFS='' # To preserve whitespaces
 
-# zip bylaws_info_reader.zip bylaws_info_reader.py
+# Replace placeholders in template with lambda code
+bylaws_info_reader_code=$(cat lambda/bylaws_info_reader.py)
 
-aws cloudformation deploy --stack-name SSPHelper --template-file cloudformation/template.yml --capabilities CAPABILITY_NAMED_IAM
+while read line; do
+  echo "${line//%BylawsInfoReaderPlaceholder%/"$bylaws_info_reader_code"}"
+done < cloudformation/template.yml > template.yml
 
+# Deploy CloudFormation Stack
+aws cloudformation deploy --stack-name SSPHelper --template-file template.yml --capabilities CAPABILITY_NAMED_IAM
 
-# rm bylaws_info_reader.zip
+# Clean up
+rm template.yml
