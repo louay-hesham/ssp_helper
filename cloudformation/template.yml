@@ -1,4 +1,5 @@
 AWSTemplateFormatVersion: 2010-09-09
+Transform: 'AWS::Serverless-2016-10-31'
 Description: AWS CloudFormation template for SSP Helper web app
 Resources:
 
@@ -45,48 +46,44 @@ Resources:
 
 
   BylawsInfoReaderLambda:
-    Type: AWS::Lambda::Function
+    Type: AWS::Serverless::Function
     Properties:
       FunctionName: BylawsInfoReaderLambda
       Handler: index.lambda_handler
-      Role: !GetAtt BylawsInfoReaderLambdaRole.Arn
       Runtime: python3.7
-      Code:
-        ZipFile: |
+      InlineCode: |
 %BylawsInfoReaderPlaceholder%
+      Role: !GetAtt BylawsInfoReaderLambdaRole.Arn
+      Events:
+        APIG:
+          Type: Api
+          Properties:
+            Method: ANY
+            Path: /GetBylaws
+            RestApiId: !Ref SspHelperApi
 
-  ApiGateway:
-    Type: AWS::ApiGateway::RestApi
+  SspHelperApi:
+    Type: AWS::Serverless::Api
     Properties:
-      Name: ssp-helper-api
-      Description: SSP Helper APIs
-
-  ApiGatewayRootMethod:
-    Type: AWS::ApiGateway::Method
-    Properties:
-      AuthorizationType: NONE
-      HttpMethod: POST
-      Integration:
-        IntegrationHttpMethod: POST
-        Type: AWS_PROXY
-        Uri: !Sub
-          - arn:aws:apigateway:${AWS::Region}:lambda:path/2015-03-31/functions/${LambdaArn}/invocations
-          - LambdaArn: !GetAtt BylawsInfoReaderLambda.Arn
-      ResourceId: !GetAtt ApiGateway.RootResourceId
-      RestApiId: !Ref ApiGateway
-
-  ApiGatewayDeployment:
-    Type: AWS::ApiGateway::Deployment
-    DependsOn:
-      - ApiGatewayRootMethod
-    Properties:
-      RestApiId: !Ref ApiGateway
+      Name: SspHelperApi
       StageName: prod
 
-  LambdaApiGatewayInvoke:
-    Type: AWS::Lambda::Permission
+  SspHelperApiDeployment:
+    Type: AWS::ApiGateway::Deployment
     Properties:
-      Action: lambda:InvokeFunction
-      FunctionName: !GetAtt BylawsInfoReaderLambda.Arn
-      Principal: apigateway.amazonaws.com
-      SourceArn: !Sub arn:aws:execute-api:${AWS::Region}:${AWS::AccountId}:${ApiGateway}/*/POST/
+      RestApiId: !Ref SspHelperApi
+
+  SspHelperApiStage:
+    Type: AWS::ApiGateway::Stage
+    Properties:
+      RestApiId: !Ref SspHelperApi
+      DeploymentId: !Ref SspHelperApiDeployment
+
+  SspHelperApiKey:
+    Type: AWS::ApiGateway::ApiKey
+    Properties:
+      Name: ssp-helper-ui
+      Enabled: true
+      StageKeys:
+        - RestApiId: !Ref SspHelperApi
+          StageName: !Ref SspHelperApiStage
