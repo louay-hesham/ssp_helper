@@ -4,11 +4,13 @@
     <button *ngFor="let bylaw of getAllBylaws();"
             (click)="selectBylaw(bylaw.year)" class="pointer"
             class="{{bylawButtonClass(bylaw)}}"
-            disabled="{{bylawButtonDisability(bylaw)}}">
+            disabled="{{bylawButtonDisability(bylaw)}}"
+            style.cursor="pointer">
 
       {{bylawButtonText(bylaw)}}
     </button>
   </div>
+  Can't find your bylaw? <button (click)="openBylawSubmitDialog()" class="btn btn-warning pointer">Submit it now!</button>
 </div>
 <div id="depDropdown" class="dropdown" dropdown>
     <b>Select department: </b>

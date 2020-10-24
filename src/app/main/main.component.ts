@@ -1,9 +1,11 @@
 import { Component, OnInit } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { MatDialog } from '@angular/material/dialog';
 import { CoursesLoaderService } from '../courses-loader.service'
 import { BylawsLoaderService } from '../bylaws-loader.service'
 import { Course } from '../course'
 import { Bylaw, BylawStatus } from '../bylaw'
+import { SubmitBylawDialogComponent } from '../submit-bylaw-dialog/submit-bylaw-dialog.component'
 
 
 @Component({
@@ -28,7 +30,7 @@ export class MainComponent implements OnInit {
     'Offshore and Coastal Engineering'
   ];
 
-  constructor(private coursesLoader: CoursesLoaderService, private bylawsLoader: BylawsLoaderService) { }
+  constructor(private coursesLoader: CoursesLoaderService, private bylawsLoader: BylawsLoaderService, public dialog: MatDialog) { }
 
   ngOnInit() {
     this.loadBylaw(this.bylawYear);
@@ -61,7 +63,7 @@ export class MainComponent implements OnInit {
   }
 
   bylawButtonDisability(bylaw: Bylaw): string {
-  	if (bylaw.status == BylawStatus.COMING_SOON) {
+  	if (bylaw.status == BylawStatus.COMING_SOON || ""+this.bylawYear == bylaw.year) {
   		return "disabled";
   	} else {
   		return ""
@@ -74,6 +76,12 @@ export class MainComponent implements OnInit {
   		text += " (Coming soon!)"
   	}
     return text
+  }
+
+  openBylawSubmitDialog() {
+    const dialogRef = this.dialog.open(SubmitBylawDialogComponent, {
+      width: '500px'
+    });
   }
 
   getCH(): number {

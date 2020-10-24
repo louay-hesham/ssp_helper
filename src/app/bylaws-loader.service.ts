@@ -17,10 +17,10 @@ export class BylawsLoaderService {
         })
   }
 
-  private fetchBylaws(): Promise<Bylaw[]> {
+  private fetchBylaws(): Promise<Bylaw> {
     return fetch("https://jc903eqh55.execute-api.eu-west-1.amazonaws.com/SSPHeSspHeZWPXQR9EPGNX/GetBylaws")
         .then(response => {
-          return response.json<Bylaw[]>();
+          return response.json();
         })
         .catch(error =>{
           console.error(error);
