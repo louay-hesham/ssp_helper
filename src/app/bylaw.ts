@@ -1,4 +1,4 @@
-enum BylawStatus {
+export enum BylawStatus {
   AVAILABLE = "AVAILABLE",
   COMING_SOON = "COMING_SOON",
   NOT_AVAILABLE = "NOT_AVAILABLE"
@@ -25,16 +25,11 @@ export class Bylaw {
     }
   }
 
-  public static isBylawsLoaded(): boolean {
-    return 2019 in Bylaw.allBylaws;
-  }
-
   public static getAllBylaws() {
     return Bylaw.getAllYears().map(year => Bylaw.allBylaws[year])
   }
 
   public static getAllYears(): string[] {
-    // while (!Bylaw.isBylawsLoaded());
     return Object.keys(Bylaw.allBylaws)
   }
 

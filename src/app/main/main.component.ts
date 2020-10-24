@@ -3,7 +3,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { CoursesLoaderService } from '../courses-loader.service'
 import { BylawsLoaderService } from '../bylaws-loader.service'
 import { Course } from '../course'
-import { Bylaw } from '../bylaw'
+import { Bylaw, BylawStatus } from '../bylaw'
 
 
 @Component({
@@ -50,14 +50,30 @@ export class MainComponent implements OnInit {
     return Bylaw.getAllBylaws();
   }
 
-  bylawButtonClass(year: string): string {
+  bylawButtonClass(bylaw: Bylaw): string {
     var css: string;
-  	if (""+this.bylawYear == year) {
+  	if (""+this.bylawYear == bylaw.year) {
   		css = "btn btn-primary";
   	} else {
   		css = "btn btn-danger";
   	}
     return css;
+  }
+
+  bylawButtonDisability(bylaw: Bylaw): string {
+  	if (bylaw.status == BylawStatus.COMING_SOON) {
+  		return "disabled";
+  	} else {
+  		return ""
+  	}
+  }
+
+  bylawButtonText(bylaw: Bylaw): string {
+    let text = ""+bylaw.year
+  	if (bylaw.status == BylawStatus.COMING_SOON) {
+  		text += " (Coming soon!)"
+  	}
+    return text
   }
 
   getCH(): number {

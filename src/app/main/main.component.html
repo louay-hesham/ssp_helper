@@ -3,8 +3,10 @@
   <div class="btn-group elective-group">
     <button *ngFor="let bylaw of getAllBylaws();"
             (click)="selectBylaw(bylaw.year)" class="pointer"
-            class="{{bylawButtonClass(bylaw.year)}}">
-      {{bylaw.year}}
+            class="{{bylawButtonClass(bylaw)}}"
+            disabled="{{bylawButtonDisability(bylaw)}}">
+
+      {{bylawButtonText(bylaw)}}
     </button>
   </div>
 </div>
