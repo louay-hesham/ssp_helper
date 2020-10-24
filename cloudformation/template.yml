@@ -67,6 +67,8 @@ Resources:
     Properties:
       Name: SspHelperApi
       StageName: prod
+      Cors:
+        AllowOrigin: "'louay-morsi.me'"
 
   SspHelperApiDeployment:
     Type: AWS::ApiGateway::Deployment

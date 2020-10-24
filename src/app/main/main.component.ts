@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { CoursesLoaderService } from '../courses-loader.service'
+import { BylawsLoaderService } from '../bylaws-loader.service'
 import { Course } from '../course'
 
 
@@ -27,15 +28,13 @@ export class MainComponent implements OnInit {
     'Offshore and Coastal Engineering'
   ];
 
-  constructor(private coursesLoader: CoursesLoaderService) { }
+  constructor(private coursesLoader: CoursesLoaderService, private bylawsLoader: BylawsLoaderService) { }
 
   ngOnInit() {
     this.loadBylaw(this.bylawYear);
   }
 
   loadBylaw(year: number) {
-    console.log(year);
-    console.log(this.bylawsStatus)
     this.coursesData = this.coursesLoader.getCourses(this.bylawYear);
     Course.loadCourses(this.coursesData, this.departmentCode);
     this.electivesDict();

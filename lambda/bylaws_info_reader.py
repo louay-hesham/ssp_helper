@@ -7,5 +7,8 @@
             bylaws = ddb_scan_response['Items']
             return {
                 "statusCode": 200,
-                "body": json.dumps(bylaws)
+                "body": json.dumps(bylaws),
+                "headers": {
+                    "Access-Control-Allow-Origin": "http://louay-morsi.me"
+                }
             }
