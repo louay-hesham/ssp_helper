@@ -11,7 +11,6 @@ export class Bylaw {
   public status: BylawStatus;
 
   public static loadBylaws(existingBylaws: Bylaw[]) {
-    console.log(existingBylaws);
     let today = new Date();
     let maxYear = today.getMonth() >= 9? today.getFullYear() + 5 : today.getFullYear() + 4;
     for (var year = 2019; year <= maxYear; year++) {
@@ -24,7 +23,19 @@ export class Bylaw {
     for (let bylaw of existingBylaws) {
       Bylaw.allBylaws[parseInt(bylaw.year)] = bylaw;
     }
-    console.log(Bylaw.allBylaws);
+  }
+
+  public static isBylawsLoaded(): boolean {
+    return 2019 in Bylaw.allBylaws;
+  }
+
+  public static getAllBylaws() {
+    return Bylaw.getAllYears().map(year => Bylaw.allBylaws[year])
+  }
+
+  public static getAllYears(): string[] {
+    // while (!Bylaw.isBylawsLoaded());
+    return Object.keys(Bylaw.allBylaws)
   }
 
   constructor(data: any) {

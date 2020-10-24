@@ -3,6 +3,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { CoursesLoaderService } from '../courses-loader.service'
 import { BylawsLoaderService } from '../bylaws-loader.service'
 import { Course } from '../course'
+import { Bylaw } from '../bylaw'
 
 
 @Component({
@@ -16,7 +17,6 @@ export class MainComponent implements OnInit {
   private departmentsCodes: string[] = ['GPE', 'EME', 'CAE', 'CCE', 'OCE'];
 
 	public levels: string[] = ['1','2','3','4','5','6','7','8','9','10', 'e','h'];
-  public bylawsStatus: any[] = [{year: 2019, status: "AVAILABLE"}]; // TODO: Load years from DDB
   public bylawYear: number = 2019
   public departmentCode: string = 'CCE';
   public departmentName: string = 'Computer and Communications Engineering';
@@ -34,10 +34,30 @@ export class MainComponent implements OnInit {
     this.loadBylaw(this.bylawYear);
   }
 
+  selectBylaw(year: number) {
+    this.bylawYear = year;
+    this.loadBylaw(year);
+  }
+
   loadBylaw(year: number) {
+    console.log("Loading bylaw " + year)
     this.coursesData = this.coursesLoader.getCourses(this.bylawYear);
     Course.loadCourses(this.coursesData, this.departmentCode);
     this.electivesDict();
+  }
+
+  getAllBylaws(): Bylaw[] {
+    return Bylaw.getAllBylaws();
+  }
+
+  bylawButtonClass(year: string): string {
+    var css: string;
+  	if (""+this.bylawYear == year) {
+  		css = "btn btn-primary";
+  	} else {
+  		css = "btn btn-danger";
+  	}
+    return css;
   }
 
   getCH(): number {

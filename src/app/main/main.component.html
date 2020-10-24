@@ -1,11 +1,12 @@
-<div [pageview]="'Main App'" id="bylawDropdown" class="dropdown" dropdown>
+<div [pageview]="'Main App'">
   <b>Select Bylaw year: </b>
-  <label class="pointer highlight" dropdownToggle>{{bylawYear}}▼</label>
-  <ul class="dropdown-menu" dropdownMenu>
-    <li *ngFor="let bylaw of bylawsStatus;" (click)="loadBylaw(bylaw.year)" class="pointer">
+  <div class="btn-group elective-group">
+    <button *ngFor="let bylaw of getAllBylaws();"
+            (click)="selectBylaw(bylaw.year)" class="pointer"
+            class="{{bylawButtonClass(bylaw.year)}}">
       {{bylaw.year}}
-    </li>
-  </ul>
+    </button>
+  </div>
 </div>
 <div id="depDropdown" class="dropdown" dropdown>
     <b>Select department: </b>
