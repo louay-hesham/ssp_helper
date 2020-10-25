@@ -8,7 +8,7 @@ export class Bylaw {
   private static allBylaws: {[year: number]: Bylaw} = {};
 
   public year: string;
-  public status: BylawStatus;
+  public status: any;
 
   public static loadBylaws(existingBylaws: Bylaw[]) {
     for (let bylaw of existingBylaws) {

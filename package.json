@@ -11,7 +11,7 @@
     "e2e": "ng e2e",
     "deploy-cloudformation": "sh scripts/deploy_cloudformation.sh",
     "predeploy": "ng build --prod --aot --base-href /ssp_helper/",
-    "deploy": "npm run deploy-cloudformation && node ./scripts/deploy.js"
+    "deploy": "npm run deploy-cloudformation && aws s3 cp dist s3://louay-morsi.me/ssp_helper --recursive"
   },
   "private": true,
   "dependencies": {
@@ -26,6 +26,7 @@
     "@angular/platform-browser": "^7.2.14",
     "@angular/platform-browser-dynamic": "^7.2.14",
     "@angular/router": "^7.2.14",
+    "amazon-s3-uri": "^0.1.0",
     "angular-custom-dropdown": "^1.1.1",
     "core-js": "^2.6.5",
     "fuckadblock": "^3.2.1",

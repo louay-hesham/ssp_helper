@@ -96,7 +96,7 @@ export class SubmitBylawDialogComponent implements OnInit {
     }
   }
 
-  toBase64(file): Promise {
+  toBase64(file): Promise<any> {
     return new Promise((resolve, reject) => {
       const reader = new FileReader();
       reader.readAsDataURL(file);
@@ -105,11 +105,11 @@ export class SubmitBylawDialogComponent implements OnInit {
     });
   }
 
-  uploadBylaw(base64Pdf: string): Promise {
+  uploadBylaw(base64Pdf: string): Promise<any> {
     return fetch("https://jc903eqh55.execute-api.eu-west-1.amazonaws.com/prod/SubmitBylaw", {
       method: 'Post',
       headers: {
-        'Bylaw-Year': this.bylawYear,
+        'Bylaw-Year': ""+this.bylawYear,
         'Content-Type': 'application/pdf;base64'
       },
       body: base64Pdf
