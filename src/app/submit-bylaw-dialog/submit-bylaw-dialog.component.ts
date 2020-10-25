@@ -2,6 +2,10 @@ import { Component, OnInit } from '@angular/core';
 import { MatDialogRef } from '@angular/material/dialog';
 import { Bylaw } from '../bylaw'
 
+import * as _swal from 'sweetalert';
+import { SweetAlert } from 'sweetalert/typings/core';
+const swal: SweetAlert = _swal as any;
+
 @Component({
   selector: 'app-submit-bylaw-dialog',
   templateUrl: './submit-bylaw-dialog.component.html',
@@ -52,17 +56,41 @@ export class SubmitBylawDialogComponent implements OnInit {
     this.fileToUpload = files.item(0);
   }
 
-  submit() {
+  async submit() {
     if (this.bylawYear == -1) {
-      alert("You must choose a year first!")
+      swal({
+        title: "Data Error!",
+        text: "You must choose a year first!",
+        icon: "error",
+      });
     } else if (this.fileToUpload == null || this.fileToUpload == undefined) {
-      alert("You must choose a PDF file first!")
+      swal({
+        title: "Data Error!",
+        text: "You must choose a PDF file first!",
+        icon: "error",
+      });
     } else {
-      this.uploadBylaw().then(response => {
-        console.log(response)
-      }).catch(error => {
-        console.error(error)
-      })
+      var base64Pdf = await this.toBase64(this.fileToUpload);
+      if (base64Pdf.startsWith("data:application/pdf")) {
+        this.uploadBylaw(base64Pdf).then(response => {
+          swal({
+            title: "Bylaw submitted for review!",
+            text: this.bylawYear + " bylaw will be available soon.",
+            icon: "success",
+          }).then( _ => {
+            location.reload();
+          })
+          this.dialogRef.close();
+        }).catch(error => {
+          console.error(error)
+        })
+      } else {
+        swal({
+          title: "Not a PDF file!",
+          text: "Please select a PDF file.",
+          icon: "error",
+        });
+      }
     }
   }
 
@@ -75,8 +103,7 @@ export class SubmitBylawDialogComponent implements OnInit {
     });
   }
 
-  async uploadBylaw(): Promise {
-    var base64Pdf = await this.toBase64(this.fileToUpload);
+  async uploadBylaw(base64Pdf: string): Promise {
     return fetch("https://jc903eqh55.execute-api.eu-west-1.amazonaws.com/prod/SubmitBylaw", {
       method: 'Post',
       headers: {
