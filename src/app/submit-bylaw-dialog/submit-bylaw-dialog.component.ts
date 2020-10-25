@@ -16,6 +16,7 @@ export class SubmitBylawDialogComponent implements OnInit {
   private fileToUpload: File = null;
 
   public bylawYear: number = -1;
+  public isUploading: boolean = false;
 
   constructor(public dialogRef: MatDialogRef<SubmitBylawDialogComponent>) {}
 
@@ -72,15 +73,16 @@ export class SubmitBylawDialogComponent implements OnInit {
     } else {
       var base64Pdf = await this.toBase64(this.fileToUpload);
       if (base64Pdf.startsWith("data:application/pdf")) {
+        this.isUploading = true;
         this.uploadBylaw(base64Pdf).then(response => {
           swal({
             title: "Bylaw submitted for review!",
             text: this.bylawYear + " bylaw will be available soon.",
             icon: "success",
           }).then( _ => {
-            // location.reload();
+            location.reload();
           })
-          // this.dialogRef.close();
+          this.dialogRef.close();
         }).catch(error => {
           console.error(error)
         })
@@ -103,7 +105,7 @@ export class SubmitBylawDialogComponent implements OnInit {
     });
   }
 
-  async uploadBylaw(base64Pdf: string): Promise {
+  uploadBylaw(base64Pdf: string): Promise {
     return fetch("https://jc903eqh55.execute-api.eu-west-1.amazonaws.com/prod/SubmitBylaw", {
       method: 'Post',
       headers: {

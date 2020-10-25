@@ -1,5 +1,5 @@
 <div [pageview]="'Main App'">
-  <b>Select Bylaw year: </b>
+  <b class="bylaw-label">Select Bylaw year: </b>
   <div class="btn-group elective-group">
     <button *ngFor="let bylaw of getAllBylaws();"
             (click)="selectBylaw(bylaw.year)" class="pointer"
