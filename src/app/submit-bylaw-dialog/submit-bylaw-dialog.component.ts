@@ -78,9 +78,9 @@ export class SubmitBylawDialogComponent implements OnInit {
             text: this.bylawYear + " bylaw will be available soon.",
             icon: "success",
           }).then( _ => {
-            location.reload();
+            // location.reload();
           })
-          this.dialogRef.close();
+          // this.dialogRef.close();
         }).catch(error => {
           console.error(error)
         })
