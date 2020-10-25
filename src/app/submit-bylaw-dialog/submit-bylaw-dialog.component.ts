@@ -58,9 +58,26 @@ export class SubmitBylawDialogComponent implements OnInit {
     } else if (this.fileToUpload == null || this.fileToUpload == undefined) {
       alert("You must choose a PDF file first!")
     } else {
-      console.log(this.bylawYear);
-      console.log(this.fileToUpload);
+      this.uploadBylaw().then(response => {
+        console.log(response)
+      }).catch(error => {
+        console.error(error)
+      })
     }
+  }
+
+  uploadBylaw(): Promise {
+    return fetch("https://jc903eqh55.execute-api.eu-west-1.amazonaws.com/SSPHeSspHeZWPXQR9EPGNX/SubmitBylaw", {
+      method: 'Post',
+      body: JSON.stringify({
+        year: this.bylawYear,
+        file: this.fileToUpload
+      })
+    }).then(response => {
+      return response.json();
+    }).catch(error => {
+      console.error(error);
+    })
   }
 
 }

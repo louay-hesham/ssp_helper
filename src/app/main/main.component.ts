@@ -80,7 +80,7 @@ export class MainComponent implements OnInit {
 
   openBylawSubmitDialog() {
     const dialogRef = this.dialog.open(SubmitBylawDialogComponent, {
-      width: '500px'
+      width: '650px'
     });
   }
 
