@@ -18,7 +18,7 @@ export class BylawsLoaderService {
   }
 
   private fetchBylaws(): Promise<Bylaw> {
-    return fetch("https://jc903eqh55.execute-api.eu-west-1.amazonaws.com/SSPHeSspHeZWPXQR9EPGNX/GetBylaws")
+    return fetch("https://jc903eqh55.execute-api.eu-west-1.amazonaws.com/prod/GetBylaws")
         .then(response => {
           return response.json();
         })

@@ -18,7 +18,7 @@ Resources:
         WriteCapacityUnits: 1
       TableName: Bylaws
 
-  BylawsInfoReaderLambdaRole:
+  LambdaRole:
     Type: AWS::IAM::Role
     Properties:
       AssumeRolePolicyDocument:
@@ -42,7 +42,8 @@ Resources:
                 Effect: "Allow"
                 Resource:
                   - !Sub "arn:aws:logs:${AWS::Region}:${AWS::AccountId}:log-group:/aws/lambda/BylawsInfoReaderLambda:*"
-      RoleName: BylawsInfoReaderLambdaRole
+                  - !Sub "arn:aws:logs:${AWS::Region}:${AWS::AccountId}:log-group:/aws/lambda/BylawUploaderLambda:*"
+      RoleName: LambdaRole
 
 
   BylawsInfoReaderLambda:
@@ -53,7 +54,7 @@ Resources:
       Runtime: python3.7
       InlineCode: |
 %BylawsInfoReaderPlaceholder%
-      Role: !GetAtt BylawsInfoReaderLambdaRole.Arn
+      Role: !GetAtt LambdaRole.Arn
       Events:
         APIG:
           Type: Api
@@ -62,13 +63,32 @@ Resources:
             Path: /GetBylaws
             RestApiId: !Ref SspHelperApi
 
+  BylawUploaderLambda:
+    Type: AWS::Serverless::Function
+    Properties:
+      FunctionName: BylawUploaderLambda
+      Handler: index.lambda_handler
+      Runtime: python3.7
+      InlineCode: |
+%BylawUploaderPlaceholder%
+      Role: !GetAtt LambdaRole.Arn
+      Events:
+        APIG:
+          Type: Api
+          Properties:
+            Method: ANY
+            Path: /SubmitBylaw
+            RestApiId: !Ref SspHelperApi
+
   SspHelperApi:
     Type: AWS::Serverless::Api
     Properties:
       Name: SspHelperApi
       StageName: prod
       Cors:
-        AllowOrigin: "'louay-morsi.me'"
+        AllowHeaders: "'Access-Control-Allow-Origin,Access-Control-Allow-Credentials,Access-Control-Allow-Headers,Access-Control-Allow-Methods,Content-Type,Bylaw-Year'"
+        AllowMethods: "'*'"
+        AllowOrigin: "'http://louay-morsi.me'"
 
   SspHelperApiDeployment:
     Type: AWS::ApiGateway::Deployment

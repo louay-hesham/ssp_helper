@@ -66,13 +66,24 @@ export class SubmitBylawDialogComponent implements OnInit {
     }
   }
 
-  uploadBylaw(): Promise {
-    return fetch("https://jc903eqh55.execute-api.eu-west-1.amazonaws.com/SSPHeSspHeZWPXQR9EPGNX/SubmitBylaw", {
+  toBase64(file): Promise {
+    return new Promise((resolve, reject) => {
+      const reader = new FileReader();
+      reader.readAsDataURL(file);
+      reader.onload = () => resolve(reader.result);
+      reader.onerror = error => reject(error);
+    });
+  }
+
+  async uploadBylaw(): Promise {
+    var base64Pdf = await this.toBase64(this.fileToUpload);
+    return fetch("https://jc903eqh55.execute-api.eu-west-1.amazonaws.com/prod/SubmitBylaw", {
       method: 'Post',
-      body: JSON.stringify({
-        year: this.bylawYear,
-        file: this.fileToUpload
-      })
+      headers: {
+        'Bylaw-Year': this.bylawYear,
+        'Content-Type': 'application/pdf;base64'
+      },
+      body: base64Pdf
     }).then(response => {
       return response.json();
     }).catch(error => {
