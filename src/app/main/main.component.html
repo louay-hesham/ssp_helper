@@ -1,4 +1,8 @@
 <div [pageview]="'Main App'">
+  <instructions></instructions>
+
+  <hr>
+  
   <div>
     <b class="bylaw-label">Select Bylaw year: </b>
     <div class="btn-group elective-group">
@@ -31,13 +35,13 @@
       </ul>
   </div>
 
-  <instructions></instructions>
-
   <div style="position: fixed; top: 65px; right: 1px;">
   	<span style="background-color: cyan">
       <b>CHs complete: </b>{{getCH()}}
     </span>
   </div>
+
+  <hr>
 
   <div *ngFor="let level of levels">
 
