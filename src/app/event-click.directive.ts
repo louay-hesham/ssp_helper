@@ -23,6 +23,12 @@ export class EventClickDirective {
 	@Input('term-click')
 	public termClick: string = undefined;
 
+  @Input('bylaw-action')
+	public bylawAction: string = undefined;
+
+  @Input('bylaw-data')
+  public bylawData: any = undefined
+
   constructor(private _GAService: GoogleAnalyticsService) { }
 
   @HostListener('click')
@@ -41,6 +47,9 @@ export class EventClickDirective {
   	}
   	if (this.termClick != undefined) {
   		this._GAService.sendButtonClickEvent('term-click', 'Term', this.termClick);
+  	}
+    if (this.bylawAction != undefined && this.bylawData != undefined) {
+  		this._GAService.sendButtonClickEvent(this.bylawAction, 'bylaw-action', this.bylawData);
   	}
   }
 }

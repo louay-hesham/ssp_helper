@@ -1,4 +1,4 @@
-<div>
+<div [pageview]="'Bylaw Upload'">
   <h1>Request addition of a new bylaw</h1>
   <br><br>
   <div>
@@ -6,6 +6,7 @@
     <div class="btn-group elective-group">
       <button *ngFor="let year of getMissingBylawsYears();"
               (click)="selectBylaw(year)" class="pointer"
+              click-event [bylaw-action]="'submit-bylaw'" [bylaw-data]="year"
               class="{{bylawButtonClass(year)}}"
               disabled="{{bylawButtonDisability(year)}}">
 
@@ -16,12 +17,23 @@
   <br><br>
   <div>
     <label for="file">Choose bylaw PDF file:</label>
-    <input type="file" accept="application/pdf" (change)="handleFileInput($event.target.files)">
+    <input  type="file"
+            accept="application/pdf"
+            (change)="handleFileInput($event.target.files)"
+            click-event [bylaw-action]="'submit-bylaw'" [bylaw-data]="'choose-file'">
   </div>
   <br><br>
   <div>
-    <button class="btn btn-danger" (click)="onNoClick()">Cancel</button>
-    <button class="btn btn-primary" (click)="submit()">Upload</button>
+    <button class="btn btn-danger"
+            click-event [bylaw-action]="'submit-bylaw'" [bylaw-data]="'cancel'"
+            (click)="onNoClick()">
+      Cancel
+    </button>
+    <button class="btn btn-primary"
+            click-event [bylaw-action]="'submit-bylaw'" [bylaw-data]="'upload-bylaw'"
+            (click)="submit()">
+      Upload
+    </button>
     <p *ngIf="isUploading">Uploading. Please wait...</p>
   </div>
 </div>
