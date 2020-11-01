@@ -1,0 +1,579 @@
+{
+  "CSE202": {
+    "code": "CSE202",
+    "credit_hours": 3,
+    "level": "4",
+    "name": "Advanced Programming And Applications",
+    "prerequisites": [
+      "CSE102",
+      "MP201"
+    ],
+    "satisfies": [
+      "OCE534"
+    ]
+  },
+  "EME203": {
+    "code": "EME203",
+    "credit_hours": 3,
+    "level": "4",
+    "name": "Thermodynamics 1",
+    "prerequisites": [
+      "MP102"
+    ],
+    "satisfies": [
+      "OCE312",
+      "OCE334",
+      "OCE413"
+    ]
+  },
+  "EME206": {
+    "code": "EME206",
+    "credit_hours": 3,
+    "level": "3",
+    "name": "Fluid Mechanics 1",
+    "prerequisites": [
+      "MP102"
+    ],
+    "satisfies": [
+      "OCE213",
+      "OCE311",
+      "OCE323",
+      "OCE402"
+    ]
+  },
+  "EME207": {
+    "code": "EME207",
+    "credit_hours": 3,
+    "level": "5",
+    "name": "Electric Circuits",
+    "prerequisites": [
+      "MP108"
+    ],
+    "satisfies": [
+      "OCE312"
+    ]
+  },
+  "MP301": {
+    "code": "MP301",
+    "credit_hours": 3,
+    "level": "5",
+    "name": "Probability",
+    "prerequisites": [
+      "MP201"
+    ],
+    "satisfies": [
+      "OCE532",
+      "OCE521"
+    ]
+  },
+  "MSE201": {
+    "code": "MSE201",
+    "credit_hours": 3,
+    "level": "3",
+    "name": "Principles Of Material Science And Engineering",
+    "prerequisites": [],
+    "satisfies": [
+      "OCE222",
+      "OCE301",
+      "OCE535"
+    ]
+  },
+  "OCE211": {
+    "code": "OCE211",
+    "credit_hours": 3,
+    "level": "3",
+    "name": "Buoyancy And Stability",
+    "prerequisites": [],
+    "satisfies": [
+      "OCE302",
+      "OCE433"
+    ]
+  },
+  "OCE212": {
+    "code": "OCE212",
+    "credit_hours": 3,
+    "level": "3",
+    "name": "Civil And Marine Drawing",
+    "prerequisites": [
+      "MP106"
+    ],
+    "satisfies": [
+      "OCE302",
+      "OCE401"
+    ]
+  },
+  "OCE213": {
+    "code": "OCE213",
+    "credit_hours": 3,
+    "level": "4",
+    "name": "Marine Hydraulics",
+    "prerequisites": [
+      "EME206"
+    ],
+    "satisfies": [
+      "OCE323",
+      "OCE332",
+      "OCE335",
+      "OCE402",
+      "OCE434",
+      "OCE535",
+      "OCE536"
+    ]
+  },
+  "OCE222": {
+    "code": "OCE222",
+    "credit_hours": 3,
+    "level": "4",
+    "name": "Marine Structural Analysis 1",
+    "prerequisites": [
+      "MSE201"
+    ],
+    "satisfies": [
+      "OCE303",
+      "OCE403",
+      "OCE433"
+    ]
+  },
+  "OCE301": {
+    "code": "OCE301",
+    "credit_hours": 4,
+    "level": "5",
+    "name": "Marine Foundations",
+    "prerequisites": [
+      "MSE201",
+      "MP108"
+    ],
+    "satisfies": [
+      "OCE537",
+      "OCE538"
+    ]
+  },
+  "OCE302": {
+    "code": "OCE302",
+    "credit_hours": 4,
+    "level": "6",
+    "name": "Harbor Planning And Coastal Structures",
+    "prerequisites": [
+      "OCE211",
+      "OCE212"
+    ],
+    "satisfies": [
+      "OCE401"
+    ]
+  },
+  "OCE303": {
+    "code": "OCE303",
+    "credit_hours": 3,
+    "level": "7",
+    "name": "Marine Structural Analysis 2",
+    "prerequisites": [
+      "OCE222"
+    ],
+    "satisfies": [
+      "OCE403",
+      "OCE433"
+    ]
+  },
+  "OCE304": {
+    "code": "OCE304",
+    "credit_hours": 3,
+    "level": "6",
+    "name": "Introduction To Oceanography",
+    "prerequisites": [
+      "GPE101",
+      "MP201"
+    ],
+    "satisfies": [
+      "OCE402"
+    ]
+  },
+  "OCE311": {
+    "code": "OCE311",
+    "credit_hours": 3,
+    "level": "5",
+    "name": "Water Wave Theory",
+    "prerequisites": [
+      "EME206"
+    ],
+    "satisfies": [
+      "OCE331",
+      "OCE335",
+      "OCE436",
+      "OCE423",
+      "OCE532"
+    ]
+  },
+  "OCE312": {
+    "code": "OCE312",
+    "credit_hours": 3,
+    "level": "6",
+    "name": "Marine Machinery And Systems",
+    "prerequisites": [
+      "EME203",
+      "EME207"
+    ],
+    "satisfies": [
+      "OCE413"
+    ]
+  },
+  "OCE323": {
+    "code": "OCE323",
+    "credit_hours": 3,
+    "level": "5",
+    "name": "Marine Hydrodynamics 1",
+    "prerequisites": [
+      "EME206",
+      "OCE213"
+    ],
+    "satisfies": [
+      "OCE424"
+    ]
+  },
+  "OCE331": {
+    "code": "OCE331",
+    "credit_hours": 3,
+    "level": "6-e1",
+    "name": "Dynamics Of Ocean Waves",
+    "prerequisites": [
+      "OCE311"
+    ],
+    "satisfies": []
+  },
+  "OCE332": {
+    "code": "OCE332",
+    "credit_hours": 3,
+    "level": "6-e1",
+    "name": "Open Channel Hydraulics",
+    "prerequisites": [
+      "OCE213"
+    ],
+    "satisfies": []
+  },
+  "OCE334": {
+    "code": "OCE334",
+    "credit_hours": 3,
+    "level": "6-e1",
+    "name": "Renewable Energy",
+    "prerequisites": [
+      "EME203"
+    ],
+    "satisfies": []
+  },
+  "OCE335": {
+    "code": "OCE335",
+    "credit_hours": 3,
+    "level": "6-e1",
+    "name": "Tidal Hydraulics",
+    "prerequisites": [
+      "OCE213",
+      "OCE311"
+    ],
+    "satisfies": []
+  },
+  "OCE401": {
+    "code": "OCE401",
+    "credit_hours": 3,
+    "level": "7",
+    "name": "Advanced Coastal Structures 1",
+    "prerequisites": [
+      "OCE212",
+      "OCE302"
+    ],
+    "satisfies": [
+      "OCE423",
+      "OCE431",
+      "OCE535"
+    ]
+  },
+  "OCE402": {
+    "code": "OCE402",
+    "credit_hours": 3,
+    "level": "7",
+    "name": "Sediment Transport And Littoral Processes",
+    "prerequisites": [
+      "EME206",
+      "OCE304",
+      "OCE213"
+    ],
+    "satisfies": [
+      "OCE434",
+      "OCE423",
+      "OCE538"
+    ]
+  },
+  "OCE403": {
+    "code": "OCE403",
+    "credit_hours": 4,
+    "level": "8",
+    "name": "Design Of Reinforced Concrete And Steel Structures",
+    "prerequisites": [
+      "OCE222",
+      "OCE303"
+    ],
+    "satisfies": []
+  },
+  "OCE413": {
+    "code": "OCE413",
+    "credit_hours": 4,
+    "level": "7",
+    "name": "Measurements And Control Systems",
+    "prerequisites": [
+      "EME203",
+      "OCE312"
+    ],
+    "satisfies": [
+      "OCE537"
+    ]
+  },
+  "OCE421": {
+    "code": "OCE421",
+    "credit_hours": 3,
+    "level": "6",
+    "name": "Introduction To Offshore Engineering",
+    "prerequisites": [],
+    "satisfies": [
+      "OCE422",
+      "OCE423",
+      "OCE511",
+      "OCE533",
+      "OCE532",
+      "OCE535",
+      "OCE537",
+      "OCE521",
+      "OCE536"
+    ]
+  },
+  "OCE422": {
+    "code": "OCE422",
+    "credit_hours": 3,
+    "level": "8",
+    "name": "Construction Of Marine And Offshore Structures",
+    "prerequisites": [
+      "OCE421"
+    ],
+    "satisfies": []
+  },
+  "OCE423": {
+    "code": "OCE423",
+    "credit_hours": 3,
+    "level": "8",
+    "name": "Physical Modeling",
+    "prerequisites": [
+      "OCE311",
+      "OCE401",
+      "OCE402",
+      "OCE421"
+    ],
+    "satisfies": []
+  },
+  "OCE424": {
+    "code": "OCE424",
+    "credit_hours": 3,
+    "level": "8",
+    "name": "Marine Hydrodynamics 2",
+    "prerequisites": [
+      "OCE323"
+    ],
+    "satisfies": []
+  },
+  "OCE431": {
+    "code": "OCE431",
+    "credit_hours": 3,
+    "level": "8-e4",
+    "name": "Advanced Coastal Structures 2",
+    "prerequisites": [
+      "OCE401"
+    ],
+    "satisfies": []
+  },
+  "OCE432": {
+    "code": "OCE432",
+    "credit_hours": 3,
+    "level": "7-e3",
+    "name": "Coastal Management",
+    "prerequisites": [],
+    "satisfies": []
+  },
+  "OCE433": {
+    "code": "OCE433",
+    "credit_hours": 3,
+    "level": "8-e4",
+    "name": "Floating Structure Design",
+    "prerequisites": [
+      "OCE211",
+      "OCE222",
+      "OCE303"
+    ],
+    "satisfies": []
+  },
+  "OCE434": {
+    "code": "OCE434",
+    "credit_hours": 3,
+    "level": "7-e3",
+    "name": "Dredging Technology",
+    "prerequisites": [
+      "OCE213",
+      "OCE402"
+    ],
+    "satisfies": []
+  },
+  "OCE436": {
+    "code": "OCE436",
+    "credit_hours": 3,
+    "level": "7-e3",
+    "name": "Analysis And Interpretation Of Wave Data",
+    "prerequisites": [
+      "OCE311"
+    ],
+    "satisfies": []
+  },
+  "OCE501": {
+    "code": "OCE501",
+    "credit_hours": 3,
+    "level": "9",
+    "name": "Offshore Oil And Gas Production",
+    "prerequisites": [],
+    "satisfies": [
+      "OCE538"
+    ]
+  },
+  "OCE502": {
+    "code": "OCE502",
+    "credit_hours": 3,
+    "level": "10",
+    "name": "Surveying In The Marine Field",
+    "prerequisites": [],
+    "satisfies": []
+  },
+  "OCE511": {
+    "code": "OCE511",
+    "credit_hours": 3,
+    "level": "9",
+    "name": "Design Of Offshore Platforms",
+    "prerequisites": [
+      "OCE421"
+    ],
+    "satisfies": []
+  },
+  "OCE512": {
+    "code": "OCE512",
+    "credit_hours": 3,
+    "level": "10",
+    "name": "Marine Production Technology",
+    "prerequisites": [
+      "PE102"
+    ],
+    "satisfies": []
+  },
+  "OCE521": {
+    "code": "OCE521",
+    "credit_hours": 3,
+    "level": "10-e9",
+    "name": "Offshore Safety And Risk Assessment",
+    "prerequisites": [
+      "MP301",
+      "OCE421"
+    ],
+    "satisfies": []
+  },
+  "OCE532": {
+    "code": "OCE532",
+    "credit_hours": 3,
+    "level": "10-e8",
+    "name": "Dynamics Of Offshore Structures",
+    "prerequisites": [
+      "MP301",
+      "OCE311",
+      "OCE421"
+    ],
+    "satisfies": []
+  },
+  "OCE533": {
+    "code": "OCE533",
+    "credit_hours": 3,
+    "level": "9-e6",
+    "name": "Underwater Technology",
+    "prerequisites": [
+      "PE102",
+      "OCE421"
+    ],
+    "satisfies": []
+  },
+  "OCE534": {
+    "code": "OCE534",
+    "credit_hours": 3,
+    "level": "9",
+    "name": "Computer Applications In The Marine Field",
+    "prerequisites": [
+      "CSE102",
+      "CSE202"
+    ],
+    "satisfies": []
+  },
+  "OCE535": {
+    "code": "OCE535",
+    "credit_hours": 3,
+    "level": "10-e8",
+    "name": "Drilling Engineering",
+    "prerequisites": [
+      "OCE213",
+      "OCE421"
+    ],
+    "satisfies": []
+  },
+  "OCE536": {
+    "code": "OCE536",
+    "credit_hours": 3,
+    "level": "10-e9",
+    "name": "Marine Pipelines And Risers",
+    "prerequisites": [
+      "OCE213",
+      "OCE421"
+    ],
+    "satisfies": []
+  },
+  "OCE537": {
+    "code": "OCE537",
+    "credit_hours": 3,
+    "level": "10-e8",
+    "name": "Geophysical And Geotechnical Design",
+    "prerequisites": [
+      "OCE301",
+      "OCE413",
+      "OCE421"
+    ],
+    "satisfies": []
+  },
+  "OCE538": {
+    "code": "OCE538",
+    "credit_hours": 3,
+    "level": "10-e9",
+    "name": "Sediments Transport",
+    "prerequisites": [
+      "OCE301",
+      "OCE402",
+      "OCE501"
+    ],
+    "satisfies": []
+  },
+  "OCE551": {
+    "code": "OCE551",
+    "credit_hours": 3,
+    "level": "9",
+    "name": "Senior Project 1",
+    "prerequisites": [],
+    "satisfies": [
+      "OCE552"
+    ]
+  },
+  "OCE552": {
+    "code": "OCE552",
+    "credit_hours": 4,
+    "level": "10",
+    "name": "Senior Project 2",
+    "prerequisites": [
+      "OCE551"
+    ],
+    "satisfies": []
+  }
+}
