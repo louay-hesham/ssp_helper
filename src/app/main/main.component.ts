@@ -93,7 +93,6 @@ export class MainComponent implements OnInit {
     this.departmentName = this.departmentsNames[i];
     console.log('Changed department to ' + this.departmentCode);
     Course.loadCourses(this.coursesData, this.departmentCode);
-    document.getElementById('depDropdown').classList.toggle('open');
   }
 
   completeLevelButtonVisibility(level: string): boolean {

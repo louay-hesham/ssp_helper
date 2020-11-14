@@ -2,7 +2,7 @@
   <instructions></instructions>
 
   <hr>
-  
+
   <div>
     <b class="bylaw-label">Select Bylaw year: </b>
     <div class="btn-group elective-group">
@@ -25,14 +25,19 @@
     </button>
   </div>
   <br>
-  <div id="depDropdown" class="dropdown" dropdown>
-      <b>Select department: </b>
-      <label class="pointer highlight" dropdownToggle>{{departmentName}} ({{departmentCode}})▼</label>
-      <ul class="dropdown-menu" dropdownMenu>
-        <li *ngFor="let d of departmentsNames; let i = index" (click)="selectDepartment(i)" class="pointer">
+  <b>Select department: </b>
+  <div ngbDropdown class="d-inline-block">
+      <button id="depDropdown" class="btn btn-outline-primary pointer" ngbDropdownToggle>
+        {{departmentName}} ({{departmentCode}})
+      </button>
+      <div class="dropdown-menu" aria-labelledby="depDropdown" ngbDropdownMenu>
+        <button *ngFor="let d of departmentsNames; let i = index"
+                (click)="selectDepartment(i)"
+                class="pointer dropdown-item"
+                ngbDropdownItem>
           {{d}}
-        </li>
-      </ul>
+        </button>
+      </div>
   </div>
 
   <div style="position: fixed; top: 65px; right: 1px;">

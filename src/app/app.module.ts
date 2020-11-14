@@ -4,6 +4,7 @@ import { Http, Response, HttpModule } from '@angular/http';
 import { HttpClientModule, HttpClient } from '@angular/common/http';
 import { MatDialogModule } from '@angular/material/dialog';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { NgbModule, NgbActiveModal } from '@ng-bootstrap/ng-bootstrap';
 
 import { SimpleTimer } from 'ng2-simple-timer';
 import { DropdownModule } from 'angular-custom-dropdown';
@@ -41,13 +42,15 @@ import { EventClickDirective } from './event-click.directive';
     HttpModule,
     DropdownModule,
     MatDialogModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    NgbModule.forRoot()
   ],
   providers: [
     CoursesLoaderService,
     GoogleAnalyticsService,
     SimpleTimer,
-    CookieService
+    CookieService,
+    NgbActiveModal
   ],
   bootstrap: [AppComponent],
   entryComponents: [SubmitBylawDialogComponent]
