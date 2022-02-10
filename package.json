@@ -35,7 +35,7 @@
     "ng2-simple-timer": "^6.0.0",
     "ngx-cookie-service": "^2.1.0",
     "node-gyp": "^4.0.0",
-    "node-sass": "^4.14.1",
+    "node-sass": "^7.0.0",
     "rxjs": "^6.5.1",
     "rxjs-compat": "^6.0.0-rc.0",
     "sweetalert": "^2.1.2",
