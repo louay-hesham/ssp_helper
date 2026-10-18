@@ -38,4 +38,4 @@ The stack was converted in place from the old SAM template, so logical IDs of ex
 * `npm run build` (repo root) before `cdk synth` / `cdk diff`, since the deployment reads `dist/`
 * `npx cdk diff --processed` compares against the template after SAM's transform; plain `cdk diff` flags false replacements for the first conversion
 * Lambda unit tests: `pip install -r lambda/requirements-dev.txt && python -m pytest lambda`
-* Resources that existed before CDK (the two Lambda log groups and the SES sender identity) are only declared with `-c adoptUnmanaged=true`, which is how `cdk import` is run
+* The two Lambda log groups and the SES sender identity existed before CDK and were adopted with `cdk import`

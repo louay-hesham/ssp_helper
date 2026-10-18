@@ -28,10 +28,8 @@ const ALLOWED_HEADERS = [
  * resources that already exist are pinned so CloudFormation updates them in
  * place; the table is retained so it can never be deleted or replaced away.
  *
- * Resources that exist but are not in the stack yet (Lambda log groups, the SES
- * sender identity) are only declared when deploying with
- * `-c adoptUnmanaged=true`, which is how `cdk import` is run. Declaring them
- * in a normal deploy would try to create duplicates.
+ * The Lambda log groups and the SES sender identity existed before CDK and were
+ * adopted with `cdk import`; they are retained on delete.
  *
  * Run `ng build` first: the front-end deployment reads ../dist.
  */
@@ -115,9 +113,7 @@ export class SspHelperStack extends cdk.Stack {
       prune: true,
     });
 
-    if (this.node.tryGetContext('adoptUnmanaged')) {
-      this.adoptUnmanaged();
-    }
+    this.adoptedResources();
   }
 
   private pythonFunction(name: string, dir: string, role: iam.IRole, timeoutSeconds: number): lambda.Function {
@@ -181,7 +177,7 @@ export class SspHelperStack extends cdk.Stack {
     };
   }
 
-  private adoptUnmanaged() {
+  private adoptedResources() {
     for (const name of ['BylawsInfoReaderLambda', 'BylawUploaderLambda']) {
       const logGroup = new logs.CfnLogGroup(this, `${name}Logs`, { logGroupName: `/aws/lambda/${name}` });
       logGroup.applyRemovalPolicy(cdk.RemovalPolicy.RETAIN);
