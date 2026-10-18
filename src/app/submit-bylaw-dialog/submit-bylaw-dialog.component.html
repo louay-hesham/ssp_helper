@@ -1,9 +1,9 @@
-<div>
+<div class="p-4">
   <h1>Request addition of a new bylaw</h1>
   <br><br>
   <div>
     <label>Select Bylaw year: </label>
-    <div class="btn-group elective-group">
+    <div class="d-flex flex-wrap gap-1 elective-group">
       @for (year of getMissingBylawsYears(); track year) {
         <button (click)="selectBylaw(year)"
                 [class]="bylawButtonClass(year)"

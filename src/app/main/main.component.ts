@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { ChangeDetectionStrategy, Component } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
 import { Bylaw, BylawStatus } from '../bylaw';
 import { BylawsLoaderService } from '../bylaws-loader.service';
@@ -8,6 +8,7 @@ import { InstructionsComponent } from '../instructions/instructions.component';
 import { SubmitBylawDialogComponent } from '../submit-bylaw-dialog/submit-bylaw-dialog.component';
 
 @Component({
+  changeDetection: ChangeDetectionStrategy.Eager,
   selector: 'app-main',
   imports: [InstructionsComponent],
   templateUrl: './main.component.html',

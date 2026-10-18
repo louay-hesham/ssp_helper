@@ -54,7 +54,7 @@
         <a (click)="completeLevel(level)" style="cursor: pointer; color: #5588FF">(select the whole term)</a>
       }
 
-      <div class="row">
+      <div class="d-flex flex-wrap">
         @for (course of coursesList(); track course.code) {
           @if (course.level === level) {
             <span>
@@ -74,7 +74,7 @@
 
       @if (electivesDict()[level]; as groups) {
         @for (electives of groups; track $index) {
-          <div class="row btn-group elective-group">
+          <div class="btn-group d-flex elective-group">
             @for (course of electives; track course.code) {
               <button (click)="course.togglePass()"
                       [class]="buttonClass(course) + ' elective'"

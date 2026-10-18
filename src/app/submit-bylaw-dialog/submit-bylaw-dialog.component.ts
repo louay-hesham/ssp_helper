@@ -1,10 +1,11 @@
-import { Component } from '@angular/core';
+import { ChangeDetectionStrategy, Component } from '@angular/core';
 import { MatDialogRef } from '@angular/material/dialog';
 import Swal from 'sweetalert2';
 import { environment } from '../../environments/environment';
 import { Bylaw } from '../bylaw';
 
 @Component({
+  changeDetection: ChangeDetectionStrategy.Eager,
   selector: 'app-submit-bylaw-dialog',
   templateUrl: './submit-bylaw-dialog.component.html',
   styleUrl: './submit-bylaw-dialog.component.css'

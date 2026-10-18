@@ -1,0 +1,8 @@
+{
+  "/api": {
+    "target": "https://jc903eqh55.execute-api.eu-west-1.amazonaws.com",
+    "secure": true,
+    "changeOrigin": true,
+    "pathRewrite": { "^/api": "/prod" }
+  }
+}
