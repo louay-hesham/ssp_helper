@@ -8,7 +8,8 @@
     "start": "ng serve",
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
-    "test": "ng test"
+    "test": "ng test",
+    "deploy": "ng build && npm --prefix infra run deploy"
   },
   "dependencies": {
     "@angular/cdk": "^22.2.0",

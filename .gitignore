@@ -46,3 +46,8 @@ Thumbs.db
 
 __pycache__/
 .pytest_cache/
+
+# CDK
+/infra/node_modules
+/infra/cdk.out
+/infra/dist
