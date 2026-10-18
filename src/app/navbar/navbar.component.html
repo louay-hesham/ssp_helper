@@ -1,24 +1,26 @@
 <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
-  <a class="navbar-brand text-light">Louay Morsi</a>
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarItems" 
-          aria-controls="navbarItems" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-  </button>
-  <div class="collapse navbar-collapse" id="navbarItems">
-    <ul class="navbar-nav mr-auto">
-      <li class="nav-item active">
-        <a class="nav-link" click-event [navbar-click]="'Home'" href="http://louay-morsi.me">Home</a>
-      </li>
-      <li class="nav-item active">
-        <a class="nav-link" click-event [navbar-click]="'Resume'" href="http://louay-morsi.me/Resume.pdf">
-        	<i class="fa fa-file-pdf-o" aria-hidden="true"></i> Resume
-        </a>
-      </li>
-      <li class="nav-item active">
-        <a class="nav-link" click-event [navbar-click]="'Github'" href="https://github.com/louay-hesham">
-        	<i class="fa fa-github" aria-hidden="true"></i> Github
-        </a>
-      </li>
-    </ul>
+  <div class="container-fluid">
+    <a class="navbar-brand text-light">Louay Morsi</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarItems"
+            aria-controls="navbarItems" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarItems">
+      <ul class="navbar-nav me-auto">
+        <li class="nav-item">
+          <a class="nav-link active" href="http://louay-morsi.me">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active" href="http://louay-morsi.me/Resume.pdf">
+            <i class="fa-regular fa-file-pdf" aria-hidden="true"></i> Resume
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active" href="https://github.com/louay-hesham">
+            <i class="fa-brands fa-github" aria-hidden="true"></i> Github
+          </a>
+        </li>
+      </ul>
+    </div>
   </div>
 </nav>

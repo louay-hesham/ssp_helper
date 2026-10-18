@@ -1,29 +1,26 @@
 import { Injectable } from '@angular/core';
-import { Bylaw } from './bylaw'
+import { environment } from '../environments/environment';
+import { Bylaw } from './bylaw';
 
-@Injectable({
-  providedIn: 'root'
-})
+@Injectable({ providedIn: 'root' })
 export class BylawsLoaderService {
 
   constructor() {
-    this.fetchBylaws()
-        .then(data => {
-          let bylaws = [];
-          for (let i in data) {
-            bylaws.push(new Bylaw(data[i]));
-          }
-          Bylaw.loadBylaws(bylaws);
-        })
+    this.fetchBylaws().then(data => {
+      const bylaws: Bylaw[] = [];
+      for (const i in data) {
+        bylaws.push(new Bylaw(data[i]));
+      }
+      Bylaw.loadBylaws(bylaws);
+    });
   }
 
-  private fetchBylaws(): Promise<Bylaw> {
-    return fetch("https://jc903eqh55.execute-api.eu-west-1.amazonaws.com/prod/GetBylaws")
-        .then(response => {
-          return response.json();
-        })
-        .catch(error =>{
-          console.error(error);
-        })
+  private fetchBylaws(): Promise<any> {
+    return fetch(`${environment.apiBaseUrl}/GetBylaws`)
+      .then(response => response.json())
+      .catch(error => {
+        console.error(error);
+        return [];
+      });
   }
 }

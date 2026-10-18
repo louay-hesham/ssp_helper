@@ -1,27 +1,27 @@
-import { Component, OnInit } from '@angular/core';
-import { BrowserModule } from '@angular/platform-browser';
+import { Component } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
-import { CoursesLoaderService } from '../courses-loader.service'
-import { BylawsLoaderService } from '../bylaws-loader.service'
-import { Course } from '../course'
-import { Bylaw, BylawStatus } from '../bylaw'
-import { SubmitBylawDialogComponent } from '../submit-bylaw-dialog/submit-bylaw-dialog.component'
-
+import { Bylaw, BylawStatus } from '../bylaw';
+import { BylawsLoaderService } from '../bylaws-loader.service';
+import { Course, CoursesData } from '../course';
+import { CoursesLoaderService } from '../courses-loader.service';
+import { InstructionsComponent } from '../instructions/instructions.component';
+import { SubmitBylawDialogComponent } from '../submit-bylaw-dialog/submit-bylaw-dialog.component';
 
 @Component({
   selector: 'app-main',
+  imports: [InstructionsComponent],
   templateUrl: './main.component.html',
-  styleUrls: ['./main.component.css']
+  styleUrl: './main.component.css'
 })
-export class MainComponent implements OnInit {
+export class MainComponent {
 
-  private coursesData: any;
+  private coursesData!: CoursesData;
   private departmentsCodes: string[] = ['GPE', 'EME', 'CAE', 'CCE', 'OCE'];
 
-	public levels: string[] = ['1','2','3','4','5','6','7','8','9','10', 'e','h'];
-  public bylawYear: number = 2019
-  public departmentCode: string = 'CCE';
-  public departmentName: string = 'Computer and Communications Engineering';
+  public levels: string[] = ['1', '2', '3', '4', '5', '6', '7', '8', '9', '10', 'e', 'h'];
+  public bylawYear = 2019;
+  public departmentCode = 'CCE';
+  public departmentName = 'Computer and Communications Engineering';
   public departmentsNames: string[] = [
     'Gas and Petrochemicals Engineering',
     'Electromechanical Engineering',
@@ -30,22 +30,24 @@ export class MainComponent implements OnInit {
     'Offshore and Coastal Engineering'
   ];
 
-  constructor(private coursesLoader: CoursesLoaderService, private bylawsLoader: BylawsLoaderService, public dialog: MatDialog) { }
-
-  ngOnInit() {
+  constructor(
+    private coursesLoader: CoursesLoaderService,
+    // Injected for its side effect: it fetches the bylaws list when created.
+    private bylawsLoader: BylawsLoaderService,
+    public dialog: MatDialog
+  ) {
     this.loadBylaw(this.bylawYear);
   }
 
-  selectBylaw(year: number) {
-    this.bylawYear = year;
-    this.loadBylaw(year);
+  selectBylaw(year: string) {
+    this.bylawYear = parseInt(year, 10);
+    this.loadBylaw(this.bylawYear);
   }
 
   loadBylaw(year: number) {
-    console.log("Loading bylaw " + year)
-    this.coursesData = this.coursesLoader.getCourses(this.bylawYear);
+    console.log('Loading bylaw ' + year);
+    this.coursesData = this.coursesLoader.getCourses(year);
     Course.loadCourses(this.coursesData, this.departmentCode);
-    this.electivesDict();
   }
 
   getAllBylaws(): Bylaw[] {
@@ -53,35 +55,23 @@ export class MainComponent implements OnInit {
   }
 
   bylawButtonClass(bylaw: Bylaw): string {
-    var css: string;
-  	if (""+this.bylawYear == bylaw.year) {
-  		css = "btn btn-primary";
-  	} else {
-  		css = "btn btn-danger";
-  	}
-    return css;
+    return '' + this.bylawYear === bylaw.year ? 'btn btn-primary' : 'btn btn-danger';
   }
 
-  bylawButtonDisability(bylaw: Bylaw): string {
-  	if (bylaw.status == BylawStatus.COMING_SOON || ""+this.bylawYear == bylaw.year) {
-  		return "disabled";
-  	} else {
-  		return ""
-  	}
+  bylawButtonDisabled(bylaw: Bylaw): boolean {
+    return bylaw.status === BylawStatus.COMING_SOON || '' + this.bylawYear === bylaw.year;
   }
 
   bylawButtonText(bylaw: Bylaw): string {
-    let text = ""+bylaw.year
-  	if (bylaw.status == BylawStatus.COMING_SOON) {
-  		text += " (Coming soon!)"
-  	}
-    return text
+    let text = '' + bylaw.year;
+    if (bylaw.status === BylawStatus.COMING_SOON) {
+      text += ' (Coming soon!)';
+    }
+    return text;
   }
 
   openBylawSubmitDialog() {
-    const dialogRef = this.dialog.open(SubmitBylawDialogComponent, {
-      width: '650px'
-    });
+    this.dialog.open(SubmitBylawDialogComponent, { width: '650px' });
   }
 
   getCH(): number {
@@ -96,93 +86,64 @@ export class MainComponent implements OnInit {
   }
 
   completeLevelButtonVisibility(level: string): boolean {
-  	if (level == 'h' || level == 'e') {
-  		return false;
-  	} else {
-  		return true;
-  	}
+    return level !== 'h' && level !== 'e';
   }
 
   completeLevel(level: string) {
-  	for (let key in Course.coreCourses) {
-  		let course = Course.coreCourses[key];
-  		if (course.level == level && course.isAvailable() && !course.isPassed) {
-  			course.pass();
-  		}
-  	}
+    for (const key in Course.coreCourses) {
+      const course = Course.coreCourses[key];
+      if (course.level === level && course.isAvailable() && !course.isPassed) {
+        course.pass();
+      }
+    }
   }
 
   levelName(level: string): string {
-  	if (level == 'h') {
-  		return "Humanities courses";
-  	} else if (level == 'e') {
-  		return "Elective courses";
-  	} else {
-  		return "Term " + level;
-  	}
+    if (level === 'h') {
+      return 'Humanities courses';
+    } else if (level === 'e') {
+      return 'Elective courses';
+    } else {
+      return 'Term ' + level;
+    }
   }
 
-  coursesList() {
-  	var coursesArray: Course[] = []
-  	for (let key in Course.coreCourses) {
-  		let course = Course.coreCourses[key];
-  		coursesArray.push(course);
-  	}
-  	coursesArray.sort((c1:Course,c2:Course) => {
-      if(c1.code.length > c2.code.length) {
+  coursesList(): Course[] {
+    const coursesArray: Course[] = Object.values(Course.coreCourses);
+    coursesArray.sort((c1, c2) => {
+      if (c1.code.length > c2.code.length) {
         return 1;
-      } else if (c1.code.length < c2.code.length){
+      } else if (c1.code.length < c2.code.length) {
         return -1;
       } else if (c1.code > c2.code) {
-      	return 1;
+        return 1;
       } else {
-      	return -1;
+        return -1;
       }
     });
     return coursesArray;
   }
 
-  electivesDict() {
-    let electivesByLevel = { };
-    for (let level in Course.electivesGroups) {
-      electivesByLevel[level] = [];
-      let groups = Course.electivesGroups[level];
-      for (let groupCode in groups) {
-        let courses = groups[groupCode];
-        electivesByLevel[level].push(courses);
-      }
+  electivesDict(): { [level: string]: Course[][] } {
+    const electivesByLevel: { [level: string]: Course[][] } = {};
+    for (const level in Course.electivesGroups) {
+      electivesByLevel[level] = Object.values(Course.electivesGroups[level]);
     }
     return electivesByLevel;
   }
 
   buttonClass(course: Course): string {
-    var css: string;
-  	if (course.isPassed) {
-  		css = "btn btn-primary";
-  	} else if (course.isAvailable()) {
-  		css = "btn btn-warning";
-  	} else {
-  		css = "btn btn-danger";
-  	}
-    if (course.level == 'e') {
+    let css: string;
+    if (course.isPassed) {
+      css = 'btn btn-primary';
+    } else if (course.isAvailable()) {
+      css = 'btn btn-warning';
+    } else {
+      css = 'btn btn-danger';
+    }
+    if (course.level === 'e') {
       css = css + ' elective';
     }
     return css;
-  }
-
-  buttonDisability(course: Course): string {
-  	if (course.isAvailable()) {
-  		return "";
-  	} else {
-  		return "disabled";
-  	}
-  }
-
-  buttonStyle(avail: boolean): string {
-  	if (avail) {
-  		return "pointer";
-  	} else {
-  		return ""
-  	}
   }
 }

@@ -19,3 +19,11 @@ Navigate to [project page](http://louay-morsi.me/ssp_helper) to try it out.
    * [Create an issue](https://github.com/louay-hesham/ssp_helper/issues/new) in GitHub
    * Or [send me an email](mailto:louay.hesham@gmail.com?Subject=SSP%20Helper%20Bug)
    * Or contact me directly
+
+## Development
+Requires Node 22.22+, 24.15+ or 26+.
+
+* `npm install`
+* `npm start`: dev server at http://localhost:4200
+* `npm run build`: production build into `dist/` (served from `/ssp_helper/`)
+* `npm test`: unit tests (Vitest)

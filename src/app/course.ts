@@ -1,11 +1,15 @@
+import { Observable } from 'rxjs';
+
+export type CoursesData = Record<string, Observable<any>>;
+
 export class Course {
 
-  private static allCourses: {[code: string]: Course} = { };
+  private static allCourses: { [code: string]: Course } = {};
 
-  public static coreCourses: {[code: string]: Course} = { };
-  public static electivesGroups: {[level :string] : {[code: string]: Course[]}} = { };
-  public static CH: number = 0;
-  public static seniorProject1Code: string = '';
+  public static coreCourses: { [code: string]: Course } = {};
+  public static electivesGroups: { [level: string]: { [code: string]: Course[] } } = {};
+  public static CH = 0;
+  public static seniorProject1Code = '';
 
   public code: string;
   public name: string;
@@ -18,7 +22,7 @@ export class Course {
 
   private static initElectivesGroup(level: string, electiveGroup: string) {
     if (!(level in Course.electivesGroups)) {
-      Course.electivesGroups[level] = { }
+      Course.electivesGroups[level] = {};
     }
     if (!(electiveGroup in Course.electivesGroups[level])) {
       Course.electivesGroups[level][electiveGroup] = [];
@@ -26,33 +30,33 @@ export class Course {
   }
 
   private static addData(data: any) {
-    for (let key in data) {
-      let course = new Course(data[key]);
+    for (const key in data) {
+      const course = new Course(data[key]);
       Course.allCourses[key] = course;
       if (/([0-9]+|h)-e[0-9]+/.test(course.level)) {
-        let trueLevel = /([0-9]+|h)/.exec(course.level)[0];
-        let electiveGroup = /e[0-9]+/.exec(course.level)[0];
+        const trueLevel = /([0-9]+|h)/.exec(course.level)![0];
+        const electiveGroup = /e[0-9]+/.exec(course.level)![0];
         course.level = trueLevel;
         Course.initElectivesGroup(trueLevel, electiveGroup);
-        Course.electivesGroups[trueLevel][electiveGroup].push(course)
+        Course.electivesGroups[trueLevel][electiveGroup].push(course);
       } else {
         Course.coreCourses[key] = course;
       }
     }
   }
 
-  public static loadCourses(coursesData: any, department: string) {
-    Course.coreCourses = { };
+  public static loadCourses(coursesData: CoursesData, department: string) {
+    Course.coreCourses = {};
     Course.CH = 0;
     Course.seniorProject1Code = '';
-    Course.electivesGroups = { };
+    Course.electivesGroups = {};
 
     coursesData['General'].subscribe(data => {
       Course.addData(data);
     });
 
     coursesData[department].subscribe(data => {
-      Course.addData(data);  
+      Course.addData(data);
     });
   }
 
@@ -65,7 +69,7 @@ export class Course {
     this.level = data['level'];
     this.isPassed = false;
     this.codeWithName = this.code + ' - ' + this.name;
-    if (this.name == 'Senior Project 1') {
+    if (this.name === 'Senior Project 1') {
       Course.seniorProject1Code = this.code;
     }
   }
@@ -74,8 +78,8 @@ export class Course {
     if (this.isPassed) {
       this.isPassed = false;
       Course.CH -= this.creditHours;
-      for (let code of this.satisfies) {
-        if (code in Course.allCourses){
+      for (const code of this.satisfies) {
+        if (code in Course.allCourses) {
           Course.allCourses[code].fail();
         }
       }
@@ -84,15 +88,13 @@ export class Course {
 
   public isAvailable(): boolean {
     let avail = true;
-    if (this.code == Course.seniorProject1Code) {
-      avail = (Course.CH >= 129)
+    if (this.code === Course.seniorProject1Code) {
+      avail = (Course.CH >= 129);
     }
-    for (let i in this.prerequisites) {
-      let prerequisite = this.prerequisites[i];
+    for (const prerequisite of this.prerequisites) {
       avail = avail && Course.allCourses[prerequisite].isPassed;
     }
     return avail;
-  
   }
 
   public togglePass() {
@@ -102,19 +104,19 @@ export class Course {
         Course.coreCourses[Course.seniorProject1Code].fail();
       }
     } else {
-      this.pass();  
-    }  
+      this.pass();
+    }
   }
 
   public pass() {
     this.isPassed = true;
-    Course.CH += this.creditHours;  
+    Course.CH += this.creditHours;
   }
 
   public getLevelFullName() {
-    if (this.level == 'h') {
+    if (this.level === 'h') {
       return 'Humanity Course';
-    } else if (this.level == 'e') {
+    } else if (this.level === 'e') {
       return 'Elective Course';
     } else {
       return 'Term ' + this.level;

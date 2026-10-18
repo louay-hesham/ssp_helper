@@ -1,4 +1,4 @@
-<div [pageview]="'Main App'">
+<div>
   <instructions></instructions>
 
   <hr>
@@ -6,91 +6,88 @@
   <div>
     <b class="bylaw-label">Select Bylaw year: </b>
     <div class="btn-group elective-group">
-      <button *ngFor="let bylaw of getAllBylaws();"
-              (click)="selectBylaw(bylaw.year)" class="pointer"
-              click-event [bylaw-action]="'load-bylaw'" [bylaw-data]="bylaw.year"
-              class="{{bylawButtonClass(bylaw)}}"
-              disabled="{{bylawButtonDisability(bylaw)}}"
-              style.cursor="pointer">
-
-        {{bylawButtonText(bylaw)}}
-      </button>
+      @for (bylaw of getAllBylaws(); track bylaw.year) {
+        <button (click)="selectBylaw(bylaw.year)"
+                [class]="bylawButtonClass(bylaw) + ' pointer'"
+                [disabled]="bylawButtonDisabled(bylaw)">
+          {{bylawButtonText(bylaw)}}
+        </button>
+      }
     </div>
     <br>
     Can't find your bylaw?
-    <button (click)="openBylawSubmitDialog()"
-            class="btn btn-warning pointer"
-            click-event [bylaw-action]="'submit-bylaw'" [bylaw-data]="'submit-btn-click'">
+    <button (click)="openBylawSubmitDialog()" class="btn btn-warning pointer">
       Submit it now!
     </button>
   </div>
   <br>
   <b>Select department: </b>
-  <div ngbDropdown class="d-inline-block">
-      <button id="depDropdown" class="btn btn-outline-primary pointer" ngbDropdownToggle>
-        {{departmentName}} ({{departmentCode}})
-      </button>
-      <div class="dropdown-menu" aria-labelledby="depDropdown" ngbDropdownMenu>
-        <button *ngFor="let d of departmentsNames; let i = index"
-                (click)="selectDepartment(i)"
-                class="pointer dropdown-item"
-                ngbDropdownItem>
-          {{d}}
-        </button>
-      </div>
+  <div class="dropdown d-inline-block">
+    <button id="depDropdown" class="btn btn-outline-primary dropdown-toggle pointer"
+            type="button" data-bs-toggle="dropdown" aria-expanded="false">
+      {{departmentName}} ({{departmentCode}})
+    </button>
+    <ul class="dropdown-menu" aria-labelledby="depDropdown">
+      @for (d of departmentsNames; track d; let i = $index) {
+        <li>
+          <button type="button" class="pointer dropdown-item" (click)="selectDepartment(i)">{{d}}</button>
+        </li>
+      }
+    </ul>
   </div>
 
   <div style="position: fixed; top: 65px; right: 1px;">
-  	<span style="background-color: cyan">
+    <span style="background-color: cyan">
       <b>CHs complete: </b>{{getCH()}}
     </span>
   </div>
 
   <hr>
 
-  <div *ngFor="let level of levels">
+  @for (level of levels; track level) {
+    <div>
+      <h4>{{levelName(level)}}</h4>
+      @if (level === 'e' && (departmentCode === 'CAE' || departmentCode === 'OCE')) {
+        <h5>Elective courses can be found in their respective terms, they will be coloured differently.</h5>
+      }
+      @if (completeLevelButtonVisibility(level)) {
+        <a (click)="completeLevel(level)" style="cursor: pointer; color: #5588FF">(select the whole term)</a>
+      }
 
-  	<h4>{{levelName(level)}}</h4>
-    <h5 *ngIf="level == 'e' && (departmentCode == 'CAE' || departmentCode == 'OCE')">
-      Elective courses can be found in their respective terms, they will be coloured differently.
-    </h5>
-  	<a  *ngIf="completeLevelButtonVisibility(level)"
-        click-event [term-click]="'Term ' + level"
-        (click)="completeLevel(level)"
-        style="cursor: pointer; color: #5588FF">
-  		(select the whole term)
-  	</a>
-
-  	<div class="row">
-  		<span *ngFor="let course of coursesList()">
-  			<button *ngIf="course.level == level"
-                click-event [course-click]="[departmentCode, course]"
-  		          (click)="course.togglePass()"
-                class="{{buttonClass(course)}}"
-  		          disabled="{{buttonDisability(course)}}"
-  		          style.cursor="{{buttonStyle(course.isAvailable())}}"
-                style.margin="{{'5px'}}">
-  		    <b>{{course.name}}</b>
-  		    <br>
-          <span class="left">{{course.code}}</span><span class="right">({{course.creditHours}} CH)</span>​
-  		  </button>
-  		</span>
-  	</div>
-
-    <div *ngIf="electivesDict()[level] != undefined">
-      <div class="row btn-group elective-group" *ngFor="let electives of electivesDict()[level]">
-        <button *ngFor="let course of electives"
-                click-event [course-click]="[departmentCode, course]"
-                (click)="course.togglePass()"
-                class="{{buttonClass(course) + ' elective'}}"
-                disabled="{{buttonDisability(course)}}"
-                style.cursor="{{buttonStyle(course.isAvailable())}}">
-          <b>{{course.name}}</b>
-          <br>
-          <span class="left">{{course.code}}</span><span class="right">({{course.creditHours}} CH)</span>​
-        </button>
+      <div class="row">
+        @for (course of coursesList(); track course.code) {
+          @if (course.level === level) {
+            <span>
+              <button (click)="course.togglePass()"
+                      [class]="buttonClass(course)"
+                      [disabled]="!course.isAvailable()"
+                      [style.cursor]="course.isAvailable() ? 'pointer' : ''"
+                      style="margin: 5px">
+                <b>{{course.name}}</b>
+                <br>
+                <span class="left">{{course.code}}</span><span class="right">({{course.creditHours}} CH)</span>
+              </button>
+            </span>
+          }
+        }
       </div>
-    </div>
 
-  </div>
+      @if (electivesDict()[level]; as groups) {
+        @for (electives of groups; track $index) {
+          <div class="row btn-group elective-group">
+            @for (course of electives; track course.code) {
+              <button (click)="course.togglePass()"
+                      [class]="buttonClass(course) + ' elective'"
+                      [disabled]="!course.isAvailable()"
+                      [style.cursor]="course.isAvailable() ? 'pointer' : ''">
+                <b>{{course.name}}</b>
+                <br>
+                <span class="left">{{course.code}}</span><span class="right">({{course.creditHours}} CH)</span>
+              </button>
+            }
+          </div>
+        }
+      }
+    </div>
+  }
 </div>

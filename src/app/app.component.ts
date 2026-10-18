@@ -1,25 +1,18 @@
-import { Component, OnInit } from '@angular/core';
-
-import { GoogleAnalyticsService } from './google-analytics.service';
-
-import { CookieService } from 'ngx-cookie-service';
+import { Component } from '@angular/core';
+import { DisclaimerComponent } from './disclaimer/disclaimer.component';
+import { FooterComponent } from './footer/footer.component';
+import { MainComponent } from './main/main.component';
+import { NavbarComponent } from './navbar/navbar.component';
 
 @Component({
   selector: 'app-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css']
+  imports: [NavbarComponent, DisclaimerComponent, MainComponent, FooterComponent],
+  templateUrl: './app.component.html'
 })
-export class AppComponent implements OnInit {
-
-  private cm: any;
-
-	public appVisible: boolean = false;
-
-	constructor(private cookie: CookieService, private ga: GoogleAnalyticsService) { }
-
-	ngOnInit() { }
+export class AppComponent {
+  appVisible = false;
 
   showApp() {
-		this.appVisible = true;
+    this.appVisible = true;
   }
 }
