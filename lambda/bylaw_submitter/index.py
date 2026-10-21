@@ -8,6 +8,8 @@ import os
 from email.mime.multipart import MIMEMultipart
 from email.mime.text import MIMEText
 from email.mime.application import MIMEApplication
+
+ALLOWED_ORIGIN = os.environ.get("ALLOWED_ORIGIN", "https://louay-morsi.me")
 from botocore.exceptions import ClientError
 
 
@@ -37,7 +39,7 @@ def lambda_handler(event, context):
       "statusCode": 200,
       "body": "{\"status\": \"SUCCESS\"}",
       "headers": {
-          "Access-Control-Allow-Origin": "http://louay-morsi.me"
+          "Access-Control-Allow-Origin": ALLOWED_ORIGIN
       }
   }
 

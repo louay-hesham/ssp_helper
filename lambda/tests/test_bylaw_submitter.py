@@ -23,7 +23,7 @@ def test_submitter_emails_the_pdf_and_records_coming_soon():
 
     assert response["statusCode"] == 200
     assert response["body"] == '{"status": "SUCCESS"}'
-    assert response["headers"]["Access-Control-Allow-Origin"] == "http://louay-morsi.me"
+    assert response["headers"]["Access-Control-Allow-Origin"] == "https://louay-morsi.me"
     assert table.get_item(Key={"Year": "2024"})["Item"]["Status"] == "COMING_SOON"
 
     sent = ses_backends[DEFAULT_ACCOUNT_ID]["eu-west-1"].sent_messages

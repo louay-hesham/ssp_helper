@@ -35,9 +35,19 @@ def test_reader_returns_all_bylaws_with_cors_header():
     response = load("bylaws_info_reader").lambda_handler({}, None)
 
     assert response["statusCode"] == 200
-    assert response["headers"]["Access-Control-Allow-Origin"] == "http://louay-morsi.me"
+    assert response["headers"]["Access-Control-Allow-Origin"] == "https://louay-morsi.me"
     items = sorted(json.loads(response["body"]), key=lambda item: item["Year"])
     assert items == [
         {"Year": "2019", "Status": "AVAILABLE"},
         {"Year": "2023", "Status": "COMING_SOON"},
     ]
+
+
+@mock_aws
+def test_reader_cors_origin_comes_from_environment(monkeypatch):
+    create_table()
+    monkeypatch.setenv("ALLOWED_ORIGIN", "https://example.test")
+
+    response = load("bylaws_info_reader").lambda_handler({}, None)
+
+    assert response["headers"]["Access-Control-Allow-Origin"] == "https://example.test"

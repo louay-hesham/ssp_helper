@@ -1,6 +1,7 @@
 import * as path from 'path';
 import * as cdk from 'aws-cdk-lib';
 import * as apigateway from 'aws-cdk-lib/aws-apigateway';
+import * as cloudfront from 'aws-cdk-lib/aws-cloudfront';
 import * as dynamodb from 'aws-cdk-lib/aws-dynamodb';
 import * as iam from 'aws-cdk-lib/aws-iam';
 import * as lambda from 'aws-cdk-lib/aws-lambda';
@@ -13,7 +14,7 @@ import { Construct } from 'constructs';
 const SITE_BUCKET = 'louay-morsi.me';
 const SITE_PREFIX = 'ssp_helper';
 const SENDER_EMAIL = 'louay.hesham@gmail.com';
-const ALLOWED_ORIGIN = 'http://louay-morsi.me';
+const SITE_ORIGIN = 'https://louay-morsi.me';
 const ALLOWED_HEADERS = [
   'Access-Control-Allow-Origin',
   'Access-Control-Allow-Credentials',
@@ -111,6 +112,12 @@ export class SspHelperStack extends cdk.Stack {
       destinationBucket: s3.Bucket.fromBucketName(this, 'SiteBucket', SITE_BUCKET),
       destinationKeyPrefix: SITE_PREFIX,
       prune: true,
+      // The distribution lives in the PersonalWebsite stack.
+      distribution: cloudfront.Distribution.fromDistributionAttributes(this, 'SiteDistribution', {
+        distributionId: cdk.Fn.importValue('PersonalWebsiteDistributionId'),
+        domainName: cdk.Fn.importValue('PersonalWebsiteDistributionDomain'),
+      }),
+      distributionPaths: [`/${SITE_PREFIX}/*`],
     });
 
     this.adoptedResources();
@@ -125,6 +132,7 @@ export class SspHelperStack extends cdk.Stack {
       role,
       timeout: cdk.Duration.seconds(timeoutSeconds),
       memorySize: 128,
+      environment: { ALLOWED_ORIGIN: SITE_ORIGIN },
     });
     pinLogicalId(fn, name);
     return fn;
@@ -155,7 +163,7 @@ export class SspHelperStack extends cdk.Stack {
               statusCode: '200',
               responseTemplates: { 'application/json': '{}\n' },
               responseParameters: {
-                'method.response.header.Access-Control-Allow-Origin': `'${ALLOWED_ORIGIN}'`,
+                'method.response.header.Access-Control-Allow-Origin': `'${SITE_ORIGIN}'`,
                 'method.response.header.Access-Control-Allow-Methods': "'*'",
                 'method.response.header.Access-Control-Allow-Headers': `'${ALLOWED_HEADERS}'`,
               },

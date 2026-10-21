@@ -1,7 +1,7 @@
 # SSP Helper
 
 This is a web app for Alexandria University, Faculty of Engineering SSP students. It tells you what courses you've met its prerequisites. That's all.
-Navigate to [project page](http://louay-morsi.me/ssp_helper) to try it out.
+Navigate to [project page](https://louay-morsi.me/ssp_helper) to try it out.
 
 ## Who is this for?
 * Students who failed one or more courses.
