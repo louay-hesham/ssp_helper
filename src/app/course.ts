@@ -60,16 +60,31 @@ export class Course {
       if (load !== Course.loadCount) {
         return; // a newer load superseded this one
       }
+      // Start from an empty map so courses of a previously loaded department can't linger.
+      Course.allCourses = {};
       Course.addData(general);
       Course.addData(departmentData);
+      Course.linkDependents();
     });
+  }
+
+  /** `satisfies` is derived from `prerequisites`, so the two can never disagree. */
+  private static linkDependents() {
+    for (const course of Object.values(Course.allCourses)) {
+      for (const prerequisite of course.prerequisites) {
+        const required = Course.allCourses[prerequisite];
+        if (required && !required.satisfies.includes(course.code)) {
+          required.satisfies.push(course.code);
+        }
+      }
+    }
   }
 
   constructor(data: any) {
     this.code = data['code'];
     this.name = data['name'];
     this.prerequisites = data['prerequisites'];
-    this.satisfies = data['satisfies'];
+    this.satisfies = [];
     this.creditHours = data['credit_hours'];
     this.level = data['level'];
     this.isPassed = false;

@@ -3,12 +3,12 @@ import { Bylaw, BylawStatus } from './bylaw';
 import { Course } from './course';
 
 const general = {
-  MP1: { code: 'MP1', name: 'Math 1', credit_hours: 3, level: '1', prerequisites: [], satisfies: ['MP2'] },
-  SP1: { code: 'SP1', name: 'Senior Project 1', credit_hours: 3, level: '9', prerequisites: [], satisfies: [] },
-  MP2: { code: 'MP2', name: 'Math 2', credit_hours: 3, level: '2', prerequisites: ['MP1'], satisfies: [] },
+  MP1: { code: 'MP1', name: 'Math 1', credit_hours: 3, level: '1', prerequisites: [] },
+  SP1: { code: 'SP1', name: 'Senior Project 1', credit_hours: 3, level: '9', prerequisites: [], satisfies: ['MP1'] }, // deliberately wrong: must be ignored
+  MP2: { code: 'MP2', name: 'Math 2', credit_hours: 3, level: '2', prerequisites: ['MP1'] },
 };
 const department = {
-  CC1: { code: 'CC1', name: 'Intro', credit_hours: 2, level: '3-e1', prerequisites: [], satisfies: [] },
+  CC1: { code: 'CC1', name: 'Intro', credit_hours: 2, level: '3-e1', prerequisites: [] },
 };
 
 describe('Course', () => {
@@ -34,6 +34,43 @@ describe('Course', () => {
     expect(Course.CH).toBe(6);
     Course.coreCourses['MP1'].togglePass();
     expect(Course.coreCourses['MP2'].isPassed).toBe(false);
+    expect(Course.CH).toBe(0);
+  });
+});
+
+describe('Course dependents', () => {
+  it('derives satisfies from prerequisites and ignores the field in the data', () => {
+    expect(Course.coreCourses['MP1'].satisfies).toEqual(['MP2']);
+    expect(Course.coreCourses['SP1'].satisfies).toEqual([]);
+  });
+
+  it('unpassing a prerequisite unpasses its dependents even if the data never listed them', () => {
+    const base = { code: 'X1', name: 'Base', credit_hours: 3, level: '1', prerequisites: [] };
+    const next = { code: 'X2', name: 'Next', credit_hours: 3, level: '2', prerequisites: ['X1'] };
+    const senior = { code: 'SP', name: 'Senior Project 1', credit_hours: 3, level: '9', prerequisites: [] };
+    Course.loadCourses({ General: of({ X1: base, X2: next, SP: senior }), CCE: of({}) }, 'CCE');
+    Course.coreCourses['X1'].togglePass();
+    Course.coreCourses['X2'].togglePass();
+    expect(Course.CH).toBe(6);
+
+    Course.coreCourses['X1'].togglePass();
+    expect(Course.coreCourses['X2'].isPassed).toBe(false);
+    expect(Course.CH).toBe(0);
+  });
+
+  it('does not keep courses of a previously loaded department', () => {
+    const senior = { code: 'SP', name: 'Senior Project 1', credit_hours: 3, level: '9', prerequisites: [] };
+    const sharedBase = { code: 'S1', name: 'Shared', credit_hours: 3, level: '1', prerequisites: [], satisfies: ['A1'] };
+    const dependentA = { code: 'A1', name: 'Only in A', credit_hours: 3, level: '3', prerequisites: ['S1'] };
+    Course.loadCourses({ General: of({ S1: sharedBase, SP: senior }), AAA: of({ A1: dependentA }), BBB: of({}) }, 'AAA');
+    Course.coreCourses['S1'].togglePass();
+    Course.coreCourses['A1'].togglePass();
+    expect(Course.CH).toBe(6);
+
+    Course.loadCourses({ General: of({ S1: sharedBase, SP: senior }), AAA: of({ A1: dependentA }), BBB: of({}) }, 'BBB');
+    expect(Course.CH).toBe(0);
+    Course.coreCourses['S1'].togglePass();
+    Course.coreCourses['S1'].togglePass();
     expect(Course.CH).toBe(0);
   });
 });
