@@ -6,9 +6,6 @@
     "name": "Machine Drawing",
     "prerequisites": [
       "MP105"
-    ],
-    "satisfies": [
-      "EME311"
     ]
   },
   "EME203": {
@@ -18,10 +15,6 @@
     "name": "Thermodynamics 1",
     "prerequisites": [
       "MP107"
-    ],
-    "satisfies": [
-      "EME307",
-      "EME302"
     ]
   },
   "EME204": {
@@ -31,19 +24,14 @@
     "name": "Logic Circuits And Micro Processors",
     "prerequisites": [
       "EME207"
-    ],
-    "satisfies": []
+    ]
   },
   "EME205": {
     "code": "EME205",
     "credit_hours": 3,
     "level": "3",
     "name": "Properties And Testing Of Electro Mechanical Materials",
-    "prerequisites": [],
-    "satisfies": [
-      "MSE202",
-      "EME412"
-    ]
+    "prerequisites": []
   },
   "EME206": {
     "code": "EME206",
@@ -52,9 +40,6 @@
     "name": "Fluid Mechanics 1",
     "prerequisites": [
       "MP107"
-    ],
-    "satisfies": [
-      "EME301"
     ]
   },
   "EME207": {
@@ -64,15 +49,6 @@
     "name": "Electric Circuits",
     "prerequisites": [
       "MP108"
-    ],
-    "satisfies": [
-      "EME204",
-      "EME208",
-      "EME210",
-      "EME309",
-      "EME308",
-      "EME414",
-      "EME510"
     ]
   },
   "EME208": {
@@ -82,8 +58,7 @@
     "name": "Analysis And Simulation Of Electric Circuits",
     "prerequisites": [
       "EME207"
-    ],
-    "satisfies": []
+    ]
   },
   "EME209": {
     "code": "EME209",
@@ -92,9 +67,6 @@
     "name": "Electrical Measurements And Instrumentation",
     "prerequisites": [
       "MP108"
-    ],
-    "satisfies": [
-      "EME407"
     ]
   },
   "EME210": {
@@ -104,9 +76,6 @@
     "name": "Electronic Devices And Circuits",
     "prerequisites": [
       "EME207"
-    ],
-    "satisfies": [
-      "EME306"
     ]
   },
   "EME301": {
@@ -116,12 +85,6 @@
     "name": "Fluid Mechanics 2",
     "prerequisites": [
       "EME206"
-    ],
-    "satisfies": [
-      "EME403",
-      "EME505",
-      "EME513",
-      "EME517"
     ]
   },
   "EME302": {
@@ -131,11 +94,6 @@
     "name": "Thermodynamics 2",
     "prerequisites": [
       "EME203"
-    ],
-    "satisfies": [
-      "EME401",
-      "EME411",
-      "EME517"
     ]
   },
   "EME303": {
@@ -145,11 +103,6 @@
     "name": "Mechanics Of Machinery",
     "prerequisites": [
       "MP104"
-    ],
-    "satisfies": [
-      "EME304",
-      "EME406",
-      "EME515"
     ]
   },
   "EME304": {
@@ -159,10 +112,6 @@
     "name": "Mechanical Vibrations",
     "prerequisites": [
       "EME303"
-    ],
-    "satisfies": [
-      "EME405",
-      "EME512"
     ]
   },
   "EME306": {
@@ -172,11 +121,6 @@
     "name": "Industrial Electronics",
     "prerequisites": [
       "EME210"
-    ],
-    "satisfies": [
-      "EME503",
-      "EME502",
-      "EME413"
     ]
   },
   "EME307": {
@@ -186,11 +130,6 @@
     "name": "Heat Transfer",
     "prerequisites": [
       "EME203"
-    ],
-    "satisfies": [
-      "EME310",
-      "EME504",
-      "EME517"
     ]
   },
   "EME308": {
@@ -200,10 +139,6 @@
     "name": "Electrical Machines",
     "prerequisites": [
       "EME207"
-    ],
-    "satisfies": [
-      "EME405",
-      "EME406"
     ]
   },
   "EME309": {
@@ -213,10 +148,6 @@
     "name": "Electrical Power Systems",
     "prerequisites": [
       "EME207"
-    ],
-    "satisfies": [
-      "EME404",
-      "EME411"
     ]
   },
   "EME310": {
@@ -226,11 +157,6 @@
     "name": "Theory Of Combustion",
     "prerequisites": [
       "EME307"
-    ],
-    "satisfies": [
-      "EME401",
-      "EME402",
-      "EME415"
     ]
   },
   "EME311": {
@@ -241,9 +167,6 @@
     "prerequisites": [
       "EME201",
       "MSE202"
-    ],
-    "satisfies": [
-      "EME418"
     ]
   },
   "EME401": {
@@ -254,9 +177,6 @@
     "prerequisites": [
       "EME302",
       "EME310"
-    ],
-    "satisfies": [
-      "EME404"
     ]
   },
   "EME402": {
@@ -266,9 +186,6 @@
     "name": "Internal Combustion Engines",
     "prerequisites": [
       "EME310"
-    ],
-    "satisfies": [
-      "EME516"
     ]
   },
   "EME403": {
@@ -278,9 +195,6 @@
     "name": "Fluid Machinery",
     "prerequisites": [
       "EME301"
-    ],
-    "satisfies": [
-      "EME416"
     ]
   },
   "EME404": {
@@ -291,9 +205,6 @@
     "prerequisites": [
       "EME309",
       "EME401"
-    ],
-    "satisfies": [
-      "EME501"
     ]
   },
   "EME405": {
@@ -304,9 +215,6 @@
     "prerequisites": [
       "EME308",
       "EME304"
-    ],
-    "satisfies": [
-      "EME417"
     ]
   },
   "EME406": {
@@ -317,9 +225,6 @@
     "prerequisites": [
       "EME308",
       "EME303"
-    ],
-    "satisfies": [
-      "EME512"
     ]
   },
   "EME407": {
@@ -329,8 +234,7 @@
     "name": "Measuring Systems And Data Acquisition",
     "prerequisites": [
       "EME209"
-    ],
-    "satisfies": []
+    ]
   },
   "EME410": {
     "code": "EME410",
@@ -340,8 +244,7 @@
     "prerequisites": [
       "PE102",
       "CSE102"
-    ],
-    "satisfies": []
+    ]
   },
   "EME411": {
     "code": "EME411",
@@ -351,8 +254,7 @@
     "prerequisites": [
       "EME302",
       "EME309"
-    ],
-    "satisfies": []
+    ]
   },
   "EME412": {
     "code": "EME412",
@@ -361,8 +263,7 @@
     "name": "Advanced Materials",
     "prerequisites": [
       "EME205"
-    ],
-    "satisfies": []
+    ]
   },
   "EME413": {
     "code": "EME413",
@@ -371,8 +272,7 @@
     "name": "Advanced Industrial Electronics",
     "prerequisites": [
       "EME306"
-    ],
-    "satisfies": []
+    ]
   },
   "EME414": {
     "code": "EME414",
@@ -381,8 +281,7 @@
     "name": "Codes And Specification Of Electrical Systems",
     "prerequisites": [
       "EME207"
-    ],
-    "satisfies": []
+    ]
   },
   "EME415": {
     "code": "EME415",
@@ -391,8 +290,7 @@
     "name": "Gas Dynamics",
     "prerequisites": [
       "EME310"
-    ],
-    "satisfies": []
+    ]
   },
   "EME416": {
     "code": "EME416",
@@ -401,8 +299,7 @@
     "name": "Turbomachinery",
     "prerequisites": [
       "EME403"
-    ],
-    "satisfies": []
+    ]
   },
   "EME417": {
     "code": "EME417",
@@ -411,9 +308,6 @@
     "name": "Applied Automatic Control",
     "prerequisites": [
       "EME405"
-    ],
-    "satisfies": [
-      "EME513"
     ]
   },
   "EME418": {
@@ -423,8 +317,7 @@
     "name": "Mechanical Power Transmission",
     "prerequisites": [
       "EME311"
-    ],
-    "satisfies": []
+    ]
   },
   "EME501": {
     "code": "EME501",
@@ -433,8 +326,7 @@
     "name": "Safety Of Electromechanical Systems",
     "prerequisites": [
       "EME404"
-    ],
-    "satisfies": []
+    ]
   },
   "EME502": {
     "code": "EME502",
@@ -443,8 +335,7 @@
     "name": "Computer Applications In Industry",
     "prerequisites": [
       "EME306"
-    ],
-    "satisfies": []
+    ]
   },
   "EME503": {
     "code": "EME503",
@@ -453,8 +344,7 @@
     "name": "Solid State Drives",
     "prerequisites": [
       "EME306"
-    ],
-    "satisfies": []
+    ]
   },
   "EME504": {
     "code": "EME504",
@@ -463,8 +353,7 @@
     "name": "Refrigeration And Air Conditioning",
     "prerequisites": [
       "EME307"
-    ],
-    "satisfies": []
+    ]
   },
   "EME505": {
     "code": "EME505",
@@ -473,18 +362,14 @@
     "name": "Fluid Power Systems",
     "prerequisites": [
       "EME301"
-    ],
-    "satisfies": []
+    ]
   },
   "EME507": {
     "code": "EME507",
     "credit_hours": 3,
     "level": "9",
     "name": "Senior Project 1",
-    "prerequisites": [],
-    "satisfies": [
-      "EME508"
-    ]
+    "prerequisites": []
   },
   "EME508": {
     "code": "EME508",
@@ -493,8 +378,7 @@
     "name": "Senior Project 2",
     "prerequisites": [
       "EME507"
-    ],
-    "satisfies": []
+    ]
   },
   "EME510": {
     "code": "EME510",
@@ -503,9 +387,6 @@
     "name": "Electrostatic And Electromagnetic Fields",
     "prerequisites": [
       "EME207"
-    ],
-    "satisfies": [
-      "EME511"
     ]
   },
   "EME511": {
@@ -515,8 +396,7 @@
     "name": "Communications Engineering",
     "prerequisites": [
       "EME510"
-    ],
-    "satisfies": []
+    ]
   },
   "EME512": {
     "code": "EME512",
@@ -526,8 +406,7 @@
     "prerequisites": [
       "EME304",
       "EME406"
-    ],
-    "satisfies": []
+    ]
   },
   "EME513": {
     "code": "EME513",
@@ -535,9 +414,9 @@
     "level": "e",
     "name": "Electro-Hydraulic Circuits",
     "prerequisites": [
-      "EME301"
-    ],
-    "satisfies": []
+      "EME301",
+      "EME417"
+    ]
   },
   "EME515": {
     "code": "EME515",
@@ -546,8 +425,7 @@
     "name": "Robotics",
     "prerequisites": [
       "EME303"
-    ],
-    "satisfies": []
+    ]
   },
   "EME516": {
     "code": "EME516",
@@ -556,8 +434,7 @@
     "name": "Automotive Engineering",
     "prerequisites": [
       "EME402"
-    ],
-    "satisfies": []
+    ]
   },
   "EME517": {
     "code": "EME517",
@@ -568,8 +445,7 @@
       "EME301",
       "EME302",
       "EME307"
-    ],
-    "satisfies": []
+    ]
   },
   "MSE202": {
     "code": "MSE202",
@@ -578,9 +454,6 @@
     "name": "Strength Of Materials",
     "prerequisites": [
       "EME205"
-    ],
-    "satisfies": [
-      "EME311"
     ]
   }
 }

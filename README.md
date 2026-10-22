@@ -28,6 +28,18 @@ Requires Node 22.22+, 24.15+ or 26+.
 * `npm run build`: production build into `dist/` (served from `/ssp_helper/`)
 * `npm test`: unit tests (Vitest)
 * `npm run deploy`: production build, then `cdk deploy` of the `SSPHelper` stack (see below)
+* `npm run validate:bylaws`: consistency checks for the bylaw data (needs Python 3); run it after editing any file in `scripts/Bylaws/`
+
+## Bylaw data (`scripts/Bylaws/<year>/`)
+One folder per bylaw year (the graduation year the regulation applies to), with `General.JSON` (shared terms and humanities) and one file per department (`GPE`, `EME`, `CAE`, `CCE`, `OCE`). The app always loads `General` plus the selected department. Each file maps a course code to:
+
+```json
+"CC181": {"code": "CC181", "name": "Discrete Structures", "credit_hours": 3, "level": "3", "prerequisites": ["MP102"]}
+```
+
+* `level` is a term (`"1"` to `"10"`), `"e"` for electives, `"h"` for humanities, or `"N-eK"` for elective group `K` of term `N` (for example `"6-e1"`).
+* Which courses unlock or lock others is derived from `prerequisites` alone when the data is loaded; there is no reverse list to maintain.
+* A year is listed in the app through the `Bylaws` DynamoDB table (`AVAILABLE` shows a button, `COMING_SOON` a disabled one), so a new year needs its folder here *and* a table row.
 
 ## Infrastructure (`infra/`)
 An AWS CDK app (TypeScript) for the `SSPHelper` stack in `eu-west-1`: the `Bylaws` DynamoDB table, the two Python Lambdas (`lambda/`), the `SspHelperApi` REST API (stage `prod`), `LambdaRole`, and the deployment of the built front-end into `s3://louay-morsi.me/ssp_helper/` (stale files are pruned inside that prefix only; the bucket itself belongs to the PersonalWebsite stack).

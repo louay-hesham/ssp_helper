@@ -6,9 +6,6 @@
     "name": "Thermodynamics 1",
     "prerequisites": [
       "MP108"
-    ],
-    "satisfies": [
-      "GPE321"
     ]
   },
   "EME206": {
@@ -18,12 +15,6 @@
     "name": "Fluid Mechanics 1",
     "prerequisites": [
       "MP102"
-    ],
-    "satisfies": [
-      "GPE412",
-      "GPE431",
-      "GPE432",
-      "GPE532"
     ]
   },
   "EME207": {
@@ -33,9 +24,6 @@
     "name": "Electric Circuits",
     "prerequisites": [
       "MP108"
-    ],
-    "satisfies": [
-      "GPE533"
     ]
   },
   "GPE201": {
@@ -45,11 +33,6 @@
     "name": "Principles Of Materials Science",
     "prerequisites": [
       "GPE101"
-    ],
-    "satisfies": [
-      "GPE301",
-      "GPE315",
-      "GPE436"
     ]
   },
   "GPE203": {
@@ -59,9 +42,6 @@
     "name": "Organic Chemistry 1",
     "prerequisites": [
       "GPE101"
-    ],
-    "satisfies": [
-      "GPE204"
     ]
   },
   "GPE204": {
@@ -71,11 +51,6 @@
     "name": "Organic Chemistry 2",
     "prerequisites": [
       "GPE203"
-    ],
-    "satisfies": [
-      "GPE301",
-      "GPE422",
-      "GPE433"
     ]
   },
   "GPE205": {
@@ -85,9 +60,6 @@
     "name": "Physical Chemistry",
     "prerequisites": [
       "GPE101"
-    ],
-    "satisfies": [
-      "GPE421"
     ]
   },
   "GPE211": {
@@ -97,9 +69,6 @@
     "name": "Mass Balance",
     "prerequisites": [
       "GPE101"
-    ],
-    "satisfies": [
-      "GPE212"
     ]
   },
   "GPE212": {
@@ -109,13 +78,6 @@
     "name": "Energy Balance",
     "prerequisites": [
       "GPE211"
-    ],
-    "satisfies": [
-      "GPE311",
-      "GPE321",
-      "GPE313",
-      "GPE312",
-      "GPE337"
     ]
   },
   "GPE301": {
@@ -126,8 +88,7 @@
     "prerequisites": [
       "GPE201",
       "GPE204"
-    ],
-    "satisfies": []
+    ]
   },
   "GPE311": {
     "code": "GPE311",
@@ -136,14 +97,6 @@
     "name": "Separation Processes 1",
     "prerequisites": [
       "GPE212"
-    ],
-    "satisfies": [
-      "GPE412",
-      "GPE534",
-      "GPE422",
-      "GPE424",
-      "GPE423",
-      "GPE401"
     ]
   },
   "GPE312": {
@@ -153,14 +106,6 @@
     "name": "Separation Processes 2",
     "prerequisites": [
       "GPE212"
-    ],
-    "satisfies": [
-      "GPE423",
-      "GPE422",
-      "GPE424",
-      "GPE412",
-      "GPE534",
-      "GPE401"
     ]
   },
   "GPE313": {
@@ -170,9 +115,6 @@
     "name": "Heat Transfer",
     "prerequisites": [
       "GPE212"
-    ],
-    "satisfies": [
-      "GPE336"
     ]
   },
   "GPE315": {
@@ -182,9 +124,6 @@
     "name": "Engineering Metallurgy",
     "prerequisites": [
       "GPE201"
-    ],
-    "satisfies": [
-      "GPE413"
     ]
   },
   "GPE321": {
@@ -195,9 +134,6 @@
     "prerequisites": [
       "EME203",
       "GPE212"
-    ],
-    "satisfies": [
-      "GPE522"
     ]
   },
   "GPE331": {
@@ -205,32 +141,28 @@
     "credit_hours": 3,
     "level": "e",
     "name": "Industrial Water Treatment",
-    "prerequisites": [],
-    "satisfies": []
+    "prerequisites": []
   },
   "GPE332": {
     "code": "GPE332",
     "credit_hours": 3,
     "level": "e",
     "name": "Environmental Science And Engineering",
-    "prerequisites": [],
-    "satisfies": []
+    "prerequisites": []
   },
   "GPE333": {
     "code": "GPE333",
     "credit_hours": 3,
     "level": "e",
     "name": "Introduction To Engineering Design",
-    "prerequisites": [],
-    "satisfies": []
+    "prerequisites": []
   },
   "GPE334": {
     "code": "GPE334",
     "credit_hours": 3,
     "level": "e",
     "name": "Wastewater Treatment",
-    "prerequisites": [],
-    "satisfies": []
+    "prerequisites": []
   },
   "GPE336": {
     "code": "GPE336",
@@ -239,8 +171,7 @@
     "name": "Heat Transfer Operations",
     "prerequisites": [
       "GPE313"
-    ],
-    "satisfies": []
+    ]
   },
   "GPE337": {
     "code": "GPE337",
@@ -249,16 +180,14 @@
     "name": "Combustion Technology",
     "prerequisites": [
       "GPE212"
-    ],
-    "satisfies": []
+    ]
   },
   "GPE338": {
     "code": "GPE338",
     "credit_hours": 3,
     "level": "e",
     "name": "Instrumental Method Of Analysis",
-    "prerequisites": [],
-    "satisfies": []
+    "prerequisites": []
   },
   "GPE401": {
     "code": "GPE401",
@@ -268,11 +197,6 @@
     "prerequisites": [
       "GPE311",
       "GPE312"
-    ],
-    "satisfies": [
-      "GPE424",
-      "GPE551",
-      "GPE431"
     ]
   },
   "GPE412": {
@@ -284,8 +208,7 @@
       "GPE312",
       "EME206",
       "GPE311"
-    ],
-    "satisfies": []
+    ]
   },
   "GPE413": {
     "code": "GPE413",
@@ -294,10 +217,6 @@
     "name": "Corrosion Engineering",
     "prerequisites": [
       "GPE315"
-    ],
-    "satisfies": [
-      "GPE434",
-      "GPE531"
     ]
   },
   "GPE421": {
@@ -307,10 +226,6 @@
     "name": "Kinetics And Reactions",
     "prerequisites": [
       "GPE205"
-    ],
-    "satisfies": [
-      "GPE426",
-      "GPE433"
     ]
   },
   "GPE422": {
@@ -323,12 +238,6 @@
       "GPE204",
       "GPE423",
       "GPE311"
-    ],
-    "satisfies": [
-      "GPE521",
-      "GPE523",
-      "GPE551",
-      "GPE531"
     ]
   },
   "GPE423": {
@@ -339,11 +248,6 @@
     "prerequisites": [
       "GPE312",
       "GPE311"
-    ],
-    "satisfies": [
-      "GPE422",
-      "GPE551",
-      "GPE532"
     ]
   },
   "GPE424": {
@@ -355,10 +259,6 @@
       "GPE401",
       "GPE312",
       "GPE311"
-    ],
-    "satisfies": [
-      "GPE522",
-      "GPE534"
     ]
   },
   "GPE426": {
@@ -369,9 +269,6 @@
     "prerequisites": [
       "GPE421",
       "MP314"
-    ],
-    "satisfies": [
-      "GPE525"
     ]
   },
   "GPE431": {
@@ -382,8 +279,7 @@
     "prerequisites": [
       "GPE401",
       "EME206"
-    ],
-    "satisfies": []
+    ]
   },
   "GPE432": {
     "code": "GPE432",
@@ -392,8 +288,7 @@
     "name": "Measurements",
     "prerequisites": [
       "EME206"
-    ],
-    "satisfies": []
+    ]
   },
   "GPE433": {
     "code": "GPE433",
@@ -403,8 +298,7 @@
     "prerequisites": [
       "GPE204",
       "GPE421"
-    ],
-    "satisfies": []
+    ]
   },
   "GPE434": {
     "code": "GPE434",
@@ -413,8 +307,7 @@
     "name": "Principles Of Industrial Electrochemistry",
     "prerequisites": [
       "GPE413"
-    ],
-    "satisfies": []
+    ]
   },
   "GPE435": {
     "code": "GPE435",
@@ -424,8 +317,7 @@
     "prerequisites": [
       "MP301",
       "MP314"
-    ],
-    "satisfies": []
+    ]
   },
   "GPE436": {
     "code": "GPE436",
@@ -434,8 +326,7 @@
     "name": "Mechanics Of Materials",
     "prerequisites": [
       "GPE201"
-    ],
-    "satisfies": []
+    ]
   },
   "GPE521": {
     "code": "GPE521",
@@ -444,8 +335,7 @@
     "name": "Petrochemical Industries 2",
     "prerequisites": [
       "GPE422"
-    ],
-    "satisfies": []
+    ]
   },
   "GPE522": {
     "code": "GPE522",
@@ -455,8 +345,7 @@
     "prerequisites": [
       "GPE321",
       "GPE424"
-    ],
-    "satisfies": []
+    ]
   },
   "GPE523": {
     "code": "GPE523",
@@ -465,9 +354,6 @@
     "name": "Hazardous Process & Safety Engineering",
     "prerequisites": [
       "GPE422"
-    ],
-    "satisfies": [
-      "GPE524"
     ]
   },
   "GPE524": {
@@ -477,8 +363,7 @@
     "name": "Process Design",
     "prerequisites": [
       "GPE523"
-    ],
-    "satisfies": []
+    ]
   },
   "GPE525": {
     "code": "GPE525",
@@ -487,9 +372,6 @@
     "name": "Process Dynamics And Control",
     "prerequisites": [
       "GPE426"
-    ],
-    "satisfies": [
-      "GPE533"
     ]
   },
   "GPE531": {
@@ -500,8 +382,7 @@
     "prerequisites": [
       "GPE413",
       "GPE422"
-    ],
-    "satisfies": []
+    ]
   },
   "GPE532": {
     "code": "GPE532",
@@ -511,8 +392,7 @@
     "prerequisites": [
       "EME206",
       "GPE423"
-    ],
-    "satisfies": []
+    ]
   },
   "GPE533": {
     "code": "GPE533",
@@ -522,8 +402,7 @@
     "prerequisites": [
       "GPE525",
       "EME207"
-    ],
-    "satisfies": []
+    ]
   },
   "GPE534": {
     "code": "GPE534",
@@ -534,8 +413,7 @@
       "GPE424",
       "GPE312",
       "GPE311"
-    ],
-    "satisfies": []
+    ]
   },
   "GPE551": {
     "code": "GPE551",
@@ -546,9 +424,6 @@
       "GPE401",
       "GPE422",
       "GPE423"
-    ],
-    "satisfies": [
-      "GPE552"
     ]
   },
   "GPE552": {
@@ -558,8 +433,7 @@
     "name": "Senior Project 2",
     "prerequisites": [
       "GPE551"
-    ],
-    "satisfies": []
+    ]
   },
   "MP301": {
     "code": "MP301",
@@ -568,9 +442,6 @@
     "name": "Probability",
     "prerequisites": [
       "MP201"
-    ],
-    "satisfies": [
-      "GPE435"
     ]
   },
   "MP314": {
@@ -580,10 +451,6 @@
     "name": "Numerical Methods",
     "prerequisites": [
       "MP202"
-    ],
-    "satisfies": [
-      "GPE426",
-      "GPE435"
     ]
   }
 }

@@ -6,11 +6,6 @@
     "name": "Discrete Structures",
     "prerequisites": [
       "MP102"
-    ],
-    "satisfies": [
-      "CC471",
-      "CC474",
-      "CC485"
     ]
   },
   "CC202": {
@@ -20,11 +15,6 @@
     "name": "Circuits 2",
     "prerequisites": [
       "EME207"
-    ],
-    "satisfies": [
-      "CC361",
-      "CC301",
-      "CC431"
     ]
   },
   "CC212": {
@@ -32,28 +22,15 @@
     "credit_hours": 3,
     "level": "4",
     "name": "Digital Logic 1",
-    "prerequisites": [],
-    "satisfies": [
-      "CC312",
-      "CC321"
-    ]
+    "prerequisites": []
   },
   "CC271": {
     "code": "CC271",
     "credit_hours": 3,
     "level": "3",
-    "name": " Programming 1",
+    "name": "Programming 1",
     "prerequisites": [
       "CSE102"
-    ],
-    "satisfies": [
-      "CC272",
-      "CC273",
-      "CC321",
-      "CC372",
-      "CC373",
-      "CC471",
-      "CC482"
     ]
   },
   "CC272": {
@@ -63,9 +40,6 @@
     "name": "Programming 2",
     "prerequisites": [
       "CC271"
-    ],
-    "satisfies": [
-      "CC552"
     ]
   },
   "CC273": {
@@ -75,12 +49,6 @@
     "name": "Data Structures 1",
     "prerequisites": [
       "CC271"
-    ],
-    "satisfies": [
-      "CC376",
-      "CC371",
-      "CC473",
-      "CC485"
     ]
   },
   "CC301": {
@@ -90,9 +58,6 @@
     "name": "Electronic Circuits Analysis",
     "prerequisites": [
       "CC202"
-    ],
-    "satisfies": [
-      "CC401"
     ]
   },
   "CC312": {
@@ -102,11 +67,6 @@
     "name": "Digital Logic 2",
     "prerequisites": [
       "CC212"
-    ],
-    "satisfies": [
-      "CC421",
-      "CC462",
-      "CC474"
     ]
   },
   "CC321": {
@@ -117,11 +77,6 @@
     "prerequisites": [
       "CC212",
       "CC271"
-    ],
-    "satisfies": [
-      "CC322",
-      "CC451",
-      "CC581"
     ]
   },
   "CC322": {
@@ -131,9 +86,6 @@
     "name": "Computer Architecture",
     "prerequisites": [
       "CC321"
-    ],
-    "satisfies": [
-      "CC423"
     ]
   },
   "CC331": {
@@ -144,11 +96,6 @@
     "prerequisites": [
       "MP202",
       "MP301"
-    ],
-    "satisfies": [
-      "CC441",
-      "CC442",
-      "CC451"
     ]
   },
   "CC332": {
@@ -159,9 +106,6 @@
     "prerequisites": [
       "MP202",
       "MP301"
-    ],
-    "satisfies": [
-      "CC432"
     ]
   },
   "CC361": {
@@ -172,9 +116,6 @@
     "prerequisites": [
       "MP202",
       "CC202"
-    ],
-    "satisfies": [
-      "CC462"
     ]
   },
   "CC371": {
@@ -184,9 +125,6 @@
     "name": "Algorithms",
     "prerequisites": [
       "CC273"
-    ],
-    "satisfies": [
-      "CC472"
     ]
   },
   "CC372": {
@@ -196,9 +134,6 @@
     "name": "Systems Programming",
     "prerequisites": [
       "CC271"
-    ],
-    "satisfies": [
-      "CC473"
     ]
   },
   "CC373": {
@@ -209,10 +144,6 @@
     "prerequisites": [
       "CC271",
       "CC321"
-    ],
-    "satisfies": [
-      "CC551",
-      "CC581"
     ]
   },
   "CC376": {
@@ -222,8 +153,7 @@
     "name": "Data Structures 2",
     "prerequisites": [
       "CC273"
-    ],
-    "satisfies": []
+    ]
   },
   "CC401": {
     "code": "CC401",
@@ -232,9 +162,6 @@
     "name": "Digital Integrated Circuit Design",
     "prerequisites": [
       "CC301"
-    ],
-    "satisfies": [
-      "CC402"
     ]
   },
   "CC402": {
@@ -244,8 +171,7 @@
     "name": "Vlsi",
     "prerequisites": [
       "CC401"
-    ],
-    "satisfies": []
+    ]
   },
   "CC421": {
     "code": "CC421",
@@ -254,9 +180,6 @@
     "name": "Microprocessors Systems",
     "prerequisites": [
       "CC312"
-    ],
-    "satisfies": [
-      "CC461"
     ]
   },
   "CC423": {
@@ -266,8 +189,7 @@
     "name": "Advanced Computer Architecture",
     "prerequisites": [
       "CC322"
-    ],
-    "satisfies": []
+    ]
   },
   "CC431": {
     "code": "CC431",
@@ -277,10 +199,6 @@
     "prerequisites": [
       "MP202",
       "CC202"
-    ],
-    "satisfies": [
-      "CC444",
-      "CC445"
     ]
   },
   "CC432": {
@@ -290,8 +208,7 @@
     "name": "Dsp Implementation",
     "prerequisites": [
       "CC332"
-    ],
-    "satisfies": []
+    ]
   },
   "CC441": {
     "code": "CC441",
@@ -300,8 +217,7 @@
     "name": "Analog Communication",
     "prerequisites": [
       "CC331"
-    ],
-    "satisfies": []
+    ]
   },
   "CC442": {
     "code": "CC442",
@@ -310,10 +226,6 @@
     "name": "Digital Communications",
     "prerequisites": [
       "CC331"
-    ],
-    "satisfies": [
-      "CC541",
-      "CC443"
     ]
   },
   "CC443": {
@@ -323,8 +235,7 @@
     "name": "Mobile Communications",
     "prerequisites": [
       "CC442"
-    ],
-    "satisfies": []
+    ]
   },
   "CC444": {
     "code": "CC444",
@@ -333,8 +244,7 @@
     "name": "Antennas & Wave Propagation",
     "prerequisites": [
       "CC431"
-    ],
-    "satisfies": []
+    ]
   },
   "CC445": {
     "code": "CC445",
@@ -343,8 +253,7 @@
     "name": "Microwave",
     "prerequisites": [
       "CC431"
-    ],
-    "satisfies": []
+    ]
   },
   "CC451": {
     "code": "CC451",
@@ -354,9 +263,6 @@
     "prerequisites": [
       "CC321",
       "CC331"
-    ],
-    "satisfies": [
-      "CC551"
     ]
   },
   "CC461": {
@@ -366,8 +272,7 @@
     "name": "Embedded Systems",
     "prerequisites": [
       "CC421"
-    ],
-    "satisfies": []
+    ]
   },
   "CC462": {
     "code": "CC462",
@@ -377,8 +282,7 @@
     "prerequisites": [
       "CC312",
       "CC361"
-    ],
-    "satisfies": []
+    ]
   },
   "CC471": {
     "code": "CC471",
@@ -388,9 +292,6 @@
     "prerequisites": [
       "CC181",
       "CC271"
-    ],
-    "satisfies": [
-      "CC472"
     ]
   },
   "CC472": {
@@ -401,8 +302,7 @@
     "prerequisites": [
       "CC371",
       "CC471"
-    ],
-    "satisfies": []
+    ]
   },
   "CC473": {
     "code": "CC473",
@@ -412,8 +312,7 @@
     "prerequisites": [
       "CC273",
       "CC372"
-    ],
-    "satisfies": []
+    ]
   },
   "CC474": {
     "code": "CC474",
@@ -423,8 +322,7 @@
     "prerequisites": [
       "CC181",
       "CC312"
-    ],
-    "satisfies": []
+    ]
   },
   "CC482": {
     "code": "CC482",
@@ -434,8 +332,7 @@
     "prerequisites": [
       "CC271",
       "MP301"
-    ],
-    "satisfies": []
+    ]
   },
   "CC483": {
     "code": "CC483",
@@ -444,8 +341,7 @@
     "name": "Optimization Techniques",
     "prerequisites": [
       "MP202"
-    ],
-    "satisfies": []
+    ]
   },
   "CC484": {
     "code": "CC484",
@@ -454,8 +350,7 @@
     "name": "Pattern Recognition",
     "prerequisites": [
       "MP301"
-    ],
-    "satisfies": []
+    ]
   },
   "CC485": {
     "code": "CC485",
@@ -465,8 +360,7 @@
     "prerequisites": [
       "CC181",
       "CC273"
-    ],
-    "satisfies": []
+    ]
   },
   "CC489": {
     "code": "CC489",
@@ -475,9 +369,6 @@
     "name": "Numerical Analysis",
     "prerequisites": [
       "MP202"
-    ],
-    "satisfies": [
-      "CC490"
     ]
   },
   "CC490": {
@@ -487,16 +378,14 @@
     "name": "Computer Vision",
     "prerequisites": [
       "CC489"
-    ],
-    "satisfies": []
+    ]
   },
   "CC491": {
     "code": "CC491",
     "credit_hours": 3,
     "level": "e",
     "name": "New Trends In Cce",
-    "prerequisites": [],
-    "satisfies": []
+    "prerequisites": []
   },
   "CC541": {
     "code": "CC541",
@@ -505,8 +394,7 @@
     "name": "Communication Systems",
     "prerequisites": [
       "CC442"
-    ],
-    "satisfies": []
+    ]
   },
   "CC551": {
     "code": "CC551",
@@ -516,8 +404,7 @@
     "prerequisites": [
       "CC373",
       "CC451"
-    ],
-    "satisfies": []
+    ]
   },
   "CC552": {
     "code": "CC552",
@@ -526,8 +413,7 @@
     "name": "Net-Centric Computing",
     "prerequisites": [
       "CC272"
-    ],
-    "satisfies": []
+    ]
   },
   "CC581": {
     "code": "CC581",
@@ -538,18 +424,14 @@
       "MP301",
       "CC321",
       "CC373"
-    ],
-    "satisfies": []
+    ]
   },
   "CC591": {
     "code": "CC591",
     "credit_hours": 3,
     "level": "9",
     "name": "Senior Project 1",
-    "prerequisites": [],
-    "satisfies": [
-      "CC592"
-    ]
+    "prerequisites": []
   },
   "CC592": {
     "code": "CC592",
@@ -558,8 +440,7 @@
     "name": "Senior Project 2",
     "prerequisites": [
       "CC591"
-    ],
-    "satisfies": []
+    ]
   },
   "EME207": {
     "code": "EME207",
@@ -568,9 +449,6 @@
     "name": "Circuits 1",
     "prerequisites": [
       "MP108"
-    ],
-    "satisfies": [
-      "CC202"
     ]
   },
   "MP204": {
@@ -581,8 +459,7 @@
     "prerequisites": [
       "MP101",
       "MP107"
-    ],
-    "satisfies": []
+    ]
   },
   "MP301": {
     "code": "MP301",
@@ -591,13 +468,6 @@
     "name": "Probability",
     "prerequisites": [
       "MP102"
-    ],
-    "satisfies": [
-      "CC331",
-      "CC332",
-      "CC581",
-      "CC482",
-      "CC484"
     ]
   }
 }

@@ -1,5 +1,6 @@
 # Run this script to add extra subjects to the JSON file that's going to be deployed with the webapp.
 # This script doesn't actually run with the webapp itself at all.
+# The webapp derives which courses depend on which from 'prerequisites', so there is no 'satisfies' field to maintain.
 
 import json
 import sys
@@ -39,19 +40,12 @@ def get_courses_info(courses):
         'code': subject_info[0].upper(),
         'name': subject_info[1].title(),
         'prerequisites': [] if subject_info[2] == '' else subject_info[2].upper().split('&'),
-        'satisfies': [],
         'credit_hours': int(subject_info[3]),
         'level': level
       }
       courses[new_course['code']] = new_course
       print(new_course)
       print("\n")
-
-      for prerequisite in new_course['prerequisites']:
-        if prerequisite in courses:
-          courses[prerequisite]['satisfies'].append(new_course['code'])
-        else:
-          general[prerequisite]['satisfies'].append(new_course['code'])
 
 
 try:

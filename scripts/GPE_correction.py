@@ -1,3 +1,4 @@
+# OBSOLETE: this only repaired the 'satisfies' fields, which no longer exist (the app derives them from 'prerequisites').
 import json
 import sys
 

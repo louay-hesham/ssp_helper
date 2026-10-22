@@ -9,6 +9,7 @@
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
+    "validate:bylaws": "python3 scripts/validate_bylaws.py",
     "deploy": "ng build && npm --prefix infra run deploy"
   },
   "dependencies": {
