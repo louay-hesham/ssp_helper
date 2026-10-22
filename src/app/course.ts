@@ -1,4 +1,4 @@
-import { Observable } from 'rxjs';
+import { forkJoin, Observable } from 'rxjs';
 
 export type CoursesData = Record<string, Observable<any>>;
 
@@ -10,6 +10,8 @@ export class Course {
   public static electivesGroups: { [level: string]: { [code: string]: Course[] } } = {};
   public static CH = 0;
   public static seniorProject1Code = '';
+
+  private static loadCount = 0;
 
   public code: string;
   public name: string;
@@ -51,12 +53,15 @@ export class Course {
     Course.seniorProject1Code = '';
     Course.electivesGroups = {};
 
-    coursesData['General'].subscribe(data => {
-      Course.addData(data);
-    });
-
-    coursesData[department].subscribe(data => {
-      Course.addData(data);
+    // Register both files together: a General course may have a prerequisite that
+    // only exists in the department file (and the other way round).
+    const load = ++Course.loadCount;
+    forkJoin([coursesData['General'], coursesData[department]]).subscribe(([general, departmentData]) => {
+      if (load !== Course.loadCount) {
+        return; // a newer load superseded this one
+      }
+      Course.addData(general);
+      Course.addData(departmentData);
     });
   }
 

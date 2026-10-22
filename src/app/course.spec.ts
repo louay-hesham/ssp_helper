@@ -1,4 +1,4 @@
-import { of } from 'rxjs';
+import { of, Subject } from 'rxjs';
 import { Bylaw, BylawStatus } from './bylaw';
 import { Course } from './course';
 
@@ -35,6 +35,44 @@ describe('Course', () => {
     Course.coreCourses['MP1'].togglePass();
     expect(Course.coreCourses['MP2'].isPassed).toBe(false);
     expect(Course.CH).toBe(0);
+  });
+});
+
+describe('Course loading', () => {
+  const generalWithDeptPrereq = {
+    MP1: { code: 'MP1', name: 'Math 1', credit_hours: 3, level: '1', prerequisites: ['CC9'], satisfies: [] },
+  };
+  const departmentWithCC9 = {
+    CC9: { code: 'CC9', name: 'Base', credit_hours: 3, level: '3', prerequisites: [], satisfies: ['MP1'] },
+  };
+
+  it('registers courses only after both files have arrived', () => {
+    const general$ = new Subject<any>();
+    const department$ = new Subject<any>();
+    Course.loadCourses({ General: general$, CCE: department$ }, 'CCE');
+
+    general$.next(generalWithDeptPrereq);
+    general$.complete();
+    expect(Object.keys(Course.coreCourses)).toEqual([]);
+
+    department$.next(departmentWithCC9);
+    department$.complete();
+    expect(Object.keys(Course.coreCourses).sort()).toEqual(['CC9', 'MP1']);
+    expect(() => Course.coreCourses['MP1'].isAvailable()).not.toThrow();
+  });
+
+  it('ignores a load that was superseded by a newer one', () => {
+    const oldGeneral$ = new Subject<any>();
+    const oldDepartment$ = new Subject<any>();
+    Course.loadCourses({ General: oldGeneral$, CCE: oldDepartment$ }, 'CCE');
+    Course.loadCourses({ General: of(general), CCE: of(department) }, 'CCE');
+
+    oldGeneral$.next(generalWithDeptPrereq);
+    oldGeneral$.complete();
+    oldDepartment$.next(departmentWithCC9);
+    oldDepartment$.complete();
+
+    expect(Object.keys(Course.coreCourses)).toEqual(['MP1', 'SP1', 'MP2']);
   });
 });
 
